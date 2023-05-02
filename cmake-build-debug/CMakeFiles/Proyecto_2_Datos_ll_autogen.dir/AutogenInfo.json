@@ -1,15 +1,15 @@
 {
-	"BUILD_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen",
-	"CMAKE_BINARY_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d",
+	"BUILD_DIR" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen",
+	"CMAKE_BINARY_DIR" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/mrr/Desktop/Pacman/Pacman",
 	"CMAKE_EXECUTABLE" : "/snap/clion/235/bin/cmake/linux/x64/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/CMakeLists.txt",
-		"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake",
+		"/home/mrr/Desktop/Pacman/Pacman/CMakeLists.txt",
+		"/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake",
-		"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake",
+		"/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake",
@@ -66,59 +66,59 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseArguments.cmake",
-		"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Resources.qrc"
+		"/home/mrr/Desktop/Pacman/Pacman/Resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d",
-	"DEP_FILE" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/mrr/Desktop/Pacman/Pacman",
+	"DEP_FILE" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Proyecto_2_Datos_ll_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Blocks.h",
+			"/home/mrr/Desktop/Pacman/Pacman/Blocks.h",
 			"MU",
 			"EWIEGA46WW/moc_Blocks.cpp",
 			null
 		],
 		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Dots.h",
+			"/home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.h",
+			"MU",
+			"EWIEGA46WW/moc_Dificulties_Window.cpp",
+			null
+		],
+		[
+			"/home/mrr/Desktop/Pacman/Pacman/Dots.h",
 			"MU",
 			"EWIEGA46WW/moc_Dots.cpp",
 			null
 		],
 		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Ghost.h",
+			"/home/mrr/Desktop/Pacman/Pacman/Game.h",
+			"MU",
+			"EWIEGA46WW/moc_Game.cpp",
+			null
+		],
+		[
+			"/home/mrr/Desktop/Pacman/Pacman/Ghost.h",
 			"MU",
 			"EWIEGA46WW/moc_Ghost.cpp",
 			null
 		],
 		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Levels.h",
-			"MU",
-			"EWIEGA46WW/moc_Levels.cpp",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Main_Window.h",
-			"MU",
-			"EWIEGA46WW/moc_Main_Window.cpp",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Pac_Man.h",
+			"/home/mrr/Desktop/Pacman/Pacman/Pac_Man.h",
 			"MU",
 			"EWIEGA46WW/moc_Pac_Man.cpp",
 			null
 		],
 		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/SuperDot.h",
+			"/home/mrr/Desktop/Pacman/Pacman/SuperDot.h",
 			"MU",
 			"EWIEGA46WW/moc_SuperDot.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -153,59 +153,27 @@
 		"-c",
 		"/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 8,
-	"PARSE_CACHE_FILE" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
 	"QT_VERSION_MAJOR" : 5,
 	"QT_VERSION_MINOR" : 15,
-	"SETTINGS_FILE" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Blocks.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Dots.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Ghost.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Levels.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Main_Window.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Pac_Man.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/SuperDot.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/main.cpp",
-			"MU",
-			null
-		]
+		[ "/home/mrr/Desktop/Pacman/Pacman/Blocks.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Dots.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Game.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Ghost.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Pac_Man.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/SuperDot.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

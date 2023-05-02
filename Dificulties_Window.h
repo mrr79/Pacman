@@ -5,13 +5,16 @@
 #include <QWidget>
 #include <QGraphicsScene>
 
-class Main_Window: public QGraphicsView{
+class Dificulties_Window: public QGraphicsView{
 public:
 
-  Main_Window(QWidget * parent=0);
+  Dificulties_Window(QWidget * parent=0);
 
   //Game dificulties
-  void game();
+  void classic();
+  void hard();
+    void normal();
+    void easy();
 
   QGraphicsScene * scene;
 private:

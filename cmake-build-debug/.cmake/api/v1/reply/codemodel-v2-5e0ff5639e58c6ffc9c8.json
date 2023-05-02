@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Proyecto_2_Datos_ll::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proyecto_2_Datos_ll-Debug-8e03a154de1f0adc0367.json",
+					"jsonFile" : "target-Proyecto_2_Datos_ll-Debug-a803d5128065c4b0246d.json",
 					"name" : "Proyecto_2_Datos_ll",
 					"projectIndex" : 0
 				},
@@ -68,8 +68,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug",
-		"source" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d"
+		"build" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug",
+		"source" : "/home/mrr/Desktop/Pacman/Pacman"
 	},
 	"version" : 
 	{

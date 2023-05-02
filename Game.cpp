@@ -1,4 +1,4 @@
-#include "Levels.h"
+#include "Game.h"
 #include "Blocks.h"
 #include "Ghost.h"
 #include "Dots.h"
@@ -6,8 +6,12 @@
 #include <QGraphicsRectItem>
 #include <iostream>
 
-Levels::Levels(QWidget *parent)
+Game::Game(char mapa[21][30], int points, int lifes, QWidget *parent) :
+        m_points(points), m_lifes(lifes), QGraphicsView(parent)
 {
+    memcpy(m_mapa, mapa, sizeof(m_mapa));
+
+
     //Creation and configuration of the scene
     scene = new QGraphicsScene();
     scene->setSceneRect(0,0,870,620);
@@ -16,12 +20,14 @@ Levels::Levels(QWidget *parent)
 
     init_lab();
 
-    pac_man = new Pac_Man();
+    pac_man = new Pac_Man(m_mapa, m_points, m_lifes, points_label, scene);
+    pac_man->set_values(mapa, points, lifes, points_label, scene);
     Ghost *ghost = new Ghost();
 
     QTimer *col = new QTimer();
     connect(col,SIGNAL(timeout()),pac_man,SLOT(check_collision()));
     col->start(100);
+
 
     connect(timer_points, SIGNAL(timeout()),pac_man, SLOT(check_points()));
     timer_points->start(500);
@@ -50,7 +56,7 @@ Levels::Levels(QWidget *parent)
 
 }
 
-void Levels::init_lab()
+void Game::init_lab()
 {
 
     int index = 0;
@@ -66,18 +72,19 @@ void Levels::init_lab()
     {
         for (int j = 0; j < int(31); j++)
         {
-            if (mapa[i][j] == 'X'){
+            if (m_mapa[i][j] == 'X'){
                 Block *block = new Block();
                 block->setPos(j*30, i*30);
                 scene->addItem(block);
 
             }
-            else if (mapa[i][j] == ' '){
+            else if (m_mapa[i][j] == ' '){
                 Dot *dot = new Dot();
                 dot->setPos((j*30)+10, (i*30)+10);
                 scene->addItem(dot);
             }
+            }
 
         }
     }
-}
+

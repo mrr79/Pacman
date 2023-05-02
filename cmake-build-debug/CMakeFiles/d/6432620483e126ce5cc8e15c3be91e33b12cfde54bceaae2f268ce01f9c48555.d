@@ -1,24 +1,24 @@
 Proyecto_2_Datos_ll_autogen/timestamp: \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Blocks.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Blocks.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/CMakeLists.txt \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Dots.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Dots.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Ghost.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Ghost.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Levels.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Levels.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Main_Window.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Main_Window.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Pac_Man.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Pac_Man.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Resources.qrc \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/SuperDot.cpp \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/SuperDot.h \
+  /home/mrr/Desktop/Pacman/Pacman/Blocks.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Blocks.h \
+  /home/mrr/Desktop/Pacman/Pacman/CMakeLists.txt \
+  /home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.h \
+  /home/mrr/Desktop/Pacman/Pacman/Dots.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Dots.h \
+  /home/mrr/Desktop/Pacman/Pacman/Game.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Game.h \
+  /home/mrr/Desktop/Pacman/Pacman/Ghost.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Ghost.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pac_Man.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Pac_Man.h \
+  /home/mrr/Desktop/Pacman/Pacman/Resources.qrc \
+  /home/mrr/Desktop/Pacman/Pacman/SuperDot.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/SuperDot.h \
   CMakeFiles/3.25.2/CMakeCXXCompiler.cmake \
   CMakeFiles/3.25.2/CMakeSystem.cmake \
   Proyecto_2_Datos_ll_autogen/moc_predefs.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/main.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/main.cpp \
   /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake \
   /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake \
   /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake \

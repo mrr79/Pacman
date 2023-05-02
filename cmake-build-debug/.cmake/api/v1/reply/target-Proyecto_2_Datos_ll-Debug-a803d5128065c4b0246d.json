@@ -115,7 +115,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include"
+					"path" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include"
 				},
 				{
 					"backtrace" : 3,
@@ -294,24 +294,24 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Main_Window.h",
+			"path" : "Dificulties_Window.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Main_Window.cpp",
+			"path" : "Dificulties_Window.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Levels.h",
+			"path" : "Game.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Levels.cpp",
+			"path" : "Game.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

@@ -9,8 +9,16 @@
 
 int cycle = 0;
 
-Pac_Man::Pac_Man()
+Pac_Man::Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene)
 {
+
+    this->points = points;
+    this->lifes = lifes;
+    this->points_label = points_label;
+    this->scene = scene;
+
+
+
     setPixmap(QPixmap(":/Images/pac_man_0R.png"));
 
     QTimer *timer_move = new QTimer;
@@ -61,26 +69,33 @@ void Pac_Man::set_mapa(char mapa[21][30])
     }
 }
 
+void Pac_Man::set_values(char mapa[21][30], int points, int lifes, QGraphicsTextItem* points_label, QGraphicsScene* scene) {
+    this->points = points;
+    this->lifes = lifes;
+    this->points_label = points_label;
+    this->scene = scene;
+}
+
 
 void Pac_Man::check_collision()
 {
     QList<QGraphicsItem *> colliding_items = collidingItems(); //List of the colliding items
     for (int i = 0, n = colliding_items.size(); i < n; ++i){
         if (typeid(*(colliding_items[i])) == typeid(Dot)){
-            scene()->removeItem(colliding_items[i]);
+            scene->removeItem(colliding_items[i]);
             delete colliding_items[i];
             points += 10;
             points_label->setPlainText("Points: " + QString::number(points));
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(SuperDot)){
-            scene()->removeItem(colliding_items[i]);
+            scene->removeItem(colliding_items[i]);
             delete colliding_items[i];
             super_dot = true;
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
-            scene()->removeItem(this);
+            scene->removeItem(this);
             lifes--;
             return;
         }
@@ -92,7 +107,7 @@ void Pac_Man::check_points()
     if (points % 200 == 0){
 
         SuperDot *super_dot = new SuperDot();
-        scene()->addItem(super_dot);
+        scene->addItem(super_dot);
         super_dot->setPos(420,600/2);
     }
 }
@@ -197,4 +212,6 @@ void Pac_Man::animation_D()
         cycle = 0;
     }
 }
+
+
 

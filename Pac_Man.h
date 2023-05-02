@@ -8,10 +8,13 @@ class Pac_Man: public QObject , public  QGraphicsPixmapItem{
      Q_OBJECT
 public:
 
-    Pac_Man();
+    Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene);
+    void set_points(int points);
+    void set_lifes(int lifes);
+
     bool super_dot = false;
     int speed = 30;
-    int points = 0;
+    //int points = 0;
     char direcction = 'R';
     void keyPressEvent(QKeyEvent *event);
     void set_points_label(QGraphicsTextItem *points_label);
@@ -21,6 +24,8 @@ public:
     int position_y = 14;
 
     QTimer *timer_animation = new QTimer;
+
+    void set_values(char mapa[21][30], int points, int lifes, QGraphicsTextItem* points_label, QGraphicsScene* scene);
 public slots:
     void check_collision();
     void move();
@@ -31,8 +36,11 @@ public slots:
     void animation_D();
 private:
     QGraphicsTextItem *points_label;
+    QGraphicsScene* scene;
     char mapa[21][30];
-    int lifes = 3;
+    int lifes;
+
+    int points;
 };
 
 #endif // PAC_MAN_H

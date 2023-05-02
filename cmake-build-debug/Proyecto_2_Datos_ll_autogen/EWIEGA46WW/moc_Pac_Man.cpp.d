@@ -1,5 +1,5 @@
-/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Pac_Man.cpp: /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/Pac_Man.h \
-  /home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
+/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Pac_Man.cpp: /home/mrr/Desktop/Pacman/Pacman/Pac_Man.h \
+  /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

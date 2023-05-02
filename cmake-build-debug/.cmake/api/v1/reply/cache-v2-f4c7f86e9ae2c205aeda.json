@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug"
+			"value" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -415,7 +415,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -475,7 +475,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d"
+			"value" : "/home/mrr/Desktop/Pacman/Pacman"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1067,7 +1067,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d/cmake-build-debug"
+			"value" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug"
 		},
 		{
 			"name" : "Proyecto_2_Datos_ll_IS_TOP_LEVEL",
@@ -1091,7 +1091,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/mrr/Downloads/pacmannn/Proyecto_2_Datos_ll-eb1af092ddbd83200f6837828bd08b23b08bb94d"
+			"value" : "/home/mrr/Desktop/Pacman/Pacman"
 		},
 		{
 			"name" : "QT_DIR",

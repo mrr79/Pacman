@@ -14,10 +14,10 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        Main_Window.h
-        Main_Window.cpp
-        Levels.h
-        Levels.cpp
+        Dificulties_Window.h
+        Dificulties_Window.cpp
+        Game.h
+        Game.cpp
         Pac_Man.h
         Pac_Man.cpp
         Dots.h
