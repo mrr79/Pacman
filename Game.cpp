@@ -90,7 +90,8 @@ void Game::init_lab()
             }
             else if (m_mapa[i][j] == '1') // if character is '1', add ghost
             {
-                Ghost *ghost = new Ghost(pacmanX,pacmanY);
+                //Ghost *ghost = new Ghost(m_mapa,pac_man->position_x,pac_man->position_y);
+                Ghost *ghost = new Ghost(m_mapa,pacmanX,pacmanY);
                 ghost->setPos(j*30, i*30); // set ghost position
                 scene->addItem(ghost);
                 //ghost->move(pacmanX,pacmanY);

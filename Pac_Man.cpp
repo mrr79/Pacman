@@ -141,7 +141,7 @@ void Pac_Man::move()
             position_x++;
         }
     }
-    position_x = y() / 30;
+    position_x = y() / 30;// posicion del pacman en el mapa
     position_y = x() / 30;
 }
 
