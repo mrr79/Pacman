@@ -77,11 +77,11 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
 
 void Dificulties_Window::easy()
 {
-    int points = 200;
+    int points = 0;
     int lifes = 3;
     char mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X                           X",
+            "X            1              X",
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
             "X                           X",
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
@@ -90,7 +90,7 @@ void Dificulties_Window::easy()
             "X                           X",
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
             "X                           X",
-            "X  XXXXXXXXXXX   XXXXXXXXXX X",
+            "X  XXXXXXXXXXX P XXXXXXXXXX X",
             "X                           X",
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
             "X                           X",
@@ -103,7 +103,7 @@ void Dificulties_Window::easy()
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     };
 
-    Game *level_1 = new Game(mapa, 1100, 2);
+    Game *level_1 = new Game(mapa, 0, 3);
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
@@ -111,12 +111,12 @@ void Dificulties_Window::easy()
 
 void Dificulties_Window::normal()
 {
-    int points = 200;
+    int points = 0;
     int lifes = 3;
     char mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "X                           X",
-            "X XXXXXXXXX          XXXXXX X",
+            "X XXXXXXXXX         XXXXXX X",
             "X                           X",
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
             "X                           X",

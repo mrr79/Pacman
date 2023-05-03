@@ -22,6 +22,8 @@ public:
 
     int position_x = 10;
     int position_y = 14;
+    int points_count = 0;
+
 
     QTimer *timer_animation = new QTimer;
 
@@ -34,6 +36,8 @@ public slots:
     void animation_L();
     void animation_U();
     void animation_D();
+
+
 private:
     QGraphicsTextItem *points_label;
     QGraphicsScene* scene;

@@ -32,10 +32,15 @@ public:
     QGraphicsScene * scene;;
 private:
     void init_lab();
+    void ghost_manager();
+
 
     int m_points;
     int m_lifes;
     char m_mapa[21][30];
+
+    int pacmanX=0;
+    int pacmanY=0;
 };
 
 #endif // LEVELS_H

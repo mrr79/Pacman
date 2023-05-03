@@ -1,5 +1,5 @@
 /****************************************************************************
-** Meta object code from reading C++ file 'Ghost.h'
+** Meta object code from reading C++ file 'Ghost_R.h'
 **
 ** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.6)
 **
@@ -7,11 +7,11 @@
 *****************************************************************************/
 
 #include <memory>
-#include "../../../Ghost.h"
+#include "../../../Ghost_R.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
-#error "The header file 'Ghost.h' doesn't include <QObject>."
+#error "The header file 'Ghost_R.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
 #error "This file was generated using the moc from 5.15.6. It"
 #error "cannot be used with the include files from this version of Qt."
@@ -21,29 +21,27 @@
 QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
-struct qt_meta_stringdata_Ghost_t {
-    QByteArrayData data[5];
-    char stringdata0[32];
+struct qt_meta_stringdata_Ghost_R_t {
+    QByteArrayData data[3];
+    char stringdata0[14];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Ghost_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Ghost_R_t, stringdata0) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
-static const qt_meta_stringdata_Ghost_t qt_meta_stringdata_Ghost = {
+static const qt_meta_stringdata_Ghost_R_t qt_meta_stringdata_Ghost_R = {
     {
-QT_MOC_LITERAL(0, 0, 5), // "Ghost"
-QT_MOC_LITERAL(1, 6, 4), // "move"
-QT_MOC_LITERAL(2, 11, 0), // ""
-QT_MOC_LITERAL(3, 12, 9), // "pac_man_x"
-QT_MOC_LITERAL(4, 22, 9) // "pac_man_y"
+QT_MOC_LITERAL(0, 0, 7), // "Ghost_R"
+QT_MOC_LITERAL(1, 8, 4), // "move"
+QT_MOC_LITERAL(2, 13, 0) // ""
 
     },
-    "Ghost\0move\0\0pac_man_x\0pac_man_y"
+    "Ghost_R\0move\0"
 };
 #undef QT_MOC_LITERAL
 
-static const uint qt_meta_data_Ghost[] = {
+static const uint qt_meta_data_Ghost_R[] = {
 
  // content:
        8,       // revision
@@ -57,52 +55,53 @@ static const uint qt_meta_data_Ghost[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    2,   19,    2, 0x0a /* Public */,
+       1,    0,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
+    QMetaType::Void,
 
        0        // eod
 };
 
-void Ghost::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+void Ghost_R::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Ghost *>(_o);
+        auto *_t = static_cast<Ghost_R *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->move((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 0: _t->move(); break;
         default: ;
         }
     }
+    (void)_a;
 }
 
-QT_INIT_METAOBJECT const QMetaObject Ghost::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject Ghost_R::staticMetaObject = { {
     QMetaObject::SuperData::link<QObject::staticMetaObject>(),
-    qt_meta_stringdata_Ghost.data,
-    qt_meta_data_Ghost,
+    qt_meta_stringdata_Ghost_R.data,
+    qt_meta_data_Ghost_R,
     qt_static_metacall,
     nullptr,
     nullptr
 } };
 
 
-const QMetaObject *Ghost::metaObject() const
+const QMetaObject *Ghost_R::metaObject() const
 {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *Ghost::qt_metacast(const char *_clname)
+void *Ghost_R::qt_metacast(const char *_clname)
 {
     if (!_clname) return nullptr;
-    if (!strcmp(_clname, qt_meta_stringdata_Ghost.stringdata0))
+    if (!strcmp(_clname, qt_meta_stringdata_Ghost_R.stringdata0))
         return static_cast<void*>(this);
     if (!strcmp(_clname, "QGraphicsPixmapItem"))
         return static_cast< QGraphicsPixmapItem*>(this);
     return QObject::qt_metacast(_clname);
 }
 
-int Ghost::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+int Ghost_R::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QObject::qt_metacall(_c, _id, _a);
     if (_id < 0)

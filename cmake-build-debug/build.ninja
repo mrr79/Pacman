@@ -121,6 +121,14 @@ build CMakeFiles/Proyecto_2_Datos_ll.dir/SuperDot.cpp.o: CXX_COMPILER__Proyecto_
   OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
   OBJECT_FILE_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
 
+build CMakeFiles/Proyecto_2_Datos_ll.dir/Utils.cpp.o: CXX_COMPILER__Proyecto_2_Datos_ll_Debug /home/mrr/Desktop/Pacman/Pacman/Utils.cpp || cmake_object_order_depends_target_Proyecto_2_Datos_ll
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Proyecto_2_Datos_ll.dir/Utils.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -fPIC -std=gnu++17
+  INCLUDES = -I/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+  OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+
 build CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o: CXX_COMPILER__Proyecto_2_Datos_ll_Debug /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp || cmake_object_order_depends_target_Proyecto_2_Datos_ll
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o.d
@@ -137,7 +145,7 @@ build CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/
 #############################################
 # Link the executable Proyecto_2_Datos_ll
 
-build Proyecto_2_Datos_ll: CXX_EXECUTABLE_LINKER__Proyecto_2_Datos_ll_Debug CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/main.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dificulties_Window.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Game.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Pac_Man.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dots.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Blocks.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Ghost.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/SuperDot.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6 || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
+build Proyecto_2_Datos_ll: CXX_EXECUTABLE_LINKER__Proyecto_2_Datos_ll_Debug CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/main.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dificulties_Window.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Game.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Pac_Man.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dots.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Blocks.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Ghost.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/SuperDot.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Utils.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6 || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6
   OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
@@ -237,7 +245,7 @@ build Proyecto_2_Datos_ll_autogen/timestamp Proyecto_2_Datos_ll_autogen/mocs_com
 #############################################
 # Custom command for Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp
 
-build Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp: CUSTOM_COMMAND /home/mrr/Desktop/Pacman/Pacman/Resources.qrc CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json /home/mrr/Desktop/Pacman/Pacman/Dot.png /home/mrr/Desktop/Pacman/Pacman/pac_man_2.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1D.png /home/mrr/Desktop/Pacman/Pacman/SuperDot.png /home/mrr/Desktop/Pacman/Pacman/GhostL.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0D.png /home/mrr/Desktop/Pacman/Pacman/block.png /home/mrr/Desktop/Pacman/Pacman/GhostR.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1L.png /home/mrr/Desktop/Pacman/Pacman/GhostT.png /home/mrr/Desktop/Pacman/Pacman/GhostU.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0L.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1R.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1U.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0R.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0U.png /home/mrr/Desktop/Pacman/Pacman/back.png /home/mrr/Desktop/Pacman/Pacman/GhostD.png /usr/lib/qt5/bin/rcc || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
+build Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp: CUSTOM_COMMAND /home/mrr/Desktop/Pacman/Pacman/Resources.qrc CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json /home/mrr/Desktop/Pacman/Pacman/ghost1.png /home/mrr/Desktop/Pacman/Pacman/block.png /home/mrr/Desktop/Pacman/Pacman/pac_man_2.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0D.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0U.png /home/mrr/Desktop/Pacman/Pacman/Dot.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0L.png /home/mrr/Desktop/Pacman/Pacman/SuperDot.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1R.png /home/mrr/Desktop/Pacman/Pacman/back.png /home/mrr/Desktop/Pacman/Pacman/pac_man_0R.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1U.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1D.png /home/mrr/Desktop/Pacman/Pacman/pac_man_1L.png /usr/lib/qt5/bin/rcc || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
   COMMAND = cd /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug && /snap/clion/235/bin/cmake/linux/x64/bin/cmake -E cmake_autorcc /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/Proyecto_2_Datos_ll_autogen.dir/AutoRcc_Resources_EWIEGA46WW_Info.json Debug
   DESC = Automatic RCC for Resources.qrc
   restat = 1
@@ -246,7 +254,7 @@ build Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_w
 #############################################
 # Phony custom command for CMakeFiles/Proyecto_2_Datos_ll_autogen_timestamp_deps
 
-build CMakeFiles/Proyecto_2_Datos_ll_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Proyecto_2_Datos_ll_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/qt5/bin/moc /usr/lib/qt5/bin/uic
+build CMakeFiles/Proyecto_2_Datos_ll_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Proyecto_2_Datos_ll_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/qt5/bin/uic /usr/lib/qt5/bin/moc
 
 
 #############################################

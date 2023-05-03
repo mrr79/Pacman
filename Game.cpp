@@ -22,7 +22,7 @@ Game::Game(char mapa[21][30], int points, int lifes, QWidget *parent) :
 
     pac_man = new Pac_Man(m_mapa, m_points, m_lifes, points_label, scene);
     pac_man->set_values(mapa, points, lifes, points_label, scene);
-    Ghost *ghost = new Ghost();
+    //Ghost *ghost = new Ghost();
 
     QTimer *col = new QTimer();
     connect(col,SIGNAL(timeout()),pac_man,SLOT(check_collision()));
@@ -37,17 +37,17 @@ Game::Game(char mapa[21][30], int points, int lifes, QWidget *parent) :
     points_label->setDefaultTextColor(Qt::red);
 
     scene->addItem(pac_man);
-    scene->addItem(ghost);
+    //scene->addItem(ghost);
     scene->addItem(points_label);
 
     points_label->setPos(720,590);
-    ghost->setPos(810,30);
+   //ghost->setPos(810,30);
 
     pac_man->set_points_label(points_label);
     pac_man->set_mapa(mapa);
     pac_man->setFlag(QGraphicsItem::ItemIsFocusable);
     pac_man->setFocus();
-    pac_man->setPos(420,600/2);
+    pac_man->setPos(pacmanX,pacmanY);
 
     setScene(scene);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -83,8 +83,21 @@ void Game::init_lab()
                 dot->setPos((j*30)+10, (i*30)+10);
                 scene->addItem(dot);
             }
+            else if (m_mapa[i][j] == 'P') // if character is 'P', add pacman
+            {
+                pacmanX=(j*30);
+                pacmanY=i*30;
+            }
+            else if (m_mapa[i][j] == '1') // if character is '1', add ghost
+            {
+                Ghost *ghost = new Ghost(pacmanX,pacmanY);
+                ghost->setPos(j*30, i*30); // set ghost position
+                scene->addItem(ghost);
+                //ghost->move(pacmanX,pacmanY);
+            }
             }
 
         }
+
     }
 

@@ -1,41 +1,5 @@
-Proyecto_2_Datos_ll_autogen/timestamp: \
-  /home/mrr/Desktop/Pacman/Pacman/Blocks.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Blocks.h \
-  /home/mrr/Desktop/Pacman/Pacman/CMakeLists.txt \
-  /home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.h \
-  /home/mrr/Desktop/Pacman/Pacman/Dots.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Dots.h \
-  /home/mrr/Desktop/Pacman/Pacman/Game.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Game.h \
-  /home/mrr/Desktop/Pacman/Pacman/Ghost.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Ghost.h \
-  /home/mrr/Desktop/Pacman/Pacman/Pac_Man.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Pac_Man.h \
-  /home/mrr/Desktop/Pacman/Pacman/Resources.qrc \
-  /home/mrr/Desktop/Pacman/Pacman/SuperDot.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/SuperDot.h \
-  /home/mrr/Desktop/Pacman/Pacman/Utils.cpp \
-  /home/mrr/Desktop/Pacman/Pacman/Utils.h \
-  CMakeFiles/3.25.2/CMakeCXXCompiler.cmake \
-  CMakeFiles/3.25.2/CMakeSystem.cmake \
-  Proyecto_2_Datos_ll_autogen/moc_predefs.h \
-  /home/mrr/Desktop/Pacman/Pacman/main.cpp \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeInitializeConfigs.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeLanguageInformation.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeParseArguments.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInformation.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeSystemSpecificInitialize.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU-CXX.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Compiler/GNU.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU-CXX.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux-GNU.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/Linux.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/Platform/UnixPaths.cmake \
+/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Ghost_R.cpp: /home/mrr/Desktop/Pacman/Pacman/Ghost_R.h \
+  /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -272,13 +236,11 @@ Proyecto_2_Datos_ll_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
@@ -327,7 +289,6 @@ Proyecto_2_Datos_ll_autogen/timestamp: \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h \
@@ -358,44 +319,4 @@ Proyecto_2_Datos_ll_autogen/timestamp: \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake \
-  /usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake \
-  /snap/clion/235/bin/cmake/linux/x64/bin/cmake
+  /usr/lib/gcc/x86_64-linux-gnu/12/include/syslimits.h

@@ -2,6 +2,7 @@
 #include "Dots.h"
 #include "SuperDot.h"
 #include "Ghost.h"
+#include "Utils.h"
 #include "qgraphicsscene.h"
 #include <QTimer>
 #include <QKeyEvent>
@@ -86,6 +87,7 @@ void Pac_Man::check_collision()
             delete colliding_items[i];
             points += 10;
             points_label->setPlainText("Points: " + QString::number(points));
+
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(SuperDot)){
@@ -139,6 +141,8 @@ void Pac_Man::move()
             position_x++;
         }
     }
+    position_x = y() / 30;
+    position_y = x() / 30;
 }
 
 void Pac_Man::animation_R()
