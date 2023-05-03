@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Ghost_t {
-    QByteArrayData data[6];
-    char stringdata0[48];
+    QByteArrayData data[4];
+    char stringdata0[28];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,13 +35,10 @@ static const qt_meta_stringdata_Ghost_t qt_meta_stringdata_Ghost = {
 QT_MOC_LITERAL(0, 0, 5), // "Ghost"
 QT_MOC_LITERAL(1, 6, 4), // "move"
 QT_MOC_LITERAL(2, 11, 0), // ""
-QT_MOC_LITERAL(3, 12, 9), // "pac_man_x"
-QT_MOC_LITERAL(4, 22, 9), // "pac_man_y"
-QT_MOC_LITERAL(5, 32, 15) // "moveWithoutArgs"
+QT_MOC_LITERAL(3, 12, 15) // "moveWithoutArgs"
 
     },
-    "Ghost\0move\0\0pac_man_x\0pac_man_y\0"
-    "moveWithoutArgs"
+    "Ghost\0move\0\0moveWithoutArgs"
 };
 #undef QT_MOC_LITERAL
 
@@ -59,11 +56,11 @@ static const uint qt_meta_data_Ghost[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    2,   24,    2, 0x0a /* Public */,
-       5,    0,   29,    2, 0x0a /* Public */,
+       1,    0,   24,    2, 0x0a /* Public */,
+       3,    0,   25,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    3,    4,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -75,11 +72,12 @@ void Ghost::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         auto *_t = static_cast<Ghost *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->move((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
+        case 0: _t->move(); break;
         case 1: _t->moveWithoutArgs(); break;
         default: ;
         }
     }
+    (void)_a;
 }
 
 QT_INIT_METAOBJECT const QMetaObject Ghost::staticMetaObject = { {

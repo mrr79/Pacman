@@ -7,11 +7,12 @@
 class Ghost:public QObject , public  QGraphicsPixmapItem{
     Q_OBJECT
 public:
-    Ghost(char mapa[21][30],int pac_man_x, int pac_man_y);
+    Ghost(char mapa[21][30],int pac_man_x, int pac_man_y,int j,int i);
 
     void set_mapa(char mapa[21][30]);
 public slots:
-    void move(int pac_man_x, int pac_man_y);
+    //void move(int pac_man_x, int pac_man_y);
+    void move();
     void moveWithoutArgs();
 
 private:
@@ -22,6 +23,8 @@ private:
 
     int pac_man_x; // Declare pac_man_x as a private member variable
     int pac_man_y;
+    int j;
+    int i;
 };
 
 
