@@ -7,16 +7,22 @@
 #include <QTimer>
 #include <QKeyEvent>
 #include <QDebug>
+#include <iostream>
 
 int cycle = 0;
 
-Pac_Man::Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene)
+Pac_Man::Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *sceneint,int j, int i)
 {
 
     this->points = points;
     this->lifes = lifes;
     this->points_label = points_label;
     this->scene = scene;
+    this->act_pacman_x=j;
+    this->act_pacman_y=i;
+
+    std::cout << "PAcman inicial en matriz X TIENE QUE SER 10 O 15: " << act_pacman_x<< std::endl;
+    std::cout << "PAcman inicial en matriz Y TIENE QUE SER 10 O 15: " << act_pacman_y<< std::endl;
 
 
 
@@ -118,31 +124,54 @@ void Pac_Man::check_points()
 void Pac_Man::move()
 {
     if (direcction == 'R'){
-        if (x() < 810 && mapa[position_x][position_y + 1] != 'X'){
+        if (x() < 810 && mapa[act_pacman_x][act_pacman_y + 1] != 'X'){
             setPos(x() + speed,y());
-            position_y++;
+            act_pacman_y++;
         }
     }
     else if (direcction == 'L'){
-        if (x() > 30 && mapa[position_x][position_y - 1] != 'X'){
+        if (x() > 30 && mapa[act_pacman_x][act_pacman_y - 1] != 'X'){
             setPos(x() - speed,y());
-            position_y--;
+            act_pacman_y--;
         }
     }
     else if (direcction == 'U'){
-        if (y() > 30 && mapa[position_x - 1][position_y] != 'X'){
+        if (y() > 30 && mapa[act_pacman_x - 1][act_pacman_y] != 'X'){
             setPos(x(),y() - speed);
-            position_x--;
+            act_pacman_x--;
         }
     }
     else if (direcction == 'D'){
-        if (y() < 540 && mapa[position_x + 1][position_y] != 'X'){
+        if (y() < 570 && mapa[act_pacman_x + 1][act_pacman_y] != 'X'){
             setPos(x(),y() + speed);
-            position_x++;
+            act_pacman_x++;
         }
     }
-    position_x = y() / 30;// posicion del pacman en el mapa
-    position_y = x() / 30;
+    act_pacman_x = y() / 30;// posicion del pacman en el mapa
+    act_pacman_y = x() / 30;
+    std::cout << "PACMAN X:" << act_pacman_x << std::endl;
+    std::cout << "PACMAN Y:" << act_pacman_y << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
+    setActPacmanX(act_pacman_x);
+    setActPacmanY(act_pacman_y);
+}
+void Pac_Man::setActPacmanX(int m) {
+    act_pacman_x = m;
+    std::cout << "PACMAN X EN SETTER:" << act_pacman_x << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
+}
+
+void Pac_Man::setActPacmanY(int n) {
+    act_pacman_y = n;
+    std::cout << "PACMAN Y EN SETTER:" << act_pacman_y << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
+}
+
+int Pac_Man::getActPacmanX() {
+    return act_pacman_x;
+    //std::cout << "X PACMAN EN get" << act_pacman_x << std::endl;
+}
+
+int Pac_Man::getActPacmanY() {
+    return act_pacman_y;
+    //std::cout << "Y PACMAN EN get" << act_pacman_y<< std::endl;
 }
 
 void Pac_Man::animation_R()

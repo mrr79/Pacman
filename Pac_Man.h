@@ -8,7 +8,7 @@ class Pac_Man: public QObject , public  QGraphicsPixmapItem{
      Q_OBJECT
 public:
 
-    Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene);
+    Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene,int j, int i);
     void set_points(int points);
     void set_lifes(int lifes);
 
@@ -20,10 +20,14 @@ public:
     void set_points_label(QGraphicsTextItem *points_label);
     void set_mapa(char mapa[21][30]);
 
-    int position_x = 10;
-    int position_y = 14;
+    int act_pacman_x;
+    int act_pacman_y;
     int points_count = 0;
 
+    int getActPacmanX();
+    int getActPacmanY();
+    void setActPacmanX(int m);
+    void setActPacmanY(int n);
 
     QTimer *timer_animation = new QTimer;
 
@@ -45,6 +49,8 @@ private:
     int lifes;
 
     int points;
+    int m;
+    int n;
 };
 
 #endif // PAC_MAN_H

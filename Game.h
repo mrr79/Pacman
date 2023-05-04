@@ -27,7 +27,7 @@ public:
     Pac_Man *pac_man;
 
     QGraphicsTextItem *points_label;
-
+    Pac_Man* get_pacman();
 
     QGraphicsScene * scene;;
 private:

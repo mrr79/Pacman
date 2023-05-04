@@ -7,8 +7,11 @@
 #include <ctime>
 #include <iostream>
 #include <QRandomGenerator>
+#include <QCoreApplication>
+#include <QThread>
 
-Ghost::Ghost(char mapa[21][30],int pac_man_x, int pac_man_y, int j, int i)
+Ghost::Ghost(char mapa[21][30],int pac_man_x, int pac_man_y, int j, int i,Game* game)
+        : m_game(game)
 {
     setPixmap(QPixmap(":/Images/ghost1.png"));
 
@@ -18,11 +21,16 @@ Ghost::Ghost(char mapa[21][30],int pac_man_x, int pac_man_y, int j, int i)
     timer_move->setSingleShot(false); // Set the timer to run only once
     QTimer::singleShot(3000, timer_move, SLOT(start())); // Wait for 3 seconds and then start the timer
 
-    position_x = j;
-    position_y =i;
+    position_x = j;//13
+    position_y =i;//0 o 1
+    std::cout << "ghost inicial en matriz X: " << position_x<< std::endl;
+    std::cout << "ghost inicial en matriz Y: " << position_y<< std::endl;
 
     set_mapa(mapa);
+    //Pac_Man* pacman = m_game->get_pacman();
+
 }
+
 
 void Ghost::set_mapa(char mapa[21][30])
 {
@@ -37,46 +45,56 @@ void Ghost::set_mapa(char mapa[21][30])
 
 void Ghost::moveWithoutArgs()
 {
-    std::cout << "entra a move sin args" << std::endl;
+    //std::cout << "entra a move sin args" << std::endl;
     // Call move() with the stored values of pac_man_x and pac_man_y
     move();
 }
 
+Pac_Man* Ghost::getPacman(){
+    if (!pacman){
+        pacman = m_game->get_pacman();
+    }
+    return pacman;
+}
 
 void Ghost::move(){
+    std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
+    int dest_x = 29; // la posición X a la que debe llegar el Ghost
+    int dest_y = position_y; // la posición Y se mantiene igual
+    bool obstacle_found = false; // variable para determinar si se encuentra un obstáculo
 
-        // Calculate the valid directions (i.e., not towards a wall)
-        bool can_move_right = (mapa[position_x][position_y + 1] != 'X');
-        bool can_move_left = (mapa[position_x][position_y - 1] != 'X');
-        bool can_move_down = (mapa[position_x + 1][position_y] != 'X');
-        bool can_move_up = (mapa[position_x - 1][position_y] != 'X');
-        QVector<QPoint> valid_directions;
-        if (can_move_right) valid_directions.append(QPoint(1, 0));
-        if (can_move_left) valid_directions.append(QPoint(-1, 0));
-        if (can_move_down) valid_directions.append(QPoint(0, 1));
-        if (can_move_up) valid_directions.append(QPoint(0, -1));
-
-        // Choose a random valid direction (or don't move if there are no valid directions)
-        QPoint chosen_direction(0, 0);
-        if (valid_directions.size() > 0) {
-            QRandomGenerator generator;
-            int random_index = generator.bounded(valid_directions.size());
-            chosen_direction = valid_directions[random_index];
+    // mover hacia la derecha hasta encontrar un obstáculo o llegar a dest_x
+    while (position_x < dest_x && !obstacle_found) {
+        if (mapa[position_y][position_x + 1] == 'X') {
+            obstacle_found = true;
+        } else {
+            setPos(x() + speed, y());
+            position_x++;
+            QCoreApplication::processEvents(); // para actualizar la ventana
+            QThread::msleep(300); // para darle una pausa al movimiento
         }
+    }
 
-        // Move in the chosen direction (or don't move if the next position is a wall)
-        int next_x = position_x + chosen_direction.x();
-        int next_y = position_y + chosen_direction.y();
-        if (mapa[next_x][next_y] != 'X') {
-            setPos(x() + speed * chosen_direction.x(), y() + speed * chosen_direction.y());
-            position_x = next_x;
-            position_y = next_y;
+    // si no hay obstáculo, mover hacia abajo hasta encontrar un obstáculo o llegar a dest_y
+    while (position_y < dest_y && !obstacle_found) {
+        if (mapa[position_y + 1][position_x] == 'X') {
+            obstacle_found = true;
+        } else {
+            setPos(x(), y() + speed);
+            position_y++;
+            QCoreApplication::processEvents(); // para actualizar la ventana
+            QThread::msleep(300); // para darle una pausa al movimiento
         }
+    }
+//    std::cout << "ghost ACTUAL en matriz X: " << position_x<< std::endl;
+//    std::cout << "ghost ACTUAL en matriz Y: " << position_y<< std::endl;
+    int pac_man_x = pacman->getActPacmanX(); // obtener el valor de act_pacman_x
+    int pac_man_y = pacman->getActPacmanY();
+    std::cout << "PACMAN X EN GHOST " << pac_man_x<< std::endl;
+    std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
 
-        // If the ghost can't move in any direction without hitting a wall, wait a random amount of time before trying again
-        if (valid_directions.size() == 0) {
-            QRandomGenerator generator;
-            QTimer::singleShot(generator.bounded(1000) + 500, this, SLOT(move()));
-        }
+}
 
+void Ghost::chasePacMan(Pac_Man* pac_man) {
+    std::cout << "bella: " << pac_man_y<< std::endl;
 }
