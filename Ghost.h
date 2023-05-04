@@ -9,7 +9,7 @@
 class Ghost:public QObject , public  QGraphicsPixmapItem{
     Q_OBJECT
 public:
-    Ghost(char mapa[21][30],int pac_man_x, int pac_man_y,int j,int i, Game* game);
+    Ghost(char mapa[21][30],int j,int i);
 
     Pac_Man* getPacman();
     void set_mapa(char mapa[21][30]);
@@ -18,7 +18,8 @@ public slots:
     void move();
     void moveWithoutArgs();
     void chasePacMan(Pac_Man* pac_man);
-
+public slots:
+    void actualizar_posicion_pacman(int x, int y);
 
 private:
     int speed=30;
@@ -31,8 +32,6 @@ private:
     int j;
     int i;
 
-    Pac_Man *pacman;
-    Game *m_game;
 };
 
 

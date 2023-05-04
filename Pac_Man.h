@@ -51,6 +51,9 @@ private:
     int points;
     int m;
     int n;
+
+signals:
+    void pacman_posicion_actualizada(int x, int y);
 };
 
 #endif // PAC_MAN_H

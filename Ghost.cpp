@@ -10,8 +10,8 @@
 #include <QCoreApplication>
 #include <QThread>
 
-Ghost::Ghost(char mapa[21][30],int pac_man_x, int pac_man_y, int j, int i,Game* game)
-        : m_game(game)
+Ghost::Ghost(char mapa[21][30], int j, int i)
+
 {
     setPixmap(QPixmap(":/Images/ghost1.png"));
 
@@ -28,6 +28,8 @@ Ghost::Ghost(char mapa[21][30],int pac_man_x, int pac_man_y, int j, int i,Game* 
 
     set_mapa(mapa);
     //Pac_Man* pacman = m_game->get_pacman();
+    //QObject::connect(pacman, SIGNAL(posicion_actualizada(int, int)),
+                     //this, SLOT(actualizar_posicion_pacman(int, int)));
 
 }
 
@@ -50,12 +52,6 @@ void Ghost::moveWithoutArgs()
     move();
 }
 
-Pac_Man* Ghost::getPacman(){
-    if (!pacman){
-        pacman = m_game->get_pacman();
-    }
-    return pacman;
-}
 
 void Ghost::move(){
     std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
@@ -88,13 +84,16 @@ void Ghost::move(){
     }
 //    std::cout << "ghost ACTUAL en matriz X: " << position_x<< std::endl;
 //    std::cout << "ghost ACTUAL en matriz Y: " << position_y<< std::endl;
-    int pac_man_x = pacman->getActPacmanX(); // obtener el valor de act_pacman_x
-    int pac_man_y = pacman->getActPacmanY();
-    std::cout << "PACMAN X EN GHOST " << pac_man_x<< std::endl;
-    std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
+    //int pac_man_x = pacman->getActPacmanX(); // obtener el valor de act_pacman_x
+    //int pac_man_y = pacman->getActPacmanY();
+    //std::cout << "PACMAN X EN GHOST " << pac_man_x<< std::endl;
+    //std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
 
 }
 
 void Ghost::chasePacMan(Pac_Man* pac_man) {
     std::cout << "bella: " << pac_man_y<< std::endl;
+}
+void Ghost::actualizar_posicion_pacman(int x, int y) {
+    std::cout << "La posición actual de Pac-Man es (" << x << ", " << y << ")" << std::endl;
 }

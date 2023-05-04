@@ -151,8 +151,8 @@ void Pac_Man::move()
     act_pacman_y = x() / 30;
     std::cout << "PACMAN X:" << act_pacman_x << std::endl;
     std::cout << "PACMAN Y:" << act_pacman_y << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
-    setActPacmanX(act_pacman_x);
-    setActPacmanY(act_pacman_y);
+    emit pacman_posicion_actualizada(act_pacman_x, act_pacman_y);
+
 }
 void Pac_Man::setActPacmanX(int m) {
     act_pacman_x = m;
