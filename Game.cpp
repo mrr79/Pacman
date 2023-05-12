@@ -6,7 +6,7 @@
 #include <QGraphicsRectItem>
 #include <iostream>
 
-Game::Game(char mapa[21][30], int points, int lifes, QWidget *parent) :
+Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
         m_points(points), m_lifes(lifes), QGraphicsView(parent)
 {
     memcpy(m_mapa, mapa, sizeof(m_mapa));
@@ -80,27 +80,27 @@ void Game::init_lab()
     {
         for (int j = 0; j < int(31); j++)
         {
-            if (m_mapa[i][j] == 'X'){
+            if (m_mapa[i][j] == 0){
                 Block *block = new Block();
                 block->setPos(j*30, i*30);
                 scene->addItem(block);
 
             }
-            else if (m_mapa[i][j] == ' '){
+            else if (m_mapa[i][j] == 1){
                 Dot *dot = new Dot();
                 dot->setPos((j*30)+10, (i*30)+10);
                 scene->addItem(dot);
             }
-            else if (m_mapa[i][j] == 'P') // if character is 'P', add pacman
+            else if (m_mapa[i][j] == 9) // if character is 'P', add pacman
             {
                 pacmanX=(j*30);// posicion en pantalla
                 pacmanY=i*30;
                 std::cout << "j pacman: " << pacmanX/30<< std::endl;//coordenadas de la matriz
                 std::cout << "i pacman: " << pacmanY/30<< std::endl;
             }
-            else if (m_mapa[i][j] == '1') // if character is '1', add ghost
+            else if (m_mapa[i][j] == 11) // if character is '1', add ghost
             {
-                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
+                Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost =j;
                 ighost=i;
 //                std::cout << "j ghost: " << j<< std::endl;

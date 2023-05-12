@@ -1,26 +1,28 @@
 Proyecto_2_Datos_ll_autogen/timestamp: \
-	/home/mrr/Desktop/Pacman/Pacman/Blocks.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Blocks.h \
-	/home/mrr/Desktop/Pacman/Pacman/CMakeLists.txt \
-	/home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Dificulties_Window.h \
-	/home/mrr/Desktop/Pacman/Pacman/Dots.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Dots.h \
-	/home/mrr/Desktop/Pacman/Pacman/Game.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Game.h \
-	/home/mrr/Desktop/Pacman/Pacman/Ghost.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Ghost.h \
-	/home/mrr/Desktop/Pacman/Pacman/Pac_Man.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Pac_Man.h \
-	/home/mrr/Desktop/Pacman/Pacman/Resources.qrc \
-	/home/mrr/Desktop/Pacman/Pacman/SuperDot.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/SuperDot.h \
-	/home/mrr/Desktop/Pacman/Pacman/Utils.cpp \
-	/home/mrr/Desktop/Pacman/Pacman/Utils.h \
-	/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake \
-	/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake \
-	/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
-	/home/mrr/Desktop/Pacman/Pacman/main.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/AStar.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/AStar.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Blocks.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Blocks.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/CMakeLists.txt \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Dificulties_Window.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Dificulties_Window.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Dots.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Dots.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Game.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Game.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Ghost.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Ghost.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Resources.qrc \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Utils.cpp \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/Utils.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeCXXCompiler.cmake \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/CMakeFiles/3.25.2/CMakeSystem.cmake \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
+	/home/mrr/Desktop/Pacman/Pacman/Pacman/main.cpp \
 	/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCXXInformation.cmake \
 	/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeCommonLanguageInclude.cmake \
 	/snap/clion/235/bin/cmake/linux/x64/share/cmake-3.25/Modules/CMakeGenericSystem.cmake \

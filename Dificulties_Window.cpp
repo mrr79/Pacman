@@ -44,7 +44,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     proxy_normal->setWidget(play_button);
     scene->addItem(proxy_normal);
     proxy_normal->setPos(320,240);
-    connect(play_button, &QPushButton::released, this, &Dificulties_Window::classic);
+    //connect(play_button, &QPushButton::released, this, &Dificulties_Window::classic);
     //Creaction and configuration of hard mode button
 
     QPushButton * hard_mode = new QPushButton("Hard");
@@ -53,7 +53,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     proxy_hard->setWidget(hard_mode);
     scene->addItem(proxy_hard);
     proxy_hard->setPos(320,330);
-    connect(hard_mode, &QPushButton::released, this, &Dificulties_Window::hard); //Method that will activated when the button is released
+    //connect(hard_mode, &QPushButton::released, this, &Dificulties_Window::hard); //Method that will activated when the button is released
 
     QPushButton * normal_mode = new QPushButton("Normal");
     normal_mode->setGeometry(0,0,170,50);
@@ -61,7 +61,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     proxy_classic->setWidget(normal_mode);
     scene->addItem(proxy_classic);
     proxy_classic->setPos(320,420);
-    connect(normal_mode, &QPushButton::released, this, &Dificulties_Window::normal); //Method that will activated when the button is released
+    //connect(normal_mode, &QPushButton::released, this, &Dificulties_Window::normal); //Method that will activated when the button is released
 
 
     //Configuration of the scene
@@ -79,7 +79,7 @@ void Dificulties_Window::easy()
 {
     int points = 0;
     int lifes = 3;
-    char mapa[21][30] = {
+    /*int mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "X            1              X",
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
@@ -101,19 +101,54 @@ void Dificulties_Window::easy()
             "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
             "X                           X",
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    };
+    };*/
 
+    int mapa[21][30] = {
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+            {0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0},
+            {0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0},
+            {0,1,0,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,0,0,1,1,1,1,1,0,0,0,0},
+            {0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,1,9,0,0,0},
+            {0,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,0,0,0,1,0,0,0},
+            {0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,1,0,0,0},
+            {0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,0,1,0,1,0,1,1,1,0,0,0},
+            {0,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,0,1,0,0,0},
+            {0,0,0,0,1,1,1,0,1,0,1,1,1,1,1,1,1,1,0,1,0,1,1,1,0,1,0,0,0},
+            {0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0},
+            {0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,0,0,0},
+            {0,0,0,0,0,0,1,0,1,1,11,1,0,1,1,1,0,1,0,1,0,0,0,0,0,1,0,0,0},
+            {0,0,0,0,0,0,1,0,1,0,0,1,0,1,0,0,0,1,0,1,0,1,1,1,1,1,0,0,0},
+            {0,0,0,0,0,0,1,1,1,0,1,1,1,1,0,1,0,1,0,1,0,1,0,0,0,1,0,0,0},
+            {0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,1,1,1,1,0,0,0},
+            {0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,0,0,0},
+            {0,0,0,0,0,0,0,0,1,1,1,1,0,1,1,1,0,1,1,1,0,0,0,0,0,1,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+    };
     Game *level_1 = new Game(mapa, 0, 3);
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
+    int espacioCount = 0;
+    for (int i = 0; i < 21; i++) {
+        for (int j = 0; j < 30; j++) {
+            if (mapa[i][j] == ' ') {
+                espacioCount++;
+            }
+        }
+    }
+
+    std::cout << "Cantidad de espacios easy : " << espacioCount << std::endl;
 }
 
+/*
 void Dificulties_Window::normal()
 {
+
     int points = 0;
     int lifes = 3;
-    char mapa[21][30] = {
+    int mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "X                           X",
             "X XXXXXXXXX         XXXXXX X",
@@ -147,7 +182,7 @@ void Dificulties_Window::classic()
 {
     int points = 200;
     int lifes = 3;
-    char mapa[21][30] = {
+    int mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "X                           X",
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
@@ -157,20 +192,31 @@ void Dificulties_Window::classic()
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
             "X                           X",
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X                           X",
-            "X           XXX             X",
-            "X XXXXXXXX  XXX  XXXXXXXXXX X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
+            "X            1              X",
+            "X          XX XX            X",
+            "X          X   X            X",
+            "X XXXXXXXX  XXX  XXXXXXXXX X",
             "X                           X",
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
             "X                           X",
+            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
+            "X           P               X",
             "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     };
+    int espacioCount = 0;
+    for (int i = 0; i < 21; i++) {
+        for (int j = 0; j < 30; j++) {
+            if (mapa[i][j] == ' ') {
+                espacioCount++;
+            }
+        }
+    }
 
+    std::cout << "Cantidad de espacios Classic : " << espacioCount << std::endl;
+
+    //return 0;
 
     Game *level_1 = new Game(mapa, 200, 2);
     std::cout << "clasico de 4: 4 fantasmas " << std::endl;
@@ -181,7 +227,7 @@ void Dificulties_Window::hard()
 {
     int points = 200;
     int lifes = 3;
-    char mapa[21][30] = {
+    int mapa[21][30] = {
             "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
             "X            XXX            X",
             "X XXXXX XXXX XXX XXXX XXXXX X",
@@ -210,3 +256,4 @@ void Dificulties_Window::hard()
     level_1->show();
     this->close();
 }
+*/

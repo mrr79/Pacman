@@ -30,7 +30,7 @@ set(PROJECT_SOURCES
         SuperDot.cpp
         Resources.qrc
 
-        Utils.cpp Utils.h)
+        Utils.cpp Utils.h AStar.cpp AStar.h)
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Proyecto_2_Datos_ll

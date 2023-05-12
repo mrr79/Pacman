@@ -1,7 +1,7 @@
-/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Ghost.cpp: /home/mrr/Desktop/Pacman/Pacman/Ghost.h \
-  /home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
-  /home/mrr/Desktop/Pacman/Pacman/Game.h \
-  /home/mrr/Desktop/Pacman/Pacman/Pac_Man.h \
+/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Ghost.cpp: /home/mrr/Desktop/Pacman/Pacman/Pacman/Ghost.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/Game.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

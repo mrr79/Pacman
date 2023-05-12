@@ -115,7 +115,7 @@
 			[
 				{
 					"backtrace" : 0,
-					"path" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include"
+					"path" : "/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include"
 				},
 				{
 					"backtrace" : 3,
@@ -164,7 +164,8 @@
 				13,
 				15,
 				17,
-				20
+				19,
+				22
 			]
 		}
 	],
@@ -246,7 +247,8 @@
 				13,
 				15,
 				17,
-				20
+				19,
+				22
 			]
 		},
 		{
@@ -260,7 +262,8 @@
 				10,
 				12,
 				14,
-				18
+				18,
+				20
 			]
 		},
 		{
@@ -268,15 +271,15 @@
 			"sourceIndexes" : 
 			[
 				16,
-				19
+				21
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				21,
-				22
+				23,
+				24
 			]
 		}
 	],
@@ -386,6 +389,17 @@
 		{
 			"backtrace" : 1,
 			"path" : "Utils.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "AStar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "AStar.h",
 			"sourceGroupIndex" : 1
 		},
 		{

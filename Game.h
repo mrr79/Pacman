@@ -10,7 +10,7 @@ class Game: public QGraphicsView{
 
 public:
 
-    Game(char mapa[21][30], int points, int lifes, QWidget *parent = nullptr);
+    Game(int mapa[21][30], int points, int lifes, QWidget *parent = nullptr);
 
     static const uint LABYRINTH_WIDTH  = 21;
     static const uint LABYRINTH_HEIGHT = 31;
@@ -37,7 +37,7 @@ private:
 
     int m_points;
     int m_lifes;
-    char m_mapa[21][30];
+    int m_mapa[21][30];
 
     int pacmanX=0;
     int pacmanY=0;

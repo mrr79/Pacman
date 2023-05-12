@@ -263,8 +263,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/mrr/Desktop/Pacman/Pacman/cmake-build-debug",
-		"source" : "/home/mrr/Desktop/Pacman/Pacman"
+		"build" : "/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug",
+		"source" : "/home/mrr/Desktop/Pacman/Pacman/Pacman"
 	},
 	"version" : 
 	{

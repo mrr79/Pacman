@@ -11,7 +11,7 @@
 
 int cycle = 0;
 
-Pac_Man::Pac_Man(char mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *sceneint,int j, int i)
+Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *sceneint,int j, int i)
 {
 
     this->points = points;
@@ -66,7 +66,7 @@ void Pac_Man::set_points_label(QGraphicsTextItem *points_label)
     this->points_label = points_label;
 }
 
-void Pac_Man::set_mapa(char mapa[21][30])
+void Pac_Man::set_mapa(int mapa[21][30])
 {
     for (int i = 0;i < 21;i++){
         for(int j = 0;j < 30;j++){
@@ -76,7 +76,7 @@ void Pac_Man::set_mapa(char mapa[21][30])
     }
 }
 
-void Pac_Man::set_values(char mapa[21][30], int points, int lifes, QGraphicsTextItem* points_label, QGraphicsScene* scene) {
+void Pac_Man::set_values(int mapa[21][30], int points, int lifes, QGraphicsTextItem* points_label, QGraphicsScene* scene) {
     this->points = points;
     this->lifes = lifes;
     this->points_label = points_label;
@@ -110,13 +110,12 @@ void Pac_Man::check_collision()
     }
 }
 
-void Pac_Man::check_points()
-{
-    if (points % 200 == 0){
+void Pac_Man::check_points() {
+    if (points % 200 == 0) {
 
-        SuperDot *super_dot = new SuperDot();
-        scene->addItem(super_dot);
-        super_dot->setPos(420,600/2);
+        //SuperDot *super_dot = new SuperDot();
+        //scene->addItem(super_dot);
+        //super_dot->setPos(420, 600 / 2);
     }
 }
 
@@ -124,25 +123,25 @@ void Pac_Man::check_points()
 void Pac_Man::move()
 {
     if (direcction == 'R'){
-        if (x() < 810 && mapa[act_pacman_x][act_pacman_y + 1] != 'X'){
+        if (x() < 810 && mapa[act_pacman_x][act_pacman_y + 1] != 0){
             setPos(x() + speed,y());
             act_pacman_y++;
         }
     }
     else if (direcction == 'L'){
-        if (x() > 30 && mapa[act_pacman_x][act_pacman_y - 1] != 'X'){
+        if (x() > 30 && mapa[act_pacman_x][act_pacman_y - 1] != 0){
             setPos(x() - speed,y());
             act_pacman_y--;
         }
     }
     else if (direcction == 'U'){
-        if (y() > 30 && mapa[act_pacman_x - 1][act_pacman_y] != 'X'){
+        if (y() > 30 && mapa[act_pacman_x - 1][act_pacman_y] != 0){
             setPos(x(),y() - speed);
             act_pacman_x--;
         }
     }
     else if (direcction == 'D'){
-        if (y() < 570 && mapa[act_pacman_x + 1][act_pacman_y] != 'X'){
+        if (y() < 570 && mapa[act_pacman_x + 1][act_pacman_y] != 0){
             setPos(x(),y() + speed);
             act_pacman_x++;
         }

@@ -10,7 +10,7 @@
 #include <QCoreApplication>
 #include <QThread>
 
-Ghost::Ghost(char mapa[21][30], int j, int i)
+Ghost::Ghost(int mapa[21][30], int j, int i)
 
 {
     setPixmap(QPixmap(":/Images/ghost1.png"));
@@ -34,7 +34,7 @@ Ghost::Ghost(char mapa[21][30], int j, int i)
 }
 
 
-void Ghost::set_mapa(char mapa[21][30])
+void Ghost::set_mapa(int mapa[21][30])
 {
     std::cout << "entra a set mapa" << std::endl;
     for (int i = 0;i < 21;i++){
