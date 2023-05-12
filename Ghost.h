@@ -31,6 +31,7 @@ private:
     int pac_man_y;
     int j;
     int i;
+    bool llego;
 
 };
 

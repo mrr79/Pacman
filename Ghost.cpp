@@ -47,8 +47,7 @@ void Ghost::set_mapa(int mapa[21][30])
 
 void Ghost::moveWithoutArgs()
 {
-    //std::cout << "entra a move sin args" << std::endl;
-    // Call move() with the stored values of pac_man_x and pac_man_y
+
     move();
 }
 
@@ -61,19 +60,21 @@ void Ghost::move(){
 
     // mover hacia la derecha hasta encontrar un obstáculo o llegar a dest_x
     while (position_x < dest_x && !obstacle_found) {
-        if (mapa[position_y][position_x + 1] == 'X') {
+        if (mapa[position_y][position_x + 1] == 0) {
             obstacle_found = true;
         } else {
             setPos(x() + speed, y());
             position_x++;
+            llego= false;
             QCoreApplication::processEvents(); // para actualizar la ventana
             QThread::msleep(300); // para darle una pausa al movimiento
         }
+        llego= true;
     }
 
     // si no hay obstáculo, mover hacia abajo hasta encontrar un obstáculo o llegar a dest_y
     while (position_y < dest_y && !obstacle_found) {
-        if (mapa[position_y + 1][position_x] == 'X') {
+        if (mapa[position_y + 1][position_x] == 0) {
             obstacle_found = true;
         } else {
             setPos(x(), y() + speed);
@@ -95,5 +96,16 @@ void Ghost::chasePacMan(Pac_Man* pac_man) {
     std::cout << "bella: " << pac_man_y<< std::endl;
 }
 void Ghost::actualizar_posicion_pacman(int x, int y) {
-    std::cout << "La posición actual de Pac-Man es (" << x << ", " << y << ")" << std::endl;
+    if (llego){
+        // ESTE BOOL ACTUALIZA LA POSICION HAST QUE EL BOOL SEA TRUE LO QUE QUIERO ES QUE EL BOOL SEA TRUE HASTA QUE SE COMPLETE LA RUTA. 
+        //std::cout << "La posición actual de Pac-Man es (" << x << ", " << y << ")" << std::endl;
+        pac_man_y=y;
+        pac_man_x=x;
+        std::cout << "PACMAN X EN GHOST " << pac_man_x<< std::endl;
+        std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
+    }
+    else{
+        std::cout << "aun no" << std::endl;
+    }
+
 }
