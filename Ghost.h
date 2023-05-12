@@ -16,6 +16,7 @@ public:
 public slots:
     //void move(int pac_man_x, int pac_man_y);
     void move();
+    void move2();
     void moveWithoutArgs();
     void chasePacMan(Pac_Man* pac_man);
 public slots:
