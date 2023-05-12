@@ -11,6 +11,7 @@
 #include <QThread>
 #include <thread>
 #include "AStar.h"
+#include "Game.h"
 
 Ghost::Ghost(int mapa[21][30], int j, int i)
 
@@ -63,14 +64,19 @@ void Ghost::move(){
     int dest_x = 29; // la posición X a la que debe llegar el Ghost
     int dest_y = position_y; // la posición Y se mantiene igual
     bool obstacle_found = false; // variable para determinar si se encuentra un obstáculo
+    std::cout << "ghost inicial en move X: " << position_x<< std::endl;
+    std::cout << "ghost inicial en move Y: " << position_y<< std::endl;
+    //position_x
     //move2();
     // mover hacia la derecha hasta encontrar un obstáculo o llegar a dest_x
     while (position_x < dest_x && !obstacle_found) {
-        if (mapa[position_y][position_x + 1] == 0) {
+        if (mapa[position_y][position_x + 1 ] == 0) {
             obstacle_found = true;
             if (search){
                 AStar astar;
-                Pair src = make_pair(11,19);//PROblema en source
+                //Pair src = make_pair(11,19);//PROblema en source
+
+                Pair src = make_pair(position_y,position_x);//PROblema en source
                 Pair dest = make_pair(pac_man_x, pac_man_y);
                 std::cout << "GHOST CALCULADO Y: " << position_y<< std::endl;
                 std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
@@ -121,8 +127,8 @@ void Ghost::actualizar_posicion_pacman(int x, int y) {
 
     pac_man_y=y;
     pac_man_x=x;
-    //std::cout << "PACMAN X EN GHOST ANTES " << pac_man_x<< std::endl;
-    //std::cout << "PACMAN Y EN GHOST: ANTES " << pac_man_y<< std::endl;
+    std::cout << "PACMAN X EN GHOST ANTES " << pac_man_x<< std::endl;
+    std::cout << "PACMAN Y EN GHOST: ANTES " << pac_man_y<< std::endl;
     if (pac_man_y !=0 || pac_man_y!=0){
         search= true;
     }

@@ -25,8 +25,8 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
 
     Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
     ghost->setPos(jghost*30, ighost*30); // set ghost position
-//                std::cout << "j ghost: " << j<< std::endl;
-//                std::cout << "i ghost: " << i<< std::endl;
+                std::cout << "j ghost: " << jghost<< std::endl;
+               std::cout << "i ghost: deberia ser 28 o 29: " << ighost<< std::endl;
     scene->addItem(ghost);
 
     connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
@@ -100,7 +100,7 @@ void Game::init_lab()
             }
             else if (m_mapa[i][j] == 11) // if character is '1', add ghost
             {
-                Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
+                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost =j;
                 ighost=i;
 //                std::cout << "j ghost: " << j<< std::endl;
