@@ -137,6 +137,22 @@ build CMakeFiles/Proyecto_2_Datos_ll.dir/AStar.cpp.o: CXX_COMPILER__Proyecto_2_D
   OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
   OBJECT_FILE_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
 
+build CMakeFiles/Proyecto_2_Datos_ll.dir/StarNode.cpp.o: CXX_COMPILER__Proyecto_2_Datos_ll_Debug /home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.cpp || cmake_object_order_depends_target_Proyecto_2_Datos_ll
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Proyecto_2_Datos_ll.dir/StarNode.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -fPIC -std=gnu++17
+  INCLUDES = -I/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+  OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+
+build CMakeFiles/Proyecto_2_Datos_ll.dir/StarList.cpp.o: CXX_COMPILER__Proyecto_2_Datos_ll_Debug /home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.cpp || cmake_object_order_depends_target_Proyecto_2_Datos_ll
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/Proyecto_2_Datos_ll.dir/StarList.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always -fPIC -std=gnu++17
+  INCLUDES = -I/home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++
+  OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+  OBJECT_FILE_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir
+
 build CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o: CXX_COMPILER__Proyecto_2_Datos_ll_Debug /home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp || cmake_object_order_depends_target_Proyecto_2_Datos_ll
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
   DEP_FILE = CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o.d
@@ -153,7 +169,7 @@ build CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/
 #############################################
 # Link the executable Proyecto_2_Datos_ll
 
-build Proyecto_2_Datos_ll: CXX_EXECUTABLE_LINKER__Proyecto_2_Datos_ll_Debug CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/main.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dificulties_Window.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Game.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Pac_Man.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dots.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Blocks.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Ghost.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/SuperDot.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Utils.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/AStar.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6 || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
+build Proyecto_2_Datos_ll: CXX_EXECUTABLE_LINKER__Proyecto_2_Datos_ll_Debug CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/mocs_compilation.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/main.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dificulties_Window.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Game.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Pac_Man.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Dots.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Blocks.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Ghost.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/SuperDot.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Utils.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/AStar.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/StarNode.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/StarList.cpp.o CMakeFiles/Proyecto_2_Datos_ll.dir/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/qrc_Resources.cpp.o | /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6 || Proyecto_2_Datos_ll_autogen Proyecto_2_Datos_ll_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.6  /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.6  /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.6
   OBJECT_DIR = CMakeFiles/Proyecto_2_Datos_ll.dir

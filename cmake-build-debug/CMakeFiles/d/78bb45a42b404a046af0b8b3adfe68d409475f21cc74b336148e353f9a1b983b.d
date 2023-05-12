@@ -15,6 +15,10 @@ Proyecto_2_Datos_ll_autogen/timestamp: \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.cpp \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.h \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Resources.qrc \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.cpp \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.h \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.cpp \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.h \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Utils.cpp \

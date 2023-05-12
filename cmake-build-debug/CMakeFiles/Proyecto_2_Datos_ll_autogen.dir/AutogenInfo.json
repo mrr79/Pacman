@@ -116,6 +116,18 @@
 			null
 		],
 		[
+			"/home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.h",
+			"MU",
+			"EWIEGA46WW/moc_StarList.cpp",
+			null
+		],
+		[
+			"/home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.h",
+			"MU",
+			"EWIEGA46WW/moc_StarNode.cpp",
+			null
+		],
+		[
 			"/home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.h",
 			"MU",
 			"EWIEGA46WW/moc_SuperDot.cpp",
@@ -189,6 +201,8 @@
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/Game.cpp", "MU", null ],
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/Ghost.cpp", "MU", null ],
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.cpp", "MU", null ],
+		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.cpp", "MU", null ],
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/SuperDot.cpp", "MU", null ],
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/Utils.cpp", "MU", null ],
 		[ "/home/mrr/Desktop/Pacman/Pacman/Pacman/main.cpp", "MU", null ]
