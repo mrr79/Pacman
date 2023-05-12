@@ -400,3 +400,6 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
 
     return;
 }
+StarList AStar::getPath() {
+    return pathList;
+}

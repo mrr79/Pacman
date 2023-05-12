@@ -10,6 +10,7 @@
 #include <QCoreApplication>
 #include <QThread>
 #include <thread>
+#include "AStar.h"
 
 Ghost::Ghost(int mapa[21][30], int j, int i)
 
@@ -67,6 +68,19 @@ void Ghost::move(){
     while (position_x < dest_x && !obstacle_found) {
         if (mapa[position_y][position_x + 1] == 0) {
             obstacle_found = true;
+            if (search){
+                AStar astar;
+                Pair src = make_pair(11,19);//PROblema en source
+                Pair dest = make_pair(pac_man_x, pac_man_y);
+                std::cout << "GHOST CALCULADO Y: " << position_y<< std::endl;
+                std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
+                std::cout << "PACMAN CALCULADO Y: " << pac_man_y<< std::endl;
+                std::cout << "PACMAN CALCULADO X: " << pac_man_x<< std::endl;
+                astar.aStarSearch(mapa, src, dest);;
+                StarList pathList = astar.getPath();
+                search= false;
+            }
+
         } else {
             setPos(x() + speed, y());
             position_x++;
@@ -101,13 +115,19 @@ void Ghost::move(){
 
 
 void Ghost::chasePacMan(Pac_Man* pac_man) {
-    std::cout << "bella: " << pac_man_y<< std::endl;
+
 }
 void Ghost::actualizar_posicion_pacman(int x, int y) {
+
     pac_man_y=y;
     pac_man_x=x;
-    std::cout << "PACMAN X EN GHOST ANTES " << pac_man_x<< std::endl;
-    std::cout << "PACMAN Y EN GHOST: ANTES " << pac_man_y<< std::endl;
+    //std::cout << "PACMAN X EN GHOST ANTES " << pac_man_x<< std::endl;
+    //std::cout << "PACMAN Y EN GHOST: ANTES " << pac_man_y<< std::endl;
+    if (pac_man_y !=0 || pac_man_y!=0){
+        search= true;
+    }
+
+
 }
 void Ghost::move2() {
     //std::cout << "mapita" << mapa<< std::endl;

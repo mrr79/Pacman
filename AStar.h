@@ -42,6 +42,7 @@ private:
     bool isDestination(int row, int col, Pair dest);
     double calculateHValue(int row, int col, Pair dest);
     void tracePath(cell cellDetails[][COL], Pair dest);
+    StarList pathList;
 };
 
 
