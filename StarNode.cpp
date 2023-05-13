@@ -3,7 +3,7 @@
 //
 
 #include "StarNode.h"
-
+#include <iostream>
 #include "StarNode.h"
 
 StarNode::StarNode(int value1, int value2) {
@@ -31,6 +31,7 @@ void StarNode::setNext(StarNode* nextNode) {
 }
 
 int StarNode::getNodeX() {
+    //std::cout << "nodo en X: " << value1<< std::endl;
     return value1;
 }
 int StarNode::getNodeY() {

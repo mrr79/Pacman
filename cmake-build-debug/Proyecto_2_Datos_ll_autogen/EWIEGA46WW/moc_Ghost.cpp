@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Ghost_t {
-    QByteArrayData data[11];
-    char stringdata0[94];
+    QByteArrayData data[9];
+    char stringdata0[77];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,16 +38,14 @@ QT_MOC_LITERAL(2, 11, 0), // ""
 QT_MOC_LITERAL(3, 12, 5), // "move2"
 QT_MOC_LITERAL(4, 18, 15), // "moveWithoutArgs"
 QT_MOC_LITERAL(5, 34, 11), // "chasePacMan"
-QT_MOC_LITERAL(6, 46, 8), // "Pac_Man*"
-QT_MOC_LITERAL(7, 55, 7), // "pac_man"
-QT_MOC_LITERAL(8, 63, 26), // "actualizar_posicion_pacman"
-QT_MOC_LITERAL(9, 90, 1), // "x"
-QT_MOC_LITERAL(10, 92, 1) // "y"
+QT_MOC_LITERAL(6, 46, 26), // "actualizar_posicion_pacman"
+QT_MOC_LITERAL(7, 73, 1), // "x"
+QT_MOC_LITERAL(8, 75, 1) // "y"
 
     },
     "Ghost\0move\0\0move2\0moveWithoutArgs\0"
-    "chasePacMan\0Pac_Man*\0pac_man\0"
-    "actualizar_posicion_pacman\0x\0y"
+    "chasePacMan\0actualizar_posicion_pacman\0"
+    "x\0y"
 };
 #undef QT_MOC_LITERAL
 
@@ -68,15 +66,15 @@ static const uint qt_meta_data_Ghost[] = {
        1,    0,   39,    2, 0x0a /* Public */,
        3,    0,   40,    2, 0x0a /* Public */,
        4,    0,   41,    2, 0x0a /* Public */,
-       5,    1,   42,    2, 0x0a /* Public */,
-       8,    2,   45,    2, 0x0a /* Public */,
+       5,    0,   42,    2, 0x0a /* Public */,
+       6,    2,   43,    2, 0x0a /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, 0x80000000 | 6,    7,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,    9,   10,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int, QMetaType::Int,    7,    8,
 
        0        // eod
 };
@@ -90,20 +88,9 @@ void Ghost::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         case 0: _t->move(); break;
         case 1: _t->move2(); break;
         case 2: _t->moveWithoutArgs(); break;
-        case 3: _t->chasePacMan((*reinterpret_cast< Pac_Man*(*)>(_a[1]))); break;
+        case 3: _t->chasePacMan(); break;
         case 4: _t->actualizar_posicion_pacman((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         default: ;
-        }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 3:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< Pac_Man* >(); break;
-            }
-            break;
         }
     }
 }
@@ -144,7 +131,7 @@ int Ghost::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 5)
-            qt_static_metacall(this, _c, _id, _a);
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 5;
     }
     return _id;

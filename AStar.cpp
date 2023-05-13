@@ -69,7 +69,8 @@ void AStar::tracePath(cell cellDetails[][COL], Pair dest)
     int row = dest.first;
     int col = dest.second;
 
-    StarList pathList;
+
+
 
     stack<Pair> Path;
 
@@ -401,5 +402,9 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
     return;
 }
 StarList AStar::getPath() {
+    std::cout << "funcaaaaaaaaaaaaa" << std::endl;
+    pathList.printList();
     return pathList;
+
+
 }

@@ -2,6 +2,8 @@
   /home/mrr/Desktop/Pacman/Pacman/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Game.h \
   /home/mrr/Desktop/Pacman/Pacman/Pacman/Pac_Man.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarList.h \
+  /home/mrr/Desktop/Pacman/Pacman/Pacman/StarNode.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \

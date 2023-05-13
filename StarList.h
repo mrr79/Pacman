@@ -10,12 +10,14 @@
 class StarList {
 public:
     StarList();
-    ~StarList();
+    //~StarList();
     void append(StarNode* new_node);
     bool remove(int index);
     int size() const;
     StarNode* getHead() const;
     void printList() const;
+    void removeHead();
+    bool isEmpty() const;
 private:
     StarNode* head;
     int listSize;

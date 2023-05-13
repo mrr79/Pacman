@@ -12,6 +12,7 @@
 #include <thread>
 #include "AStar.h"
 #include "Game.h"
+#include "StarNode.h"
 
 Ghost::Ghost(int mapa[21][30], int j, int i)
 
@@ -19,7 +20,7 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
     setPixmap(QPixmap(":/Images/ghost1.png"));
 
     QTimer *timer_move = new QTimer;
-    connect(timer_move, &QTimer::timeout, this, &Ghost::moveWithoutArgs);
+    connect(timer_move, &QTimer::timeout, this, &Ghost::move);
     timer_move->setInterval(500); // Signal every 50 milliseconds
 
     timer_move->setSingleShot(false); // Set the timer to run only once
@@ -32,11 +33,6 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
 
     set_mapa(mapa);
 
-
-    //Pac_Man* pacman = m_game->get_pacman();
-    //QObject::connect(pacman, SIGNAL(posicion_actualizada(int, int)),
-                     //this, SLOT(actualizar_posicion_pacman(int, int)));
-//move2();
 }
 
 
@@ -56,9 +52,45 @@ void Ghost::moveWithoutArgs()
 
     move();
 }
-
-
 void Ghost::move(){
+    std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
+    if (!pathList.isEmpty()) {
+        int new_x = pathList.getHead()->getNodeX();// primer x en la ruta
+        int new_y = pathList.getHead()->getNodeY();// primer y en la ruta
+        setPos(new_x, new_y);// // pacman ahi (creo que estan al reves)
+        pathList.removeHead();// quito el primeer elemento de la lista o sea tood el par porque ya lo use
+    }
+    if (pathList.isEmpty()){
+        std::cout << "LISTA VACIA" << std::endl;
+        chasePacMan();
+        route_completed= true;
+        searching=true;
+
+
+    }
+
+}
+
+void Ghost::chasePacMan() { //para calcular
+    if (route_completed== true && searching== true){
+        std::cout << "ENTRA A CHASE DE GHOST" << std::endl;
+        AStar astar;
+        Pair src = make_pair(position_y,position_x);//PROblema en source
+        Pair dest = make_pair(pac_man_x, pac_man_y);
+        astar.aStarSearch(mapa, src, dest);
+        pathList = astar.getPath();//lista con la ruta
+        route_completed= false;// ya hice ruta pero no la he completado
+        searching= false;// ya no tengo que buscar.
+        while (!pathList.isEmpty() ) {
+            move();
+            //route_completed= true;
+            //searching=true;
+        }
+
+    }
+}
+
+void Ghost::move2(){// ignorar
     //move2();
     std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
     int dest_x = 29; // la posición X a la que debe llegar el Ghost
@@ -74,6 +106,7 @@ void Ghost::move(){
             obstacle_found = true;
             if (search){
                 AStar astar;
+
                 //Pair src = make_pair(11,19);//PROblema en source
 
                 Pair src = make_pair(position_y,position_x);//PROblema en source
@@ -82,8 +115,18 @@ void Ghost::move(){
                 std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
                 std::cout << "PACMAN CALCULADO Y: " << pac_man_y<< std::endl;
                 std::cout << "PACMAN CALCULADO X: " << pac_man_x<< std::endl;
-                astar.aStarSearch(mapa, src, dest);;
+                astar.aStarSearch(mapa, src, dest);
+                std::cout << "PRINT EN GHOST DE LISTA " << std::endl;
                 StarList pathList = astar.getPath();
+                std::cout << "PRINT HEAD EN GHOST DE LISTA " << std::endl;
+                pathList.getHead();
+                std::cout << "PRINT size EN GHOST DE LISTA " << std::endl;
+                pathList.size();
+                std::cout << "PRINT head en X EN GHOST DE LISTA " << std::endl;
+                pathList.getHead()->getNodeX();
+
+                //pathList.printList();
+                //pathList.getHead();
                 search= false;
             }
 
@@ -116,13 +159,31 @@ void Ghost::move(){
     //std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
 
 }
+//hacer dos metodos uno paa validacion y otro para calculo y en validacion se mueve: en validacion es
+// recorrer la lista y ponerlo a moverse  y hasta que la lista sea 0 se vuelva a calcular.
 
 
 
 
-void Ghost::chasePacMan(Pac_Man* pac_man) {
 
-}
+
+
+
+
+
+    /*std::cout << "GHOST CALCULADO Y: " << position_y<< std::endl;
+    std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
+    std::cout << "PACMAN CALCULADO Y: " << pac_man_y<< std::endl;
+    std::cout << "PACMAN CALCULADO X: " << pac_man_x<< std::endl;*/
+    //astar.aStarSearch(mapa, src, dest);
+    //StarList pathList = astar.getPath();
+    //std::cout << "PRINT HEAD EN GHOST DE LISTA " << std::endl;
+    //pathList.getHead();
+    //std::cout << "PRINT size EN GHOST DE LISTA " << std::endl;
+    //pathList.size();
+
+
+
 void Ghost::actualizar_posicion_pacman(int x, int y) {
 
     pac_man_y=y;
@@ -133,9 +194,5 @@ void Ghost::actualizar_posicion_pacman(int x, int y) {
         search= true;
     }
 
-
-}
-void Ghost::move2() {
-    //std::cout << "mapita" << mapa<< std::endl;
 
 }
