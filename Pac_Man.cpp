@@ -83,6 +83,7 @@ void Pac_Man::set_values(int mapa[21][30], int points, int lifes, QGraphicsTextI
     this->scene = scene;
 }
 
+int pointsR;
 
 void Pac_Man::check_collision()
 {
@@ -92,6 +93,7 @@ void Pac_Man::check_collision()
             scene->removeItem(colliding_items[i]);
             delete colliding_items[i];
             points += 10;
+            pointsR = points;
             points_label->setPlainText("Points: " + QString::number(points));
 
             return;
@@ -103,8 +105,9 @@ void Pac_Man::check_collision()
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
-            scene->removeItem(this);
-            lifes--;
+            //
+            // scene->removeItem(this);
+            //lifes--;
             return;
         }
     }

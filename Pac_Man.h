@@ -3,11 +3,10 @@
 
 #include <QGraphicsPixmapItem>
 #include <QTimer>
-
+extern int pointsR;
 class Pac_Man: public QObject , public  QGraphicsPixmapItem{
      Q_OBJECT
 public:
-
     Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene,int j, int i);
     void set_points(int points);
     void set_lifes(int lifes);

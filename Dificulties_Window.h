@@ -4,8 +4,11 @@
 #include <QGraphicsView>
 #include <QWidget>
 #include <QGraphicsScene>
+#include "Game.h"
 
 class Dificulties_Window: public QGraphicsView{
+Q_OBJECT
+
 public:
 
   Dificulties_Window(QWidget * parent=0);
@@ -13,13 +16,21 @@ public:
   //Game dificulties
   void classic();
   void hard();
-    void normal();
-    void easy();
+  void normal();
+  void easy();
+
 
   QGraphicsScene * scene;
 private:
   int width = 800;
   int height = 600;
+  Game *level_1;
+  Game *level_2;
+  Game *level_3;
+  Game *level_4;
+
+public slots:
+    void checkwin();
 
 };
 

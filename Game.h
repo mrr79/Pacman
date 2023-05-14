@@ -43,6 +43,7 @@ private:
     int pacmanY=0;
     int jghost=0;
     int ighost=0;
+
 };
 
 #endif // LEVELS_H

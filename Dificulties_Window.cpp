@@ -5,6 +5,7 @@
 #include "Dificulties_Window.h"
 #include "Game.h"
 #include <iostream>
+#include "Pac_Man.h"
 
 
 
@@ -72,6 +73,10 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setFixedSize(800,600);
 
+    QTimer* timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(checkwin()));
+    timer->start(500);
+
     show();
 }
 
@@ -79,29 +84,6 @@ void Dificulties_Window::easy()
 {
     int points = 0;
     int lifes = 3;
-    /*int mapa[21][30] = {
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X            1              X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXX P XXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "X  XXXXXXXXXXXXXXXXXXXXXXXX X",
-            "X                           X",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    };*/
     int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,1,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0},
@@ -125,139 +107,34 @@ void Dificulties_Window::easy()
             {0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
-    Game *level_1 = new Game(mapa, 0, 3);
+    level_1 = new Game(mapa, 0, 10);
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
-    int espacioCount = 0;
-    for (int i = 0; i < 21; i++) {
-        for (int j = 0; j < 30; j++) {
-            if (mapa[i][j] == ' ') {
-                espacioCount++;
-            }
-        }
-    }
 
-    std::cout << "Cantidad de espacios easy : " << espacioCount << std::endl;
+
 }
 
-/*
+void Dificulties_Window::checkwin() {
+    printf("jueputaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    std::cout << "PUNTOS ACTULAES " << pointsR << std::endl;
+    if (pointsR == 20000){
+        normal();
+    }
+    if (pointsR == 50000000000){
+        classic();
+    }
+    if (pointsR == 70000000){
+        hard();
+    }
+
+}
+
+
 void Dificulties_Window::normal()
 {
 
-    int points = 0;
-    int lifes = 3;
     int mapa[21][30] = {
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X                           X",
-            "X XXXXXXXXX         XXXXXX X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXX   XXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXX          XXXXXX X",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    };
-
-
-    Game *level_1 = new Game(mapa, 200, 2);
-    std::cout << "normalll " << std::endl;
-    level_1->show();
-    this->close();
-}
-void Dificulties_Window::classic()
-{
-    int points = 200;
-    int lifes = 3;
-    int mapa[21][30] = {
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X            1              X",
-            "X          XX XX            X",
-            "X          X   X            X",
-            "X XXXXXXXX  XXX  XXXXXXXXX X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X                           X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "X           P               X",
-            "X XXXXXXXXXXXXXXXXXXXXXXXX  X",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    };
-    int espacioCount = 0;
-    for (int i = 0; i < 21; i++) {
-        for (int j = 0; j < 30; j++) {
-            if (mapa[i][j] == ' ') {
-                espacioCount++;
-            }
-        }
-    }
-
-    std::cout << "Cantidad de espacios Classic : " << espacioCount << std::endl;
-
-    //return 0;
-
-    Game *level_1 = new Game(mapa, 200, 2);
-    std::cout << "clasico de 4: 4 fantasmas " << std::endl;
-    level_1->show();
-    this->close();
-}
-void Dificulties_Window::hard()
-{
-    int points = 200;
-    int lifes = 3;
-    int mapa[21][30] = {
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-            "X            XXX            X",
-            "X XXXXX XXXX XXX XXXX XXXXX X",
-            "X                           X",
-            "X XXX XXXXX XXXXX XXXXX XXX X",
-            "X XXX X               X XXX X",
-            "X XXX X XXXXXX   XXXX X XXX X",
-            "X XXX X X           X X XXX X",
-            "X XXX X X XXXXXXXXX X X XXX X",
-            "X XXX X X X       X X X XXX X",
-            "X                           X",
-            "X XXX X X XXXXXXXXX X X XXX X",
-            "X XXX X X           X X XXX X",
-            "X XXX X X XXXXXXXXX X X XXX X",
-            "X XXX X X           X X XXX X",
-            "X XXX X X XXXXXXXXX X X XXX X",
-            "X                           X",
-            "X XXX X XXXX XXX XXXX XXXXX X",
-            "X            XXX            X",
-            "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-    };
-
-
-    Game *level_1 = new Game(mapa, 200, 2);
-    std::cout << "hard lvl : 3 enemies " << std::endl;
-    level_1->show();
-    this->close();
-}
-*/
-/*
-int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0},
             {0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,1,0,0,0,1,1,1,1,0},
@@ -280,6 +157,17 @@ int mapa[21][30] = {
             {0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
+
+    level_2 = new Game(mapa, 200, 2);
+    std::cout << "normal " << std::endl;
+    level_2->show();
+    level_1->close();
+    delete level_1;
+}
+
+void Dificulties_Window::classic()
+{
+
     int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0},
@@ -304,6 +192,14 @@ int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
 
+
+    level_3 = new Game(mapa, 500, 2);
+    std::cout << "clasico de 4: 4 fantasmas " << std::endl;
+    level_3->show();
+    level_2->close();
+}
+void Dificulties_Window::hard()
+{
     int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,11,0},
@@ -327,4 +223,9 @@ int mapa[21][30] = {
             {0,11,1,1,1,1,1,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,0,0,0,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
- */
+    level_4 = new Game(mapa, 700, 2);
+    std::cout << "hard lvl : 3 enemies " << std::endl;
+    level_4->show();
+    level_3->close();
+}
+

@@ -21,7 +21,7 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
 
     QTimer *timer_move = new QTimer;
     connect(timer_move, &QTimer::timeout, this, &Ghost::move);
-    timer_move->setInterval(300); // Signal every 50 milliseconds
+    timer_move->setInterval(600); // Signal every 50 milliseconds
 
     timer_move->setSingleShot(false); // Set the timer to run only once
     QTimer::singleShot(3000, timer_move, SLOT(start())); // Wait for 3 seconds and then start the timer
@@ -157,30 +157,6 @@ void Ghost::move2(){// ignorar
     //std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
 
 }
-//hacer dos metodos uno paa validacion y otro para calculo y en validacion se mueve: en validacion es
-// recorrer la lista y ponerlo a moverse  y hasta que la lista sea 0 se vuelva a calcular.
-
-
-
-
-
-
-
-
-
-
-    /*std::cout << "GHOST CALCULADO Y: " << position_y<< std::endl;
-    std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
-    std::cout << "PACMAN CALCULADO Y: " << pac_man_y<< std::endl;
-    std::cout << "PACMAN CALCULADO X: " << pac_man_x<< std::endl;*/
-    //astar.aStarSearch(mapa, src, dest);
-    //StarList pathList = astar.getPath();
-    //std::cout << "PRINT HEAD EN GHOST DE LISTA " << std::endl;
-    //pathList.getHead();
-    //std::cout << "PRINT size EN GHOST DE LISTA " << std::endl;
-    //pathList.size();
-
-
 
 void Ghost::actualizar_posicion_pacman(int x, int y) {
 
