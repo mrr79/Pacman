@@ -166,6 +166,7 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
 
     while (!openList.empty()) {
         pPair p = *openList.begin();
+        /*
         printf("Open List:\n");
         for (auto const& pair: openList) {
             printf("    (%d, %d): f=%f, g=%f, h=%f\n",
@@ -187,6 +188,7 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
                 }
             }
         }
+         */
         openList.erase(openList.begin());
 
         // Add this vertex to the closed list

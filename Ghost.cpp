@@ -21,7 +21,7 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
 
     QTimer *timer_move = new QTimer;
     connect(timer_move, &QTimer::timeout, this, &Ghost::move);
-    timer_move->setInterval(500); // Signal every 50 milliseconds
+    timer_move->setInterval(300); // Signal every 50 milliseconds
 
     timer_move->setSingleShot(false); // Set the timer to run only once
     QTimer::singleShot(3000, timer_move, SLOT(start())); // Wait for 3 seconds and then start the timer
@@ -57,8 +57,10 @@ void Ghost::move(){
     if (!pathList.isEmpty()) {
         int new_x = pathList.getHead()->getNodeX();// primer x en la ruta
         int new_y = pathList.getHead()->getNodeY();// primer y en la ruta
-        setPos(new_x, new_y);// // pacman ahi (creo que estan al reves)
-        pathList.removeHead();// quito el primeer elemento de la lista o sea tood el par porque ya lo use
+        position_y = pathList.getHead()->getNodeX();
+        position_x = pathList.getHead()->getNodeY();
+        setPos(new_y*30, new_x*30);// // pacman ahi (creo que estan al reves)
+        pathList.removeHead();// quito el primeer elemento de la lista o sea to el par porque ya lo use
     }
     if (pathList.isEmpty()){
         std::cout << "LISTA VACIA" << std::endl;
@@ -81,11 +83,7 @@ void Ghost::chasePacMan() { //para calcular
         pathList = astar.getPath();//lista con la ruta
         route_completed= false;// ya hice ruta pero no la he completado
         searching= false;// ya no tengo que buscar.
-        while (!pathList.isEmpty() ) {
-            move();
-            //route_completed= true;
-            //searching=true;
-        }
+        move();
 
     }
 }
