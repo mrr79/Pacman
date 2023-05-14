@@ -33,7 +33,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     proxy->setWidget(easy_mode);
     scene->addItem(proxy);
     proxy->setPos(320,150);
-    connect(easy_mode, &QPushButton::released, this, &Dificulties_Window::easy); //Method that will activated when the button is released
+    connect(easy_mode, &QPushButton::released, this, &Dificulties_Window::easy); //Method that will when the button is released
 
     //Creaction and configuration of normal mode button
 
@@ -78,6 +78,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     timer->start(500);
 
     show();
+    nivel1 = true;
 }
 
 void Dificulties_Window::easy()
@@ -118,7 +119,7 @@ void Dificulties_Window::easy()
 void Dificulties_Window::checkwin() {
     printf("jueputaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     std::cout << "PUNTOS ACTULAES " << pointsR << std::endl;
-    if (pointsR == 20000){
+    if (pointsR == 200){
         normal();
     }
     if (pointsR == 50000000000){
@@ -161,6 +162,7 @@ void Dificulties_Window::normal()
     level_2 = new Game(mapa, 200, 2);
     std::cout << "normal " << std::endl;
     level_2->show();
+    nivel1 = false;
     level_1->close();
     delete level_1;
 }

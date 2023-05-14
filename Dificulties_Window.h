@@ -5,7 +5,7 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include "Game.h"
-
+extern bool nivel1;
 class Dificulties_Window: public QGraphicsView{
 Q_OBJECT
 

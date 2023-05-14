@@ -72,4 +72,20 @@ bool StarList::isEmpty() const {
         return false;
     }
 }
+StarNode* StarList::getRandomNode() const {
+    int count = size();
+    if (count == 0) {
+        return nullptr;
+    }
+    int random_index = rand() % count;
 
+    StarNode* nodo_actual = this->head;
+    int current_index = 0;
+    while (current_index < random_index && nodo_actual != nullptr) {
+        nodo_actual = nodo_actual->getNext();
+        current_index++;
+    }
+    std::cout << " --> "
+              << "(" << nodo_actual->getNodeX() << "," << nodo_actual->getNodeY() << ")";
+    return nodo_actual;
+}

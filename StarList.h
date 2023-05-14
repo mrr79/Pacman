@@ -18,9 +18,12 @@ public:
     void printList() const;
     void removeHead();
     bool isEmpty() const;
+    StarNode *getRandomNode() const;
 private:
     StarNode* head;
     int listSize;
+
+
 };
 
 

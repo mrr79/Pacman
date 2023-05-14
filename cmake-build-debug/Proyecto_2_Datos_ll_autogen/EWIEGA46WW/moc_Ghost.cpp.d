@@ -1,6 +1,7 @@
 /home/henry/CLionProjects/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/EWIEGA46WW/moc_Ghost.cpp: /home/henry/CLionProjects/Pacman/Ghost.h \
   /home/henry/CLionProjects/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/moc_predefs.h \
   /home/henry/CLionProjects/Pacman/Game.h \
+  /home/henry/CLionProjects/Pacman/Ghost.h \
   /home/henry/CLionProjects/Pacman/Pac_Man.h \
   /home/henry/CLionProjects/Pacman/StarList.h \
   /home/henry/CLionProjects/Pacman/StarNode.h \

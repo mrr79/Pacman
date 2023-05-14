@@ -5,6 +5,7 @@
 #include <QGraphicsScene>
 #include <QPixmap>
 #include "Pac_Man.h"
+#include "Ghost.h"
 
 class Game: public QGraphicsView{
 
@@ -29,7 +30,9 @@ public:
     QGraphicsTextItem *points_label;
     Pac_Man* get_pacman();
 
-    QGraphicsScene * scene;;
+    QGraphicsScene * scene;
+    void deleteghost();
+
 private:
     void init_lab();
     void ghost_manager();
@@ -38,7 +41,6 @@ private:
     int m_points;
     int m_lifes;
     int m_mapa[21][30];
-
     int pacmanX=0;
     int pacmanY=0;
     int jghost=0;

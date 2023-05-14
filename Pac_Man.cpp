@@ -32,6 +32,17 @@ Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *poi
     connect(timer_move,SIGNAL(timeout()),this,SLOT(move())); //conect method that repeats the method everytime it recives the signal
     timer_move->start(500); //Signal every 50 miliseconds
 
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (mapa[i][j] != 0) {
+                StarNode *node = new StarNode(j, i);
+                lista_random.append(node);
+            }
+        }
+    }
+    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    lista_random.printList();
+    lista_random.getRandomNode();
 
     connect(timer_animation,SIGNAL(timeout()),this,SLOT(animation_R())); //conect method that repeats the method everytime it recives the signal
     timer_animation->start(150); //Signal every 50 miliseconds
@@ -75,7 +86,6 @@ void Pac_Man::set_mapa(int mapa[21][30])
         }
     }
 }
-
 void Pac_Man::set_values(int mapa[21][30], int points, int lifes, QGraphicsTextItem* points_label, QGraphicsScene* scene) {
     this->points = points;
     this->lifes = lifes;
@@ -93,35 +103,43 @@ void Pac_Man::check_collision()
             scene->removeItem(colliding_items[i]);
             delete colliding_items[i];
             points += 10;
-            pointsR = points;
             points_label->setPlainText("Points: " + QString::number(points));
 
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(SuperDot)){
-            scene->removeItem(colliding_items[i]);
-            delete colliding_items[i];
-            super_dot = true;
-            return;
+            //scene->removeItem(colliding_items[i]);
+            //delete colliding_items[i];
+            //super_dot = true;
+            //return;
+            std::cout << "PAcman y superpastilla " << std::endl;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
-            //
-            // scene->removeItem(this);
-            //lifes--;
+            //scene->removeItem(this);
+            lifes--;
+            random_location();
             return;
         }
     }
 }
 
 void Pac_Man::check_points() {
-    if (points % 200 == 0) {
+    if (points % 200==0 && points!=0) {
 
-        //SuperDot *super_dot = new SuperDot();
-        //scene->addItem(super_dot);
-        //super_dot->setPos(420, 600 / 2);
+        srand(time(NULL));
+
+        SuperDot *super_dot = new SuperDot();
+        int x, y;
+        do {
+            x = rand() % 21;
+            y = rand() % 30;
+        } while (mapa[x][y] != 0);
+
+        scene->addItem(super_dot);
+        super_dot->setPos(x*30,y*30);
+        std::cout << "Coordenadas aleatorias de SUPERDOT: (" << x << ", " << y << ")" << std::endl;
     }
 }
-
 
 void Pac_Man::move()
 {
@@ -247,6 +265,11 @@ void Pac_Man::animation_D()
         cycle = 0;
     }
 }
+void Pac_Man::random_location(){
+    int x = lista_random.getRandomNode()->getNodeX();
+    int y = lista_random.getRandomNode()->getNodeY();
+    setPos(x*30, y*30);
 
+}
 
 

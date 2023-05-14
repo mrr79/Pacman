@@ -13,6 +13,8 @@
 #include "AStar.h"
 #include "Game.h"
 #include "StarNode.h"
+#include "Dificulties_Window.h"
+bool nivel1;
 
 Ghost::Ghost(int mapa[21][30], int j, int i)
 
@@ -63,10 +65,18 @@ void Ghost::move(){
         pathList.removeHead();// quito el primeer elemento de la lista o sea to el par porque ya lo use
     }
     if (pathList.isEmpty()){
-        std::cout << "LISTA VACIA" << std::endl;
-        chasePacMan();
-        route_completed= true;
-        searching=true;
+        if (nivel1 == true){
+            std::cout << "LISTA VACIA" << std::endl;
+            chasePacMan();
+            route_completed= true;
+            searching=true;
+        }
+        else{
+            std::cout << "LISTA VACIA" << std::endl;
+            chasePacMan();
+            route_completed= true;
+            searching=true;
+        }
 
 
     }

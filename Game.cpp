@@ -115,3 +115,4 @@ void Game::init_lab()
 Pac_Man* Game::get_pacman() {
     return pac_man;
 }
+

@@ -3,6 +3,8 @@
 
 #include <QGraphicsPixmapItem>
 #include <QTimer>
+#include "StarList.h"
+#include "StarNode.h"
 extern int pointsR;
 class Pac_Man: public QObject , public  QGraphicsPixmapItem{
      Q_OBJECT
@@ -10,7 +12,7 @@ public:
     Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *scene,int j, int i);
     void set_points(int points);
     void set_lifes(int lifes);
-
+    void random_location();
     bool super_dot = false;
     int speed = 30;
     //int points = 0;
@@ -27,6 +29,9 @@ public:
     int getActPacmanY();
     void setActPacmanX(int m);
     void setActPacmanY(int n);
+    StarList lista_random;
+
+
 
     QTimer *timer_animation = new QTimer;
 
