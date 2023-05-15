@@ -124,7 +124,6 @@ void Ghost2::move(){
 }
 
 void Ghost2::chasePacMan() { //para calcular
-    buscar = false;
     vector<vector<int>> maze(21, vector<int>(30));
     for (int i = 0; i < 21; i++) {
         for (int j = 0; j < 30; j++) {
@@ -138,7 +137,7 @@ void Ghost2::chasePacMan() { //para calcular
 
 
     //imprime los caminos
-    //cout << "camino:" << paths[0] << endl;
+    cout << "camino:" << paths[0] << endl;
 
 }
 
@@ -174,8 +173,9 @@ void Ghost2::random_location(){
     poder_y = lista_randomg.getRandomNode()->getNodeY();
     position_y = poder_x;
     position_x = poder_y;
-    //paths.clear();
+    setPos(position_y*30, position_x*30);
+    contador = 0;
+    paths.clear();
     //std::this_thread::sleep_for(std::chrono::seconds(5));
-    setPos(poder_x*30, poder_y*30);
 
 }
