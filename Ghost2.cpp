@@ -20,6 +20,7 @@
 #include "StarNode.h"
 #include "SuperDot.h"
 #include "Dificulties_Window.h"
+#include "Backtracking.h"
 
 Ghost2::Ghost2(int mapa[21][30], int j, int i)
 
@@ -73,50 +74,27 @@ void Ghost2::set_mapa(int mapa[21][30])
 
 void Ghost2::move(){
     std::cout << "ENTRA A MOVE DE Ghost2" << std::endl;
-    if (!pathList.isEmpty()) {
-        int new_x = pathList.getHead()->getNodeX();// primer x en la ruta
-        int new_y = pathList.getHead()->getNodeY();// primer y en la ruta
-        position_y = pathList.getHead()->getNodeX();
-        position_x = pathList.getHead()->getNodeY();
-        setPos(new_y*30, new_x*30);// // pacman ahi (creo que estan al reves)
-        pathList.removeHead();// quito el primeer elemento de la lista o sea to el par porque ya lo use
-    }
-    if (pathList.isEmpty()){
-        if (nivel1 == true){
-            std::cout << "LISTA VACIA" << std::endl;
-            chasePacMan();
-            route_completed= true;
-            searching=true;
-        }
-        else{
-            std::cout << "LISTA VACIA" << std::endl;
-            chasePacMan();
-            route_completed= true;
-            searching=true;
-        }
-
-
-    }
+    chasePacMan();
 }
 
 void Ghost2::chasePacMan() { //para calcular
-    if (route_completed== true && searching== true){
-        std::cout << "ENTRA A CHASE DE Ghost2" << std::endl;
-        AStar astar;
-        Pair src = make_pair(position_y,position_x);//PROblema en source
-        Pair dest;
-        if (poder_activo == true){
-            dest = make_pair(poder_x, poder_y);
-        } else{
-            dest = make_pair(pac_man_x, pac_man_y);
+    vector<vector<int>> maze(21, vector<int>(30));
+    for (int i = 0; i < 21; i++) {
+        for (int j = 0; j < 30; j++) {
+            maze[i][j] = mapa[i][j];
         }
+    }
+    //llama a conseguir los caminos
+    Backtracking Bt;
+    vector<string> paths=Bt.possiblePaths(maze,2,1); //EL primer valor es para abajo y el segundo hacia la derecha
+    //vector<string> paths = possiblePaths(maze, 0, 0);
 
-        astar.aStarSearch(mapa, src, dest);
-        pathList = astar.getPath();//lista con la ruta
-        route_completed= false;// ya hice ruta pero no la he completado
-        searching= false;// ya no tengo que buscar.
-        move();
 
+    //imprime los caminos
+    cout << "Mejores caminos:" << endl;
+    cout << "caminos:" << paths.size() << endl;
+    for(int i=0;i<paths.size();i++){
+        cout<<paths[0]<<" ";
     }
 }
 

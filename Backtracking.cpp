@@ -83,9 +83,6 @@ vector<string> Backtracking::possiblePaths(vector<vector<int>> &maze, int eq, in
     int m = maze[0].size();
     vector<string> ans;  //guarda todos los caminos
     //si hay errores en la posiciones de salida o fin devuelve nulo
-    if(maze[0][0] == 0 || maze[n-1][m-1]==0){
-        return ans;
-    }
     //posicion inicial del fantasma
     int x =eq;
     int y =ye;

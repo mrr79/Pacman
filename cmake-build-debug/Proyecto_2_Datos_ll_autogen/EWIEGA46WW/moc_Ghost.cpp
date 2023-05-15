@@ -89,8 +89,6 @@ void Ghost::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->move(); break;
-        case 1: _t->move2(); break;
-        case 2: _t->moveWithoutArgs(); break;
         case 3: _t->chasePacMan(); break;
         case 4: _t->actualizar_posicion_pacman((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2]))); break;
         case 5: _t->check_collision(); break;
