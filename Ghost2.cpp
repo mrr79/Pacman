@@ -173,9 +173,9 @@ void Ghost2::random_location(){
     poder_y = lista_randomg.getRandomNode()->getNodeY();
     position_y = poder_x;
     position_x = poder_y;
+    std::this_thread::sleep_for(std::chrono::seconds(5));
     setPos(position_y*30, position_x*30);
     contador = 0;
     paths.clear();
-    //std::this_thread::sleep_for(std::chrono::seconds(5));
 
 }

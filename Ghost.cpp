@@ -148,6 +148,7 @@ void Ghost::random_location(){
     poder_y = lista_randomg.getRandomNode()->getNodeY();
     position_y = poder_x;
     position_x = poder_y;
+    std::this_thread::sleep_for(std::chrono::seconds(5));
     pathList.clear();
     setPos(poder_x*30, poder_y*30);
     move();
