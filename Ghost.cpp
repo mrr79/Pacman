@@ -44,6 +44,14 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
     std::cout << "ghost inicial en matriz Y: " << position_y<< std::endl;
 
     set_mapa(mapa);
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if (mapa[i][j] != 0) {
+                StarNode *node = new StarNode(j, i);
+                lista_randomg.append(node);
+            }
+        }
+    }
 
 }
 
@@ -207,4 +215,15 @@ void Ghost::check_collision()
             std::cout << "PODER ROBADOOOOOOOOOOOOOOOOO" << std::endl;
         }
     }
+}
+
+void Ghost::random_location(){
+    poder_x = lista_randomg.getRandomNode()->getNodeX();
+    poder_y = lista_randomg.getRandomNode()->getNodeY();
+    position_y = poder_x;
+    position_x = poder_y;
+    pathList.clear();
+    move();
+    setPos(poder_x*30, poder_y*30);
+
 }

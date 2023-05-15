@@ -91,3 +91,10 @@ StarNode* StarList::getRandomNode() const {
               << "(" << nodo_actual->getNodeX() << "," << nodo_actual->getNodeY() << ")";
     return nodo_actual;
 }
+void StarList::clear() {
+    while (head != nullptr) {
+        StarNode* temp = head;
+        head = head->getNext();
+        delete temp;
+    }
+}

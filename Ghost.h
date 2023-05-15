@@ -12,10 +12,13 @@ class Ghost:public QObject , public  QGraphicsPixmapItem{
     Q_OBJECT
 public:
     Ghost(int mapa[21][30],int j,int i);
+    void random_location();
 
     Pac_Man* getPacman();
     void set_mapa(int mapa[21][30]);
     //StarNode head;
+    StarList lista_randomg;
+
 public slots:
     //void move(int pac_man_x, int pac_man_y);
     void move();

@@ -30,6 +30,7 @@ public:
 
     int getActPacmanX();
     int getActPacmanY();
+    bool cazar = false;
     void setActPacmanX(int m);
     void setActPacmanY(int n);
     StarList lista_random;

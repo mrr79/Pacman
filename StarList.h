@@ -19,6 +19,7 @@ public:
     void removeHead();
     bool isEmpty() const;
     StarNode *getRandomNode() const;
+    void clear();
 private:
     StarNode* head;
     int listSize;

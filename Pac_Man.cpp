@@ -115,19 +115,28 @@ void Pac_Man::check_collision()
             delete colliding_items[i];
             poder_activo = true;
             std::cout << "PODER ACTIVADOOOOOOOOOOOOOOOOO" << std::endl;
+            cazar = true;
+            poder_activo = false;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
-            //scene->removeItem(this);
-            lifes--;
-            random_location();
-            return;
+            Ghost* ghost_ptr = dynamic_cast<Ghost*>(colliding_items[i]);
+            if (cazar = false){
+                lifes--;
+                random_location();
+            } else{
+                points+= 50;
+                points_label->setPlainText("Points: " + QString::number(points));
+                ghost_ptr->random_location();
+            }
+
         }
     }
 }
 
 void Pac_Man::check_points() {
     if (points % 200==0 && points!=0) {
-
+        points+= 10;
+        points_label->setPlainText("Points: " + QString::number(points));
         srand(time(NULL));
 
         SuperDot *super_dot = new SuperDot();
