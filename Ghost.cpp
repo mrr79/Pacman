@@ -67,11 +67,6 @@ void Ghost::set_mapa(int mapa[21][30])
     }
 }
 
-void Ghost::moveWithoutArgs()
-{
-
-    move();
-}
 void Ghost::move(){
     std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
     if (!pathList.isEmpty()) {
@@ -121,75 +116,6 @@ void Ghost::chasePacMan() { //para calcular
     }
 }
 
-void Ghost::move2(){// ignorar
-    //move2();
-    std::cout << "ENTRA A MOVE DE GHOST" << std::endl;
-    int dest_x = 29; // la posición X a la que debe llegar el Ghost
-    int dest_y = position_y; // la posición Y se mantiene igual
-    bool obstacle_found = false; // variable para determinar si se encuentra un obstáculo
-    std::cout << "ghost inicial en move X: " << position_x<< std::endl;
-    std::cout << "ghost inicial en move Y: " << position_y<< std::endl;
-    //position_x
-    //move2();
-    // mover hacia la derecha hasta encontrar un obstáculo o llegar a dest_x
-    while (position_x < dest_x && !obstacle_found) {
-        if (mapa[position_y][position_x + 1 ] == 0) {
-            obstacle_found = true;
-            if (search){
-                AStar astar;
-
-                //Pair src = make_pair(11,19);//PROblema en source
-
-                Pair src = make_pair(position_y,position_x);//PROblema en source
-                Pair dest = make_pair(pac_man_x, pac_man_y);
-                std::cout << "GHOST CALCULADO Y: " << position_y<< std::endl;
-                std::cout << "GHOST CALCULADO X:  " << position_x<< std::endl;
-                std::cout << "PACMAN CALCULADO Y: " << pac_man_y<< std::endl;
-                std::cout << "PACMAN CALCULADO X: " << pac_man_x<< std::endl;
-                astar.aStarSearch(mapa, src, dest);
-                std::cout << "PRINT EN GHOST DE LISTA " << std::endl;
-                StarList pathList = astar.getPath();
-                std::cout << "PRINT HEAD EN GHOST DE LISTA " << std::endl;
-                pathList.getHead();
-                std::cout << "PRINT size EN GHOST DE LISTA " << std::endl;
-                pathList.size();
-                std::cout << "PRINT head en X EN GHOST DE LISTA " << std::endl;
-                pathList.getHead()->getNodeX();
-
-                //pathList.printList();
-                //pathList.getHead();
-                search= false;
-            }
-
-        } else {
-            setPos(x() + speed, y());
-            position_x++;
-            //llego= false;
-            QCoreApplication::processEvents(); // para actualizar la ventana
-            QThread::msleep(300); // para darle una pausa al movimiento
-        }
-        //llego= true;
-    }
-
-    // si no hay obstáculo, mover hacia abajo hasta encontrar un obstáculo o llegar a dest_y
-    while (position_y < dest_y && !obstacle_found) {
-        if (mapa[position_y + 1][position_x] == 0) {
-            obstacle_found = true;
-        } else {
-            setPos(x(), y() + speed);
-            position_y++;
-            QCoreApplication::processEvents(); // para actualizar la ventana
-            QThread::msleep(300); // para darle una pausa al movimiento
-        }
-    }
-//    std::cout << "ghost ACTUAL en matriz X: " << position_x<< std::endl;
-//    std::cout << "ghost ACTUAL en matriz Y: " << position_y<< std::endl;
-    //int pac_man_x = pacman->getActPacmanX(); // obtener el valor de act_pacman_x
-    //int pac_man_y = pacman->getActPacmanY();
-    //std::cout << "PACMAN X EN GHOST " << pac_man_x<< std::endl;
-    //std::cout << "PACMAN Y EN GHOST: " << pac_man_y<< std::endl;
-
-}
 
 void Ghost::actualizar_posicion_pacman(int x, int y) {
 

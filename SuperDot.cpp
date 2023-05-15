@@ -2,5 +2,5 @@
 
 SuperDot::SuperDot()
 {
-    setPixmap(QPixmap(":/Images/SuperDot.png"));
+    setPixmap(QPixmap(":/Images/Cherry.png"));
 }

@@ -17,5 +17,6 @@
         <file>ghost3.png</file>
         <file>ghost4.png</file>
         <file>Dot.png</file>
+        <file>Cherry.png</file>
     </qresource>
 </RCC>
