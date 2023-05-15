@@ -18,6 +18,7 @@ bool Backtracking::isSafe(int x, int y, int n, int m, vector<vector<int>> &maze,
 
 void Backtracking::solve(vector<vector<int>> &maze, int n, int m, int x, int y, string path, vector<string> &ans, vector<vector<int>> &visited) {
     cout << "entra a solve:" << endl;
+
     if (x == 1 && y == 1) {
         ans.push_back(path);
         return;

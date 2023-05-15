@@ -21,7 +21,6 @@
 #include "SuperDot.h"
 #include "Dificulties_Window.h"
 #include "Backtracking.h"
-
 Ghost2::Ghost2(int mapa[21][30], int j, int i)
 
 {
@@ -73,11 +72,50 @@ void Ghost2::set_mapa(int mapa[21][30])
 }
 
 void Ghost2::move(){
-    std::cout << "ENTRA A MOVE DE Ghost2" << std::endl;
-    chasePacMan();
+    if (paths.empty()) {
+        chasePacMan();
+        cout << "El vector paths está vacío." << endl;
+    } else {
+        cout << "El vector paths no está vacío." << endl;
+        string path = paths[0];
+        std::cout << "CONTADOR " << contador<< std::endl;
+        std::cout << "siixe " << path.size()<< std::endl;
+
+        if (contador == path.size()){
+            std::cout << "ESTOY TRISTE " << std::endl;
+            contador = 0;
+            paths.clear();
+        }else{
+            std::cout << "ESTOY FELIZ " << std::endl;
+            char direction = path[contador];
+            contador = contador + 1;
+
+            std::cout << "CONTADOR " << contador<< std::endl;
+            std::cout << "DIRECCION " << direction<< std::endl;
+
+            if (direction == 'U') {
+                position_y = position_y-1;
+                setPos(position_x*30, position_y*30);
+            }
+            else if (direction == 'D'){
+                position_y = position_y+1;
+                setPos(position_x*30, position_y*30);
+            }
+            else if (direction == 'L'){
+                position_x = position_x-1;
+                setPos(position_x*30, position_y*30);
+            }
+            else if (direction == 'R'){
+                position_x = position_x+1;
+                setPos(position_x*30, position_y*30);
+            }
+        }
+    }
+
 }
 
 void Ghost2::chasePacMan() { //para calcular
+    buscar = false;
     vector<vector<int>> maze(21, vector<int>(30));
     for (int i = 0; i < 21; i++) {
         for (int j = 0; j < 30; j++) {
@@ -86,16 +124,13 @@ void Ghost2::chasePacMan() { //para calcular
     }
     //llama a conseguir los caminos
     Backtracking Bt;
-    vector<string> paths=Bt.possiblePaths(maze,2,1); //EL primer valor es para abajo y el segundo hacia la derecha
+    paths=Bt.possiblePaths(maze,position_y,position_x); //EL primer valor es para abajo y el segundo hacia la derecha
     //vector<string> paths = possiblePaths(maze, 0, 0);
 
 
     //imprime los caminos
-    cout << "Mejores caminos:" << endl;
-    cout << "caminos:" << paths.size() << endl;
-    for(int i=0;i<paths.size();i++){
-        cout<<paths[0]<<" ";
-    }
+    cout << "camino:" << paths[0] << endl;
+
 }
 
 

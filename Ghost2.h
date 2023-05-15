@@ -35,6 +35,8 @@ public slots:
     void check_collision();
 
 private:
+    bool buscar;
+    int contador = 0;
     std::vector<std::string> paths;
     int speed=30;
     int position_x;
