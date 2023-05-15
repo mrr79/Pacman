@@ -48,10 +48,10 @@ Ghost2::Ghost2(int mapa[21][30], int j, int i)
     std::cout << "Ghost2 inicial en matriz Y: " << position_y<< std::endl;
 
     set_mapa(mapa);
-    for (int i = 0; i < 5; i++) {
+    for (int i = 15; i < 25; i++) {
         for (int j = 0; j < 5; j++) {
-            if (mapa[i][j] != 0) {
-                StarNode *node = new StarNode(j, i);
+            if (mapa[i][19] != 0) {
+                StarNode *node = new StarNode(19, i);
                 lista_randomg.append(node);
             }
         }
@@ -73,8 +73,8 @@ void Ghost2::set_mapa(int mapa[21][30])
 
 void Ghost2::move(){
     if (poder_activo == true){
-        backtrack_y= poder_x;
-        backtrack_x = poder_y;
+        backtrack_y= 1;
+        backtrack_x = 1;
 
     } else {
         backtrack_y= pac_man_x;
@@ -138,7 +138,7 @@ void Ghost2::chasePacMan() { //para calcular
 
 
     //imprime los caminos
-    cout << "camino:" << paths[0] << endl;
+    //cout << "camino:" << paths[0] << endl;
 
 }
 
@@ -174,8 +174,8 @@ void Ghost2::random_location(){
     poder_y = lista_randomg.getRandomNode()->getNodeY();
     position_y = poder_x;
     position_x = poder_y;
-    pathList.clear();
-    move();
+    //paths.clear();
+    //std::this_thread::sleep_for(std::chrono::seconds(5));
     setPos(poder_x*30, poder_y*30);
 
 }

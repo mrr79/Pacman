@@ -44,10 +44,10 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
     std::cout << "ghost inicial en matriz Y: " << position_y<< std::endl;
 
     set_mapa(mapa);
-    for (int i = 0; i < 5; i++) {
+    for (int i = 15; i < 25; i++) {
         for (int j = 0; j < 5; j++) {
-            if (mapa[i][j] != 0) {
-                StarNode *node = new StarNode(j, i);
+            if (mapa[i][19] != 0) {
+                StarNode *node = new StarNode(19, i);
                 lista_randomg.append(node);
             }
         }

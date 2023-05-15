@@ -4,6 +4,7 @@
 #include "Ghost.h"
 #include "Utils.h"
 #include "qgraphicsscene.h"
+#include "Ghost2.h"
 #include <QTimer>
 #include <QKeyEvent>
 #include <QDebug>
@@ -130,6 +131,18 @@ void Pac_Man::check_collision()
             }
 
         }
+        else if (typeid(*(colliding_items[i])) == typeid(Ghost2)){
+            Ghost2* ghost_ptr2 = dynamic_cast<Ghost2*>(colliding_items[i]);
+            if (cazar = false){
+                lifes--;
+                random_location();
+            } else{
+                points+= 50;
+                points_label->setPlainText("Points: " + QString::number(points));
+                ghost_ptr2->random_location();
+            }
+
+        }
     }
 }
 
@@ -141,11 +154,8 @@ void Pac_Man::check_points() {
 
         SuperDot *super_dot = new SuperDot();
 
-        poder_x = lista_random.getRandomNode()->getNodeX();
-        poder_y = lista_random.getRandomNode()->getNodeY();
-
         scene->addItem(super_dot);
-        super_dot->setPos(poder_x*30,poder_y*30);
+        super_dot->setPos(1*30,1*30);
         poder_activo = true;
         std::cout << "Coordenadas aleatorias de SUPERDOT: (" << poder_x << ", " << poder_y << ")" << std::endl;
     }
