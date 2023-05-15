@@ -9,6 +9,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+extern int backtrack_x;
+extern int backtrack_y;
 
 class Backtracking {
 #include <vector>

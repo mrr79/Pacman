@@ -72,6 +72,9 @@ void Ghost2::set_mapa(int mapa[21][30])
 }
 
 void Ghost2::move(){
+    backtrack_y= pac_man_x;
+    backtrack_x = pac_man_y;
+
     if (paths.empty()) {
         chasePacMan();
         cout << "El vector paths está vacío." << endl;
