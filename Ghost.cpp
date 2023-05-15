@@ -102,7 +102,7 @@ void Ghost::chasePacMan() { //para calcular
         Pair src = make_pair(position_y,position_x);//PROblema en source
         Pair dest;
         if (poder_activo == true){
-            dest = make_pair(poder_x, poder_y);
+            dest = make_pair(1, 1);
         } else{
             dest = make_pair(pac_man_x, pac_man_y);
         }
