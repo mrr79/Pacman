@@ -13,6 +13,7 @@
 #include "AStar.h"
 #include "Game.h"
 #include "StarNode.h"
+#include "SuperDot.h"
 #include "Dificulties_Window.h"
 bool nivel1;
 
@@ -27,6 +28,15 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
 
     timer_move->setSingleShot(false); // Set the timer to run only once
     QTimer::singleShot(3000, timer_move, SLOT(start())); // Wait for 3 seconds and then start the timer
+
+    QTimer *collision_timer = new QTimer(this);
+    collision_timer->setInterval(500);
+
+    // Conectar la señal timeout() del QTimer al slot check_collision():
+    connect(collision_timer, SIGNAL(timeout()), this, SLOT(check_collision()));
+
+    // Iniciar el QTimer:
+    collision_timer->start();
 
     position_x = j;//13
     position_y =i;//0 o 1
@@ -184,4 +194,17 @@ void Ghost::actualizar_posicion_pacman(int x, int y) {
     }
 
 
+}
+void Ghost::check_collision()
+{
+    QList<QGraphicsItem *> colliding_items = collidingItems(); //List of the colliding items
+    for (int i = 0, n = colliding_items.size(); i < n; ++i){
+
+        if (typeid(*(colliding_items[i])) == typeid(SuperDot)){
+            scene()->removeItem(colliding_items[i]);
+            delete colliding_items[i];
+            poder_activo = false;
+            std::cout << "PODER ROBADOOOOOOOOOOOOOOOOO" << std::endl;
+        }
+    }
 }

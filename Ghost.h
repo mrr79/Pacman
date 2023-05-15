@@ -25,6 +25,7 @@ public slots:
 
 public slots:
     void actualizar_posicion_pacman(int x, int y);
+    void check_collision();
 
 private:
     int speed=30;
