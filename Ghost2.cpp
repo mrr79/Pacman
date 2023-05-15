@@ -72,8 +72,15 @@ void Ghost2::set_mapa(int mapa[21][30])
 }
 
 void Ghost2::move(){
-    backtrack_y= pac_man_x;
-    backtrack_x = pac_man_y;
+    if (poder_activo == true){
+        backtrack_y= poder_x;
+        backtrack_x = poder_y;
+        std::cout << "PODER YYYYYYYYY " << backtrack_x<< std::endl;
+        std::cout << "PODER XXXX " << backtrack_y<< std::endl;
+    } else {
+        backtrack_y= pac_man_x;
+        backtrack_x = pac_man_y;
+    }
 
     if (paths.empty()) {
         chasePacMan();
