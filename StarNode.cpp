@@ -31,9 +31,19 @@ void StarNode::setNext(StarNode* nextNode) {
 }
 
 int StarNode::getNodeX() {
-    //std::cout << "nodo en X: " << value1<< std::endl;
-    return value1;
+    if (this == nullptr) {
+        return 100; // o cualquier otro valor predeterminado
+    } else{
+        return value1;
+    }
+
 }
+
 int StarNode::getNodeY() {
-    return value2;
+    if (this == nullptr) {
+        return 0; // o cualquier otro valor predeterminado
+    } else{
+        return value2;
+    }
+
 }

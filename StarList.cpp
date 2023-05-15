@@ -23,7 +23,9 @@ void StarList::append(StarNode* new_node) {
 void StarList::printList() const {
     StarNode* nodo_actual = this->head;
     std::cout << "(" << nodo_actual->getNodeX() << "," << nodo_actual->getNodeY() << ")";
-    nodo_actual = nodo_actual->getNext();
+    if (nodo_actual->getNodeX() != 100){
+        nodo_actual = nodo_actual->getNext();
+    }
     while (nodo_actual != nullptr) {
         std::cout << " --> "
                   << "(" << nodo_actual->getNodeX() << "," << nodo_actual->getNodeY() << ")";
