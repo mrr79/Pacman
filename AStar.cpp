@@ -11,6 +11,7 @@ using namespace std;
 #include "AStar.h"
 #define ROW 21
 #define COL 30
+bool ejecutar = true;
 
 // Creating a shortcut for int, int pair type
 typedef pair<int, int> Pair;
@@ -106,12 +107,14 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
 
     // If the source is out of range
     if (isValid(src.first, src.second) == false) {
+        ejecutar = false;
         printf("Source is invalid\n");
         return;
     }
 
     // If the destination is out of range
     if (isValid(dest.first, dest.second) == false) {
+        ejecutar = false;
         printf("Destination is invalid\n");
         return;
     }
@@ -120,6 +123,7 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
     if (isUnBlocked(grid, src.first, src.second) == false
         || isUnBlocked(grid, dest.first, dest.second)
            == false) {
+        ejecutar = false;
         printf("Source or the destination is blocked\n");
         return;
     }
@@ -127,6 +131,7 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
     // If the destination cell is the same as source cell
     if (isDestination(src.first, src.second, dest)
         == true) {
+        ejecutar = false;
         printf("We are already at the destination\n");
         return;
     }
@@ -399,13 +404,16 @@ void AStar::aStarSearch(int grid[][COL], Pair src, Pair dest)
     // there is no way to destination cell (due to
     // blockages)
     if (foundDest == false)
-        printf("Failed to find the Destination Cell\n");
+        ejecutar = false;
+    printf("Failed to find the Destination Cell\n");
 
     return;
 }
 StarList AStar::getPath() {
     std::cout << "funcaaaaaaaaaaaaa" << std::endl;
+
     pathList.printList();
+
     return pathList;
 
 

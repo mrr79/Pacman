@@ -23,7 +23,7 @@ struct cell {
     int parent_i, parent_j;
     double f, g, h;
 };
-
+extern bool ejecutar;
 class AStar {
 public:
     void setGrid(int grid[ROW][COL]);
