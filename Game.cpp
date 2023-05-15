@@ -2,6 +2,7 @@
 #include "Blocks.h"
 #include "Ghost.h"
 #include "Dots.h"
+#include "Ghost2.h"
 #include <QTimer>
 #include <QGraphicsRectItem>
 #include <iostream>
@@ -29,7 +30,15 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
                std::cout << "i ghost: deberia ser 28 o 29: " << ighost<< std::endl;
     scene->addItem(ghost);
 
+    Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
+    ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
+    std::cout << "j ghost: " << jghost2<< std::endl;
+    std::cout << "i ghost: deberia ser 28 o 29: " << ighost2<< std::endl;
+    scene->addItem(ghost2);
+
     connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
+    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
+
     //Ghost *ghost = new Ghost();
 
     QTimer *col = new QTimer();
@@ -103,6 +112,15 @@ void Game::init_lab()
                 //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost =j;
                 ighost=i;
+//                std::cout << "j ghost: " << j<< std::endl;
+//                std::cout << "i ghost: " << i<< std::endl;
+                //ghost->move(pacmanX,pacmanY);
+            }
+            else if (m_mapa[i][j] == 12) // if character is '1', add ghost
+            {
+                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
+                jghost2 =j;
+                ighost2 =i;
 //                std::cout << "j ghost: " << j<< std::endl;
 //                std::cout << "i ghost: " << i<< std::endl;
                 //ghost->move(pacmanX,pacmanY);

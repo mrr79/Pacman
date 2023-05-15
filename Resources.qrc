@@ -13,6 +13,9 @@
         <file>SuperDot.png</file>
         <file>back.png</file>
         <file>ghost1.png</file>
+        <file>ghost2.png</file>
+        <file>ghost3.png</file>
+        <file>ghost4.png</file>
         <file>Dot.png</file>
     </qresource>
 </RCC>

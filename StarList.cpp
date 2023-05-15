@@ -83,7 +83,7 @@ StarNode* StarList::getRandomNode() const {
 
     StarNode* nodo_actual = this->head;
     int current_index = 0;
-    while (current_index < random_index && nodo_actual != nullptr) {
+    while (current_index < random_index && nodo_actual->getNext() != nullptr) {
         nodo_actual = nodo_actual->getNext();
         current_index++;
     }
@@ -91,6 +91,7 @@ StarNode* StarList::getRandomNode() const {
               << "(" << nodo_actual->getNodeX() << "," << nodo_actual->getNodeY() << ")";
     return nodo_actual;
 }
+
 void StarList::clear() {
     while (head != nullptr) {
         StarNode* temp = head;

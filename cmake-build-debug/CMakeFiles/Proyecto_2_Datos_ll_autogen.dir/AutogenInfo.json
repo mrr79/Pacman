@@ -119,6 +119,12 @@
 			null
 		],
 		[
+			"/home/henry/CLionProjects/Pacman/Ghost2.h",
+			"MU",
+			"EWIEGA46WW/moc_Ghost2.cpp",
+			null
+		],
+		[
 			"/home/henry/CLionProjects/Pacman/Pac_Man.h",
 			"MU",
 			"EWIEGA46WW/moc_Pac_Man.cpp",
@@ -206,6 +212,7 @@
 		[ "/home/henry/CLionProjects/Pacman/Dots.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Game.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Ghost.cpp", "MU", null ],
+		[ "/home/henry/CLionProjects/Pacman/Ghost2.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Pac_Man.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/StarList.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/StarNode.cpp", "MU", null ],
