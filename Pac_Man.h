@@ -6,6 +6,9 @@
 #include "StarList.h"
 #include "StarNode.h"
 extern int pointsR;
+extern bool poder_activo;
+extern int poder_x;
+extern int poder_y;
 class Pac_Man: public QObject , public  QGraphicsPixmapItem{
      Q_OBJECT
 public:

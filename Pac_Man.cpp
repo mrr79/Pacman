@@ -10,7 +10,9 @@
 #include <iostream>
 
 int cycle = 0;
-
+bool poder_activo = false;
+int poder_x;
+int poder_y;
 Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *sceneint,int j, int i)
 {
 
@@ -20,7 +22,7 @@ Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *poi
     this->scene = scene;
     this->act_pacman_x=j;
     this->act_pacman_y=i;
-
+    poder_activo = false;
     std::cout << "PAcman inicial en matriz X TIENE QUE SER 10 O 15: " << act_pacman_x<< std::endl;
     std::cout << "PAcman inicial en matriz Y TIENE QUE SER 10 O 15: " << act_pacman_y<< std::endl;
 
@@ -95,6 +97,7 @@ void Pac_Man::set_values(int mapa[21][30], int points, int lifes, QGraphicsTextI
 
 int pointsR;
 
+
 void Pac_Man::check_collision()
 {
     QList<QGraphicsItem *> colliding_items = collidingItems(); //List of the colliding items
@@ -108,11 +111,10 @@ void Pac_Man::check_collision()
             return;
         }
         else if (typeid(*(colliding_items[i])) == typeid(SuperDot)){
-            //scene->removeItem(colliding_items[i]);
-            //delete colliding_items[i];
-            //super_dot = true;
-            //return;
-            std::cout << "PAcman y superpastilla " << std::endl;
+            scene->removeItem(colliding_items[i]);
+            delete colliding_items[i];
+            poder_activo = true;
+            std::cout << "PODER ACTIVADOOOOOOOOOOOOOOOOO" << std::endl;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
             //scene->removeItem(this);
@@ -129,15 +131,14 @@ void Pac_Man::check_points() {
         srand(time(NULL));
 
         SuperDot *super_dot = new SuperDot();
-        int x, y;
-        do {
-            x = rand() % 21;
-            y = rand() % 30;
-        } while (mapa[x][y] != 0);
+
+        poder_x = lista_random.getRandomNode()->getNodeX();
+        poder_y = lista_random.getRandomNode()->getNodeY();
 
         scene->addItem(super_dot);
-        super_dot->setPos(x*30,y*30);
-        std::cout << "Coordenadas aleatorias de SUPERDOT: (" << x << ", " << y << ")" << std::endl;
+        super_dot->setPos(poder_x*30,poder_y*30);
+        poder_activo = true;
+        std::cout << "Coordenadas aleatorias de SUPERDOT: (" << poder_x << ", " << poder_y << ")" << std::endl;
     }
 }
 
@@ -266,9 +267,9 @@ void Pac_Man::animation_D()
     }
 }
 void Pac_Man::random_location(){
-    int x = lista_random.getRandomNode()->getNodeX();
-    int y = lista_random.getRandomNode()->getNodeY();
-    setPos(x*30, y*30);
+    poder_x = lista_random.getRandomNode()->getNodeX();
+    poder_y = lista_random.getRandomNode()->getNodeY();
+    setPos(poder_x*30, poder_y*30);
 
 }
 

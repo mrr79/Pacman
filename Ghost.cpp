@@ -23,7 +23,7 @@ Ghost::Ghost(int mapa[21][30], int j, int i)
 
     QTimer *timer_move = new QTimer;
     connect(timer_move, &QTimer::timeout, this, &Ghost::move);
-    timer_move->setInterval(600); // Signal every 50 milliseconds
+    timer_move->setInterval(400); // Signal every 50 milliseconds
 
     timer_move->setSingleShot(false); // Set the timer to run only once
     QTimer::singleShot(3000, timer_move, SLOT(start())); // Wait for 3 seconds and then start the timer
@@ -88,7 +88,13 @@ void Ghost::chasePacMan() { //para calcular
         std::cout << "ENTRA A CHASE DE GHOST" << std::endl;
         AStar astar;
         Pair src = make_pair(position_y,position_x);//PROblema en source
-        Pair dest = make_pair(pac_man_x, pac_man_y);
+        Pair dest;
+        if (poder_activo == true){
+            dest = make_pair(poder_x, poder_y);
+        } else{
+            dest = make_pair(pac_man_x, pac_man_y);
+        }
+
         astar.aStarSearch(mapa, src, dest);
         pathList = astar.getPath();//lista con la ruta
         route_completed= false;// ya hice ruta pero no la he completado
