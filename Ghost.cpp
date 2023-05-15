@@ -149,7 +149,7 @@ void Ghost::random_location(){
     position_y = poder_x;
     position_x = poder_y;
     pathList.clear();
-    move();
     setPos(poder_x*30, poder_y*30);
+    move();
 
 }

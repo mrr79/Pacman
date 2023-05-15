@@ -75,8 +75,7 @@ void Ghost2::move(){
     if (poder_activo == true){
         backtrack_y= poder_x;
         backtrack_x = poder_y;
-        std::cout << "PODER YYYYYYYYY " << backtrack_x<< std::endl;
-        std::cout << "PODER XXXX " << backtrack_y<< std::endl;
+
     } else {
         backtrack_y= pac_man_x;
         backtrack_x = pac_man_y;
@@ -87,7 +86,7 @@ void Ghost2::move(){
         cout << "El vector paths está vacío." << endl;
     } else {
         cout << "El vector paths no está vacío." << endl;
-        string path = paths[0];
+        string path = paths[(paths.size()-1)];
         std::cout << "CONTADOR " << contador<< std::endl;
         std::cout << "siixe " << path.size()<< std::endl;
 
