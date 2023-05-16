@@ -23,58 +23,17 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     //Creation of the scene
     QGraphicsScene *scene = new QGraphicsScene();
     scene->setSceneRect(0,0,800,600);
+    scene->setBackgroundBrush(QBrush(QImage(":/Images/MENU.png")));
 
-    //Creation and configuration of the title
-    QLabel *label = new QLabel("Pac-Man");
-    QGraphicsProxyWidget *proxy_label = new QGraphicsProxyWidget(); //Widget that makes posible to use a QLabel in a QGraphicsscene
-    proxy_label->setWidget(label);
-    QFont font("Arial", 20, QFont::Helvetica);
-    label->setStyleSheet("background-color: white");
-    label->setFont(font);
-    scene->addItem(proxy_label);
-    proxy_label->setPos(335, 20);
-
-    //Creation and configuration of easy mode button
-
-    QPushButton * easy_mode = new QPushButton("Easy");
+    QPushButton * easy_mode = new QPushButton("START GAME");
     easy_mode->setGeometry(0,0,170,50);
     QGraphicsProxyWidget *proxy = new QGraphicsProxyWidget(); //Widget that makes posible to use a QPushButton in a QGraphicsscene
     proxy->setWidget(easy_mode);
     scene->addItem(proxy);
-    proxy->setPos(320,150);
+    proxy->setPos(320,290);
     connect(easy_mode, &QPushButton::released, this, &Dificulties_Window::easy); //Method that will when the button is released
 
     //Creaction and configuration of normal mode button
-
-
-
-    QPushButton * play_button = new QPushButton("Classic 4");
-    play_button->setGeometry(0,0,170,50);
-    QGraphicsProxyWidget *proxy_normal = new QGraphicsProxyWidget(); //Widget that makes posible to use a QPushButton in a QGraphicsscene
-    proxy_normal->setWidget(play_button);
-    scene->addItem(proxy_normal);
-    proxy_normal->setPos(320,240);
-    //connect(play_button, &QPushButton::released, this, &Dificulties_Window::classic);
-    //Creaction and configuration of hard mode button
-
-    QPushButton * hard_mode = new QPushButton("Hard");
-    hard_mode->setGeometry(0,0,170,50);
-    QGraphicsProxyWidget *proxy_hard = new QGraphicsProxyWidget(); //Widget that makes posible to use a QPushButton in a QGraphicsscene
-    proxy_hard->setWidget(hard_mode);
-    scene->addItem(proxy_hard);
-    proxy_hard->setPos(320,330);
-    //connect(hard_mode, &QPushButton::released, this, &Dificulties_Window::hard); //Method that will activated when the button is released
-
-    QPushButton * normal_mode = new QPushButton("Normal");
-    normal_mode->setGeometry(0,0,170,50);
-    QGraphicsProxyWidget *proxy_classic = new QGraphicsProxyWidget(); //Widget that makes posible to use a QPushButton in a QGraphicsscene
-    proxy_classic->setWidget(normal_mode);
-    scene->addItem(proxy_classic);
-    proxy_classic->setPos(320,420);
-    //connect(normal_mode, &QPushButton::released, this, &Dificulties_Window::normal); //Method that will activated when the button is released
-
-
-    //Configuration of the scene
 
 
     setScene(scene);
