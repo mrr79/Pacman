@@ -5,6 +5,7 @@
 #include "Ghost2.h"
 #include "Ghost3.h"
 #include "Ghost4.h"
+#include "Dificulties_Window.h"
 #include <QTimer>
 #include <QGraphicsRectItem>
 #include <iostream>
@@ -25,27 +26,65 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
 
     pac_man = new Pac_Man(m_mapa, m_points, m_lifes, points_label, scene,pacmanX/30,pacmanY/30);
     pac_man->set_values(mapa, points, lifes, points_label, scene);
+//Creacion de los fantasmas
+    if (nivel == 1){
+        Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
+        ghost->setPos(jghost*30, ighost*30); // set ghost position
+        scene->addItem(ghost);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
 
-    Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
-    ghost->setPos(jghost*30, ighost*30); // set ghost position
-    scene->addItem(ghost);
+    }
+    else if (nivel == 2){
+        Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
+        ghost->setPos(jghost*30, ighost*30); // set ghost position
+        scene->addItem(ghost);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
 
-    Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
-    ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
-    scene->addItem(ghost2);
+        Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
+        ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
+        scene->addItem(ghost2);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
 
-    Ghost3 *ghost3 = new Ghost3(m_mapa,jghost2, ighost2);
-    ghost3->setPos(jghost3*30, ighost3*30); // set ghost position
-    scene->addItem(ghost3);
+    }
+    else if (nivel == 3){
+        Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
+        ghost->setPos(jghost*30, ighost*30); // set ghost position
+        scene->addItem(ghost);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
 
-    Ghost4 *ghost4 = new Ghost4(m_mapa,jghost4, ighost4);
-    ghost4->setPos(jghost4*30, ighost4*30); // set ghost position
-    scene->addItem(ghost4);
+        Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
+        ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
+        scene->addItem(ghost2);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
 
-    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
-    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
-    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost3, SLOT(actualizar_posicion_pacman3(int, int)));
-    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost4, SLOT(actualizar_posicion_pacman4(int, int)));
+        Ghost3 *ghost3 = new Ghost3(m_mapa,jghost2, ighost2);
+        ghost3->setPos(jghost3*30, ighost3*30); // set ghost position
+        scene->addItem(ghost3);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost3, SLOT(actualizar_posicion_pacman3(int, int)));
+
+    }
+    else if (nivel == 4){
+        Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
+        ghost->setPos(jghost*30, ighost*30); // set ghost position
+        scene->addItem(ghost);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
+
+        Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
+        ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
+        scene->addItem(ghost2);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
+
+        Ghost3 *ghost3 = new Ghost3(m_mapa,jghost2, ighost2);
+        ghost3->setPos(jghost3*30, ighost3*30); // set ghost position
+        scene->addItem(ghost3);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost3, SLOT(actualizar_posicion_pacman3(int, int)));
+
+        Ghost4 *ghost4 = new Ghost4(m_mapa,jghost4, ighost4);
+        ghost4->setPos(jghost4*30, ighost4*30); // set ghost position
+        scene->addItem(ghost4);
+        connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost4, SLOT(actualizar_posicion_pacman4(int, int)));
+
+    }
 
 
     QTimer *col = new QTimer();

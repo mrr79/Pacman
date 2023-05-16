@@ -9,7 +9,7 @@
 
 int vidas = 3;
 int puntos = 0;
-int nivel = 1;
+int nivel = 4;
 
 Dificulties_Window::Dificulties_Window(QWidget *parent)
 {
