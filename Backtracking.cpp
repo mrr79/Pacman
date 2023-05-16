@@ -8,6 +8,7 @@
 int backtrack_x;
 int backtrack_y;
 
+
 bool Backtracking::isSafe(int x, int y, int n, int m, vector<vector<int>> &maze, vector<vector<int>> &visited) {
     if ((x >= 0 && x < n) && (y >= 0 && y < m) && visited[x][y] == 0 && (maze[x][y] == 1 || maze[x][y] == 9 || maze[x][y] == 11 || maze[x][y] == 12 || maze[x][y] == 13 || maze[x][y] == 14)) {
         return true;
