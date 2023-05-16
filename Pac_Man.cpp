@@ -111,8 +111,9 @@ void Pac_Man::check_collision()
         if (typeid(*(colliding_items[i])) == typeid(Dot)){
             scene->removeItem(colliding_items[i]);
             delete colliding_items[i];
-            puntos += 10;
-            points_label->setPlainText("Points: " + QString::number(puntos));
+            points+= 10;
+            pointsR = points;
+            points_label->setPlainText("Points: " + QString::number(points));
 
             return;
         }
@@ -127,8 +128,9 @@ void Pac_Man::check_collision()
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
             Ghost* ghost_ptr = dynamic_cast<Ghost*>(colliding_items[i]);
             if (cazar == false){
-                puntos+= 50;
-                points_label->setPlainText("Points: " + QString::number(puntos));
+                points+= 50;
+                pointsR = points;
+                points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr->random_location();
             } else{
                 vidas--;
@@ -140,8 +142,9 @@ void Pac_Man::check_collision()
         else if (typeid(*(colliding_items[i])) == typeid(Ghost2)){
             Ghost2* ghost_ptr2 = dynamic_cast<Ghost2*>(colliding_items[i]);
             if (cazar == false){
-                puntos+= 50;
-                points_label->setPlainText("Points: " + QString::number(puntos));
+                points+= 50;
+                pointsR = points;
+                points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr2->random_location();
             } else {
                 vidas--;
@@ -154,8 +157,9 @@ void Pac_Man::check_collision()
         else if (typeid(*(colliding_items[i])) == typeid(Ghost3)){
             Ghost3* ghost_ptr3 = dynamic_cast<Ghost3*>(colliding_items[i]);
             if (cazar == false){
-                puntos+= 50;
-                points_label->setPlainText("Points: " + QString::number(puntos));
+                points+= 50;
+                pointsR = points;
+                points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr3->random_location();
             } else {
                 vidas--;
@@ -168,8 +172,9 @@ void Pac_Man::check_collision()
         else if (typeid(*(colliding_items[i])) == typeid(Ghost4)){
             Ghost4* ghost_ptr4 = dynamic_cast<Ghost4*>(colliding_items[i]);
             if (cazar == false){
-                puntos+= 50;
-                points_label->setPlainText("Points: " + QString::number(puntos));
+                points+= 50;
+                pointsR = points;
+                points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr4->random_location();
             } else {
                 vidas--;
@@ -183,8 +188,28 @@ void Pac_Man::check_collision()
 }
 
 void Pac_Man::check_points() {
-    if (puntos % 200==0 && puntos!=0) {
-        puntos+= 10;
+    if (nivel == 1){
+        if (points >= 100){
+            nivel2 = true;
+        }
+    }
+    else if (nivel == 2){
+        if (points >= 150){
+            nivel3 = true;
+        }
+    }
+    else if (nivel == 3){
+        if (points >= 200){
+            nivel4 = true;
+        }
+    }
+    else if (nivel == 4){
+        if (points >= 250){
+            win = true;
+        }
+    }
+    if (points % 200==0 && points!=0) {
+        points+= 10;
         points_label->setPlainText("Points: " + QString::number(puntos));
         srand(time(NULL));
 

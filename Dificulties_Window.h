@@ -6,6 +6,11 @@
 #include <QGraphicsScene>
 #include "Game.h"
 extern bool nivel1;
+extern bool nivel2;
+extern bool nivel3;
+extern bool nivel4;
+extern bool win;
+
 extern int vidas;
 extern int puntos;
 extern int nivel;

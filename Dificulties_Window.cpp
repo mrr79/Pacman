@@ -9,7 +9,12 @@
 
 int vidas = 3;
 int puntos = 0;
-int nivel = 4;
+int nivel = 1;
+bool nivel2 = false;
+bool nivel3 = false;
+bool nivel4 = false;
+bool win = false;
+
 
 Dificulties_Window::Dificulties_Window(QWidget *parent)
 {
@@ -82,6 +87,33 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     show();
     nivel1 = true;
 }
+void Dificulties_Window::checkwin() {
+    std::cout << "PUNTOS ACTULAES " << pointsR << std::endl;
+    if (nivel2 == true){
+        nivel2 = false;
+        pointsR = pointsR + 10;
+        normal();
+    }
+    if (nivel3 == true){
+        nivel3 = false;
+        pointsR = pointsR + 10;
+        classic();
+    }
+    if (nivel4 == true){
+        nivel4 = false;
+        pointsR = pointsR + 10;
+        hard();
+    }
+    if (vidas <= 0){
+        std::cout << "GAME OVER" << vidas << std::endl;
+
+    }
+    if (win == true){
+        std::cout << "Ganooooo " << pointsR << std::endl;
+
+    }
+
+}
 
 void Dificulties_Window::easy()
 {
@@ -110,29 +142,13 @@ void Dificulties_Window::easy()
             {0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
-    level_1 = new Game(mapa, puntos, vidas);
+    level_1 = new Game(mapa, 0, vidas);
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
 
 
 }
-
-void Dificulties_Window::checkwin() {
-    printf("jueputaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-    std::cout << "PUNTOS ACTULAES " << pointsR << std::endl;
-    if (pointsR == 200){
-        normal();
-    }
-    if (pointsR == 50000000000){
-        classic();
-    }
-    if (pointsR == 70000000){
-        hard();
-    }
-
-}
-
 
 void Dificulties_Window::normal()
 {
@@ -141,7 +157,7 @@ void Dificulties_Window::normal()
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0},
             {0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,1,0,1,1,0,0,0,1,1,1,1,0},
-            {0,1,0,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,0,0,1,1,1,1,1,0,0,1,0},
+            {0,1,0,1,1,1,1,1,0,1,1,12,0,1,0,1,1,1,0,0,1,1,1,1,1,0,0,1,0},
             {0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,1,1,0,0,0,0,0,1,0,0,1,0},
             {0,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,1,0,1,1,1,0,0,0,1,0,1,0},
             {0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,1,0,1,0,1,1,1,0,1,0,1,0},
@@ -160,13 +176,12 @@ void Dificulties_Window::normal()
             {0,1,1,1,1,1,1,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
-
-    level_2 = new Game(mapa, 200, 2);
-    std::cout << "normal " << std::endl;
-    level_2->show();
-    nivel1 = false;
     level_1->close();
     delete level_1;
+    nivel = nivel + 1;
+    level_2 = new Game(mapa, 0, vidas);
+    level_2->show();
+
 }
 
 void Dificulties_Window::classic()
@@ -174,9 +189,9 @@ void Dificulties_Window::classic()
 
     int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
-            {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0},
-            {0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,1,1,0,0,0,1,1,1,1,0},
-            {0,1,0,1,0,1,1,1,0,1,1,1,0,1,0,1,1,0,0,0,1,1,1,1,1,0,0,1,0},
+            {0,1,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,0,0,1,0,0,0,0,0,0,0,0},
+            {0,1,0,0,0,1,0,1,0,0,0,13,0,1,0,1,0,0,0,1,1,0,0,0,1,1,1,1,0},
+            {0,1,0,1,0,1,1,1,0,1,1,12,0,1,0,1,1,0,0,0,1,1,1,1,1,0,0,1,0},
             {0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0},
             {0,1,1,1,0,0,1,1,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0,0,0,1,0,1,0},
             {0,1,0,0,0,0,1,0,0,0,0,1,0,0,0,1,0,0,0,1,0,1,1,1,0,1,0,1,0},
@@ -197,22 +212,23 @@ void Dificulties_Window::classic()
     };
 
 
-    level_3 = new Game(mapa, 500, 2);
-    std::cout << "clasico de 4: 4 fantasmas " << std::endl;
-    level_3->show();
     level_2->close();
+    delete level_2;
+    nivel = nivel + 1;
+    level_3 = new Game(mapa, 0, vidas);
+    level_3->show();
 }
 void Dificulties_Window::hard()
 {
     int mapa[21][30] = {
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
             {0,11,1,1,1,1,0,1,1,1,1,9,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,11,0},
-            {0,1,0,0,0,1,0,1,0,0,0,1,0,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,0},
-            {0,1,1,1,0,1,1,1,0,1,1,1,0,1,0,1,1,0,0,0,0,0,0,1,1,0,0,1,0},
+            {0,1,0,0,0,1,0,1,0,0,0,13,0,1,0,1,0,0,0,0,0,0,0,0,1,1,1,1,0},
+            {0,1,1,1,0,1,1,1,0,1,1,12,0,1,0,1,1,0,0,0,0,0,0,1,1,0,0,1,0},
             {0,1,0,1,0,0,0,1,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0},
             {0,1,1,1,1,0,1,1,1,1,1,1,0,1,1,1,0,0,0,1,1,1,0,0,0,1,0,1,0},
             {0,1,0,0,1,0,1,0,0,1,0,1,0,0,0,1,0,0,0,1,0,1,1,1,0,1,0,1,0},
-            {0,1,1,1,1,0,1,0,1,1,0,1,1,1,0,0,0,0,0,1,0,1,0,1,1,1,0,1,0},
+            {0,1,1,1,1,0,1,0,1,1,0,14,1,1,0,0,0,0,0,1,0,1,0,1,1,1,0,1,0},
             {0,1,1,0,1,0,1,0,0,0,0,0,0,1,0,0,0,1,0,1,0,1,0,1,0,1,0,1,0},
             {0,1,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,1,0},
             {0,1,1,1,1,0,1,0,1,0,1,0,0,0,0,1,0,1,0,1,0,1,0,0,0,1,0,1,0},
@@ -227,9 +243,10 @@ void Dificulties_Window::hard()
             {0,11,1,1,1,1,1,0,0,0,0,1,0,0,1,1,1,1,1,1,1,1,0,0,0,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
-    level_4 = new Game(mapa, 700, 2);
-    std::cout << "hard lvl : 3 enemies " << std::endl;
-    level_4->show();
     level_3->close();
+    delete level_3;
+    nivel = nivel + 1;
+    level_4 = new Game(mapa, 0, vidas);
+    level_4->show();
 }
 
