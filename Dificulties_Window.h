@@ -6,6 +6,8 @@
 #include <QGraphicsScene>
 #include "Game.h"
 extern bool nivel1;
+extern int vidas;
+extern int puntos;
 class Dificulties_Window: public QGraphicsView{
 Q_OBJECT
 

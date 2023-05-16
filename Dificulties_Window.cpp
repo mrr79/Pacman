@@ -7,7 +7,8 @@
 #include <iostream>
 #include "Pac_Man.h"
 
-
+int vidas = 3;
+int puntos = 0;
 
 Dificulties_Window::Dificulties_Window(QWidget *parent)
 {
@@ -108,7 +109,7 @@ void Dificulties_Window::easy()
             {0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,11,0,0,0},
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
-    level_1 = new Game(mapa, 0, 10);
+    level_1 = new Game(mapa, puntos, vidas);
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
