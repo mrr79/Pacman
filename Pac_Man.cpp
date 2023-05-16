@@ -14,9 +14,9 @@ int cycle = 0;
 bool poder_activo = false;
 int poder_x;
 int poder_y;
+bool cazar = true;
 Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *points_label, QGraphicsScene *sceneint,int j, int i)
 {
-
     this->points = points;
     this->lifes = lifes;
     this->points_label = points_label;
@@ -101,6 +101,8 @@ int pointsR;
 
 void Pac_Man::check_collision()
 {
+    std::cout << "CAZARRRR:" << cazar << std::endl;
+
     QList<QGraphicsItem *> colliding_items = collidingItems(); //List of the colliding items
     for (int i = 0, n = colliding_items.size(); i < n; ++i){
         if (typeid(*(colliding_items[i])) == typeid(Dot)){
@@ -116,30 +118,31 @@ void Pac_Man::check_collision()
             delete colliding_items[i];
             poder_activo = true;
             std::cout << "PODER ACTIVADOOOOOOOOOOOOOOOOO" << std::endl;
-            cazar = true;
+            cazar = false;
             poder_activo = false;
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost)){
             Ghost* ghost_ptr = dynamic_cast<Ghost*>(colliding_items[i]);
-            if (cazar = false){
-                lifes--;
-                random_location();
-            } else{
+            if (cazar == false){
                 points+= 50;
                 points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr->random_location();
+            } else{
+                lifes--;
+                random_location();
             }
 
         }
         else if (typeid(*(colliding_items[i])) == typeid(Ghost2)){
             Ghost2* ghost_ptr2 = dynamic_cast<Ghost2*>(colliding_items[i]);
-            if (cazar = false){
-                lifes--;
-                random_location();
-            } else{
+            if (cazar == false){
                 points+= 50;
                 points_label->setPlainText("Points: " + QString::number(points));
                 ghost_ptr2->random_location();
+            } else {
+                lifes--;
+                random_location();
+
             }
 
         }

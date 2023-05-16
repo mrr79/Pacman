@@ -30,7 +30,6 @@ public:
 
     int getActPacmanX();
     int getActPacmanY();
-    bool cazar = false;
     void setActPacmanX(int m);
     void setActPacmanY(int n);
     StarList lista_random;
@@ -55,7 +54,6 @@ private:
     QGraphicsScene* scene;
     int mapa[21][30];
     int lifes;
-
     int points;
     int m;
     int n;
