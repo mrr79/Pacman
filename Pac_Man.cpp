@@ -196,7 +196,9 @@ void Pac_Man::check_collision()
 }
 
 void Pac_Man::check_points() {
-    SocketServer();
+    if (app == true){
+        SocketServer();
+    }
     lifes_label->setPlainText("Lifes: " + QString::number(vidas));
     level_label->setPlainText("Level: " + QString::number(nivel));
 

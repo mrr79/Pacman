@@ -19,6 +19,7 @@ public:
     void SocketServer();
     bool super_dot = false;
     int speed = 30;
+    bool app = false;
     //int points = 0;
     char direcction = 'R';
     void keyPressEvent(QKeyEvent *event);
