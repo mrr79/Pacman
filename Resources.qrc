@@ -20,5 +20,6 @@
         <file>Cherry.png</file>
         <file>GO.png</file>
         <file>MENU.png</file>
+        <file>GW.png</file>
     </qresource>
 </RCC>

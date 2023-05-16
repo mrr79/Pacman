@@ -27,9 +27,6 @@ Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *poi
     this->act_pacman_x=j;
     this->act_pacman_y=i;
     poder_activo = false;
-    std::cout << "PAcman inicial en matriz X TIENE QUE SER 10 O 15: " << act_pacman_x<< std::endl;
-    std::cout << "PAcman inicial en matriz Y TIENE QUE SER 10 O 15: " << act_pacman_y<< std::endl;
-
 
 
     setPixmap(QPixmap(":/Images/pac_man_0R.png"));
@@ -46,7 +43,6 @@ Pac_Man::Pac_Man(int mapa[21][30], int points, int lifes, QGraphicsTextItem *poi
             }
         }
     }
-    printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     lista_random.printList();
     lista_random.getRandomNode();
 
@@ -112,7 +108,6 @@ int pointsR;
 
 void Pac_Man::check_collision()
 {
-    std::cout << "CAZARRRR:" << cazar << std::endl;
 
     QList<QGraphicsItem *> colliding_items = collidingItems(); //List of the colliding items
     for (int i = 0, n = colliding_items.size(); i < n; ++i){
@@ -265,24 +260,20 @@ void Pac_Man::move()
     }
     act_pacman_x = y() / 30;// posicion del pacman en el mapa
     act_pacman_y = x() / 30;
-    std::cout << "PACMAN X:" << act_pacman_x << std::endl;
-    std::cout << "PACMAN Y:" << act_pacman_y << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
+
     emit pacman_posicion_actualizada(act_pacman_x, act_pacman_y);
 
 }
 void Pac_Man::setActPacmanX(int m) {
     act_pacman_x = m;
-    std::cout << "PACMAN X EN SETTER:" << act_pacman_x << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
 }
 
 void Pac_Man::setActPacmanY(int n) {
     act_pacman_y = n;
-    std::cout << "PACMAN Y EN SETTER:" << act_pacman_y << std::endl;// COORDENADAS DE PACMAN EN Ela matriz
 }
 
 int Pac_Man::getActPacmanX() {
     return act_pacman_x;
-    //std::cout << "X PACMAN EN get" << act_pacman_x << std::endl;
 }
 
 int Pac_Man::getActPacmanY() {

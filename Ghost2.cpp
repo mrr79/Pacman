@@ -44,8 +44,6 @@ Ghost2::Ghost2(int mapa[21][30], int j, int i)
 
     position_x = j;//13
     position_y =i;//0 o 1
-    std::cout << "Ghost2 inicial en matriz X: " << position_x<< std::endl;
-    std::cout << "Ghost2 inicial en matriz Y: " << position_y<< std::endl;
 
     set_mapa(mapa);
     for (int i = 15; i < 25; i++) {
@@ -62,7 +60,6 @@ Ghost2::Ghost2(int mapa[21][30], int j, int i)
 
 void Ghost2::set_mapa(int mapa[21][30])
 {
-    std::cout << "entra a set mapa" << std::endl;
     for (int i = 0;i < 21;i++){
         for(int j = 0;j < 30;j++){
             this->mapa[i][j] = mapa[i][j];
@@ -83,24 +80,17 @@ void Ghost2::move(){
 
     if (paths.empty()) {
         chasePacMan();
-        cout << "El vector paths está vacío." << endl;
     } else {
-        cout << "El vector paths no está vacío." << endl;
         string path = paths[(paths.size()-1)];
-        std::cout << "CONTADOR " << contador<< std::endl;
-        std::cout << "siixe " << path.size()<< std::endl;
+
 
         if (contador == path.size()){
-            std::cout << "ESTOY TRISTE " << std::endl;
             contador = 0;
             paths.clear();
         }else{
-            std::cout << "ESTOY FELIZ " << std::endl;
             char direction = path[contador];
             contador = contador + 1;
 
-            std::cout << "CONTADOR " << contador<< std::endl;
-            std::cout << "DIRECCION " << direction<< std::endl;
 
             if (direction == 'U') {
                 position_y = position_y-1;
@@ -146,8 +136,7 @@ void Ghost2::actualizar_posicion_pacman2(int x, int y) {
 
     pac_man_y=y;
     pac_man_x=x;
-    std::cout << "PACMAN X EN Ghost2 ANTES " << pac_man_x<< std::endl;
-    std::cout << "PACMAN Y EN Ghost2: ANTES " << pac_man_y<< std::endl;
+
     if (pac_man_y !=0 || pac_man_y!=0){
         search= true;
     }
@@ -163,7 +152,6 @@ void Ghost2::check_collision()
             scene()->removeItem(colliding_items[i]);
             delete colliding_items[i];
             poder_activo = false;
-            std::cout << "PODER ROBADOOOOOOOOOOOOOOOOO" << std::endl;
         }
     }
 }

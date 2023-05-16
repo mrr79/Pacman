@@ -169,44 +169,31 @@ void Game::init_lab()
             {
                 pacmanX=(j*30);// posicion en pantalla
                 pacmanY=i*30;
-                std::cout << "j pacman: " << pacmanX/30<< std::endl;//coordenadas de la matriz
-                std::cout << "i pacman: " << pacmanY/30<< std::endl;
+
             }
             else if (m_mapa[i][j] == 11) // if character is '1', add ghost
             {
-                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost =j;
                 ighost=i;
-//                std::cout << "j ghost: " << j<< std::endl;
-//                std::cout << "i ghost: " << i<< std::endl;
-                //ghost->move(pacmanX,pacmanY);
+
             }
             else if (m_mapa[i][j] == 12) // if character is '1', add ghost
             {
-                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost2 =j;
                 ighost2 =i;
-//                std::cout << "j ghost: " << j<< std::endl;
-//                std::cout << "i ghost: " << i<< std::endl;
-                //ghost->move(pacmanX,pacmanY);
+
             }
-            else if (m_mapa[i][j] == 13) // if character is '1', add ghost
+            else if (m_mapa[i][j] == 13) // if character is '13', add ghost
             {
-                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost3 =j;
                 ighost3 =i;
-//                std::cout << "j ghost: " << j<< std::endl;
-//                std::cout << "i ghost: " << i<< std::endl;
-                //ghost->move(pacmanX,pacmanY);
+
             }
-            else if (m_mapa[i][j] == 14) // if character is '1', add ghost
+            else if (m_mapa[i][j] == 14) // if character is '14', add ghost
             {
-                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost4 =j;
                 ighost4 =i;
-//                std::cout << "j ghost: " << j<< std::endl;
-//                std::cout << "i ghost: " << i<< std::endl;
-                //ghost->move(pacmanX,pacmanY);
+
             }
             }
 

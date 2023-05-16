@@ -50,7 +50,6 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
     nivel1 = true;
 }
 void Dificulties_Window::checkwin() {
-    std::cout << "PUNTOS ACTULAES " << pointsR << std::endl;
     if (nivel2 == true){
         nivel2 = false;
         pointsR = pointsR + 10;
@@ -112,7 +111,6 @@ void Dificulties_Window::easy()
             {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
     };
     level_1 = new Game(mapa, 0, vidas);
-    std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
 

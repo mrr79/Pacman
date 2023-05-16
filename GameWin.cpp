@@ -18,7 +18,7 @@ GameWin::GameWin(QWidget *parent) {
     pointsf_label->setPlainText("Final Points: " + QString::number(pointsR));
     QFont font("Arial", 20, QFont::Helvetica);
     pointsf_label->setFont(font);
-    scene->setBackgroundBrush(QBrush(QImage(":/Images/GO.png")));
+    scene->setBackgroundBrush(QBrush(QImage(":/Images/GW.png")));
     setScene(scene);
     show();
 }
