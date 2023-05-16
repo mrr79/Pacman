@@ -7,6 +7,7 @@
 #include "Ghost2.h"
 #include "Ghost3.h"
 #include "Dificulties_Window.h"
+#include "Ghost4.h"
 #include <QTimer>
 #include <QKeyEvent>
 #include <QDebug>
@@ -156,6 +157,20 @@ void Pac_Man::check_collision()
                 puntos+= 50;
                 points_label->setPlainText("Points: " + QString::number(puntos));
                 ghost_ptr3->random_location();
+            } else {
+                vidas--;
+                std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
+                random_location();
+
+            }
+
+        }
+        else if (typeid(*(colliding_items[i])) == typeid(Ghost4)){
+            Ghost4* ghost_ptr4 = dynamic_cast<Ghost4*>(colliding_items[i]);
+            if (cazar == false){
+                puntos+= 50;
+                points_label->setPlainText("Points: " + QString::number(puntos));
+                ghost_ptr4->random_location();
             } else {
                 vidas--;
                 std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
