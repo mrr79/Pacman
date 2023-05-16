@@ -6,7 +6,8 @@
 #include "Game.h"
 #include <iostream>
 #include "Pac_Man.h"
-#include "cmake-build-debug/GameOver.h"
+#include "GameWin.h"
+#include "GameOver.h"
 
 int vidas = 3;
 int puntos = 0;
@@ -75,7 +76,10 @@ void Dificulties_Window::checkwin() {
     }
     if (win == true){
         std::cout << "Ganooooo " << pointsR << std::endl;
-
+        level_4->close();
+        delete level_4;
+        GameWin *gamewin = new GameWin();
+        gamewin->show();
     }
 
 }

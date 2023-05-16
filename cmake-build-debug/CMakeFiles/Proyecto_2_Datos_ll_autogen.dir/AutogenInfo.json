@@ -113,6 +113,18 @@
 			null
 		],
 		[
+			"/home/henry/CLionProjects/Pacman/GameOver.h",
+			"MU",
+			"EWIEGA46WW/moc_GameOver.cpp",
+			null
+		],
+		[
+			"/home/henry/CLionProjects/Pacman/GameWin.h",
+			"MU",
+			"EWIEGA46WW/moc_GameWin.cpp",
+			null
+		],
+		[
 			"/home/henry/CLionProjects/Pacman/Ghost.h",
 			"MU",
 			"EWIEGA46WW/moc_Ghost.cpp",
@@ -164,12 +176,6 @@
 			"/home/henry/CLionProjects/Pacman/Utils.h",
 			"MU",
 			"EWIEGA46WW/moc_Utils.cpp",
-			null
-		],
-		[
-			"/home/henry/CLionProjects/Pacman/cmake-build-debug/GameOver.h",
-			"MU",
-			"526CGLRSAY/moc_GameOver.cpp",
 			null
 		]
 	],
@@ -229,6 +235,8 @@
 		[ "/home/henry/CLionProjects/Pacman/Dificulties_Window.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Dots.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Game.cpp", "MU", null ],
+		[ "/home/henry/CLionProjects/Pacman/GameOver.cpp", "MU", null ],
+		[ "/home/henry/CLionProjects/Pacman/GameWin.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Ghost.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Ghost2.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Ghost3.cpp", "MU", null ],
@@ -238,11 +246,6 @@
 		[ "/home/henry/CLionProjects/Pacman/StarNode.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/SuperDot.cpp", "MU", null ],
 		[ "/home/henry/CLionProjects/Pacman/Utils.cpp", "MU", null ],
-		[
-			"/home/henry/CLionProjects/Pacman/cmake-build-debug/GameOver.cpp",
-			"MU",
-			null
-		],
 		[ "/home/henry/CLionProjects/Pacman/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],

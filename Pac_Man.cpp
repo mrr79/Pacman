@@ -203,22 +203,22 @@ void Pac_Man::check_points() {
         loose = true;
     }
     if (nivel == 1){
-        if (points >= 100){
+        if (points >= 50){
             nivel2 = true;
         }
     }
     else if (nivel == 2){
-        if (points >= 150){
+        if (points >= 100){
             nivel3 = true;
         }
     }
     else if (nivel == 3){
-        if (points >= 200){
+        if (points >= 150){
             nivel4 = true;
         }
     }
     else if (nivel == 4){
-        if (points >= 250){
+        if (points >= 170){
             win = true;
         }
     }
