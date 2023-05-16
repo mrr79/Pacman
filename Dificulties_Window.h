@@ -8,6 +8,8 @@
 extern bool nivel1;
 extern int vidas;
 extern int puntos;
+extern int nivel;
+
 class Dificulties_Window: public QGraphicsView{
 Q_OBJECT
 

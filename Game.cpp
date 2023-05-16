@@ -3,6 +3,7 @@
 #include "Ghost.h"
 #include "Dots.h"
 #include "Ghost2.h"
+#include "Ghost3.h"
 #include <QTimer>
 #include <QGraphicsRectItem>
 #include <iostream>
@@ -26,20 +27,20 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
 
     Ghost *ghost = new Ghost(m_mapa,jghost, ighost);
     ghost->setPos(jghost*30, ighost*30); // set ghost position
-                std::cout << "j ghost: " << jghost<< std::endl;
-               std::cout << "i ghost: deberia ser 28 o 29: " << ighost<< std::endl;
     scene->addItem(ghost);
 
     Ghost2 *ghost2 = new Ghost2(m_mapa,jghost2, ighost2);
     ghost2->setPos(jghost2*30, ighost2*30); // set ghost position
-    std::cout << "j ghost: " << jghost2<< std::endl;
-    std::cout << "i ghost: deberia ser 28 o 29: " << ighost2<< std::endl;
     scene->addItem(ghost2);
+
+    Ghost3 *ghost3 = new Ghost3(m_mapa,jghost2, ighost2);
+    ghost3->setPos(jghost3*30, ighost3*30); // set ghost position
+    scene->addItem(ghost3);
 
     connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost, SLOT(actualizar_posicion_pacman(int, int)));
     connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost2, SLOT(actualizar_posicion_pacman2(int, int)));
+    connect(pac_man, SIGNAL(pacman_posicion_actualizada(int, int)), ghost3, SLOT(actualizar_posicion_pacman3(int, int)));
 
-    //Ghost *ghost = new Ghost();
 
     QTimer *col = new QTimer();
     connect(col,SIGNAL(timeout()),pac_man,SLOT(check_collision()));
@@ -121,6 +122,15 @@ void Game::init_lab()
                 //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
                 jghost2 =j;
                 ighost2 =i;
+//                std::cout << "j ghost: " << j<< std::endl;
+//                std::cout << "i ghost: " << i<< std::endl;
+                //ghost->move(pacmanX,pacmanY);
+            }
+            else if (m_mapa[i][j] == 13) // if character is '1', add ghost
+            {
+                //Ghost *ghost = new Ghost(m_mapa,pac_man->act_pacman_x,pac_man->act_pacman_y);
+                jghost3 =j;
+                ighost3 =i;
 //                std::cout << "j ghost: " << j<< std::endl;
 //                std::cout << "i ghost: " << i<< std::endl;
                 //ghost->move(pacmanX,pacmanY);

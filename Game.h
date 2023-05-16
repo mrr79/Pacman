@@ -47,6 +47,10 @@ private:
     int ighost=0;
     int jghost2;
     int ighost2;
+    int jghost3;
+    int ighost3;
+    int jghost4;
+    int ighost4;
 
 };
 
