@@ -14,6 +14,7 @@ class GameWin: public QGraphicsView{
 public:
     GameWin(QWidget * parent=0);
     QGraphicsScene * scene;
+    QGraphicsTextItem *pointsf_label;
 };
 
 

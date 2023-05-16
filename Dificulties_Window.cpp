@@ -76,8 +76,8 @@ void Dificulties_Window::checkwin() {
     }
     if (win == true){
         std::cout << "Ganooooo " << pointsR << std::endl;
-        level_4->close();
-        delete level_4;
+        this->close();
+        delete this;
         GameWin *gamewin = new GameWin();
         gamewin->show();
     }
