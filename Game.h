@@ -24,10 +24,16 @@ public:
     QPixmap m_labyrinthPixmaps[32];
 
     QTimer *timer_points = new QTimer();
+    QTimer *timer_lifes = new QTimer();
+    QTimer *timer_level = new QTimer();
+
 
     Pac_Man *pac_man;
 
     QGraphicsTextItem *points_label;
+    QGraphicsTextItem *lifes_label;
+    QGraphicsTextItem *level_label;
+
     Pac_Man* get_pacman();
 
     QGraphicsScene * scene;

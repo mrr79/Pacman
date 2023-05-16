@@ -22,6 +22,9 @@ public:
     char direcction = 'R';
     void keyPressEvent(QKeyEvent *event);
     void set_points_label(QGraphicsTextItem *points_label);
+    void set_lifes_label(QGraphicsTextItem *lifes_label);
+    void set_level_label(QGraphicsTextItem *level_label);
+
     void set_mapa(int mapa[21][30]);
 
     int act_pacman_x;
@@ -51,6 +54,8 @@ public slots:
 
 private:
     QGraphicsTextItem *points_label;
+    QGraphicsTextItem *lifes_label;
+    QGraphicsTextItem *level_label;
     QGraphicsScene* scene;
     int mapa[21][30];
     int lifes;

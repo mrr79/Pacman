@@ -99,14 +99,33 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
     points_label->setFont(font);
     points_label->setDefaultTextColor(Qt::red);
 
+    lifes_label = new QGraphicsTextItem("Lifes: " + QString::number(0));
+    lifes_label->setFont(font);
+    lifes_label->setDefaultTextColor(Qt::red);
+
+    level_label = new QGraphicsTextItem("Level: " + QString::number(0));
+    level_label->setFont(font);
+    level_label->setDefaultTextColor(Qt::red);
+
     scene->addItem(pac_man);
     //scene->addItem(ghost);
     scene->addItem(points_label);
 
+    scene->addItem(lifes_label);
+
+    scene->addItem(level_label);
+
+
+
     points_label->setPos(720,590);
-   //ghost->setPos(810,30);
+    lifes_label->setPos(650,590);
+    level_label->setPos(570,590);
+
+    //ghost->setPos(810,30);
 
     pac_man->set_points_label(points_label);
+    pac_man->set_lifes_label(lifes_label);
+    pac_man->set_level_label(level_label);
     pac_man->set_mapa(mapa);
     pac_man->setFlag(QGraphicsItem::ItemIsFocusable);
     pac_man->setFocus();

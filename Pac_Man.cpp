@@ -82,6 +82,14 @@ void Pac_Man::set_points_label(QGraphicsTextItem *points_label)
 {
     this->points_label = points_label;
 }
+void Pac_Man::set_lifes_label(QGraphicsTextItem *lifes_label)
+{
+    this->lifes_label = lifes_label;
+}
+void Pac_Man::set_level_label(QGraphicsTextItem *level_label)
+{
+    this->level_label = level_label;
+}
 
 void Pac_Man::set_mapa(int mapa[21][30])
 {
@@ -188,6 +196,9 @@ void Pac_Man::check_collision()
 }
 
 void Pac_Man::check_points() {
+    lifes_label->setPlainText("Lifes: " + QString::number(vidas));
+    level_label->setPlainText("Level: " + QString::number(nivel));
+
     if (vidas <= 0){
         loose = true;
     }
