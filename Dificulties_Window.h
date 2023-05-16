@@ -10,6 +10,7 @@ extern bool nivel2;
 extern bool nivel3;
 extern bool nivel4;
 extern bool win;
+extern bool loose;
 
 extern int vidas;
 extern int puntos;

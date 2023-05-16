@@ -7,6 +7,7 @@
 	"INCLUDE_DIR" : "/home/henry/CLionProjects/Pacman/cmake-build-debug/Proyecto_2_Datos_ll_autogen/include",
 	"INPUTS" : 
 	[
+		"/home/henry/CLionProjects/Pacman/GO.png",
 		"/home/henry/CLionProjects/Pacman/Dot.png",
 		"/home/henry/CLionProjects/Pacman/pac_man_2.png",
 		"/home/henry/CLionProjects/Pacman/pac_man_1D.png",

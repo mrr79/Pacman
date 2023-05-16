@@ -188,6 +188,9 @@ void Pac_Man::check_collision()
 }
 
 void Pac_Man::check_points() {
+    if (vidas <= 0){
+        loose = true;
+    }
     if (nivel == 1){
         if (points >= 100){
             nivel2 = true;

@@ -6,6 +6,7 @@
 #include "Game.h"
 #include <iostream>
 #include "Pac_Man.h"
+#include "cmake-build-debug/GameOver.h"
 
 int vidas = 3;
 int puntos = 0;
@@ -14,6 +15,7 @@ bool nivel2 = false;
 bool nivel3 = false;
 bool nivel4 = false;
 bool win = false;
+bool loose = false;
 
 
 Dificulties_Window::Dificulties_Window(QWidget *parent)
@@ -104,9 +106,13 @@ void Dificulties_Window::checkwin() {
         pointsR = pointsR + 10;
         hard();
     }
-    if (vidas <= 0){
+    if (loose == true){
+        loose = false;
         std::cout << "GAME OVER" << vidas << std::endl;
-
+        this->close();
+        delete this;
+        GameOver *gameover = new GameOver();
+        gameover->show();
     }
     if (win == true){
         std::cout << "Ganooooo " << pointsR << std::endl;
@@ -146,7 +152,6 @@ void Dificulties_Window::easy()
     std::cout << "easyyy" << std::endl;
     level_1->show();
     this->close();
-
 
 }
 

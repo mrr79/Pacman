@@ -127,7 +127,6 @@ void Ghost::actualizar_posicion_pacman(int x, int y) {
         search= true;
     }
 
-
 }
 void Ghost::check_collision()
 {
