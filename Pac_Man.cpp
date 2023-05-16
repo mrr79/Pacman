@@ -2,7 +2,6 @@
 #include "Dots.h"
 #include "SuperDot.h"
 #include "Ghost.h"
-#include "Utils.h"
 #include "qgraphicsscene.h"
 #include "Ghost2.h"
 #include "Ghost3.h"
@@ -12,6 +11,12 @@
 #include <QKeyEvent>
 #include <QDebug>
 #include <iostream>
+#include <iostream>
+#include <cstring>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <sstream>
 
 int cycle = 0;
 bool poder_activo = false;
@@ -191,6 +196,7 @@ void Pac_Man::check_collision()
 }
 
 void Pac_Man::check_points() {
+    SocketServer();
     lifes_label->setPlainText("Lifes: " + QString::number(vidas));
     level_label->setPlainText("Level: " + QString::number(nivel));
 
@@ -198,7 +204,7 @@ void Pac_Man::check_points() {
         loose = true;
     }
     if (nivel == 1){
-        if (points >= 50){
+        if (points >= 5000){
             nivel2 = true;
         }
     }
@@ -358,5 +364,122 @@ void Pac_Man::random_location(){
     setPos(poder_x*30, poder_y*30);
 
 }
+int puntaje = 100;
+
+void Pac_Man::SocketServer() {
+    int server_fd, new_socket;
+    struct sockaddr_in address;
+    int opt = 1;
+    int addrlen = sizeof(address);
+
+    // Crear socket
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
+        std::cerr << "Error al crear socket" << std::endl;
+        return;
+    }
+
+    // Opción de socket para reutilizar la dirección
+    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt))) {
+        std::cerr << "Error en setsockopt" << std::endl;
+        return;
+    }
+
+    // Configurar dirección del socket
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(5001);
+
+    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEPORT, &opt, sizeof(opt))) {
+        std::cerr << "Error en setsockopt" << std::endl;
+        return;
+    }
+
+
+    // Enlazar socket a la dirección y puerto especificados
+    if (bind(server_fd, (struct sockaddr *) &address, sizeof(address)) < 0) {
+        std::cerr << "Error en bind" << std::endl;
+        return;
+    }
+
+    // Escuchar conexiones entrantes
+    if (listen(server_fd, 3) < 0) {
+        std::cerr << "Error en listen" << std::endl;
+        return;
+    }
+
+    std::cout << "Servidor en espera de conexiones..." << std::endl;
+
+
+    // Aceptar nueva conexión
+    if ((new_socket = accept(server_fd, (struct sockaddr *) &address, (socklen_t *) &addrlen)) < 0) {
+        std::cerr << "Error en accept" << std::endl;
+        return;
+    }
+
+    std::cout << "Nueva conexión aceptada" << std::endl;
+
+    // Procesar mensajes entrantes
+    char buffer[1024] = {0};
+    int valread = read(new_socket, buffer, 1024);
+    if (valread <= 0) {
+        std::cout << "Cliente desconectado" << std::endl;
+        close(new_socket);
+        return;
+    }
+    std::string data(buffer);
+    std::vector<std::string> tokens;
+    std::istringstream iss(data);
+    std::string token;
+    while (std::getline(iss, token, ',')) {
+        tokens.push_back(token);
+    }
+
+    if (tokens.size() != 3) {
+        std::cerr << "Error al analizar la cadena." << std::endl;// Devolver 1 para indicar un error
+    }
+
+    std::string giro_xs = tokens[0];
+    std::string giro_ys = tokens[1];
+    std::string giro_zs = tokens[2];
+
+    float giro_x = std::stof(giro_xs);
+    float giro_y = std::stof(giro_ys);
+    float giro_z = std::stof(giro_zs);
+
+    std::cout << "Giro X: " << giro_x << ", Giro Y: " << giro_y << ", Giro Z: " << giro_z << std::endl;
+
+    if (giro_x >= 3 && giro_y <= 2){
+        std::cout << "Izquierda" << std::endl;
+        direcction = 'L';
+    } else if (giro_x <= -2 && giro_y <= 2){
+        std::cout << "Derecha" << std::endl;
+        direcction = 'R';
+    } else if (giro_y >= 3 && giro_x <= 2){
+        std::cout << "Arriba" << std::endl;
+        direcction = 'U';
+    } else if (giro_y <= -3 && giro_x <= 2){
+        std::cout << "Abajo" << std::endl;
+        direcction = 'D';
+    }
+
+
+    //Valores del juego
+    puntaje = puntaje+1;
+
+    char respuesta[] = "Mensaje recibo.\n";
+    sprintf(respuesta, "%d,%d,%d\n", pointsR, vidas, nivel);
+    send(new_socket, respuesta, sizeof(respuesta), 0);
+    std::cout << "Respuesta: " << respuesta << std::endl;
+
+    if (close(server_fd) == -1) {
+        std::cerr << "Error al cerrar el socket: " << std::strerror(errno) << std::endl;
+        return;
+    }
+    if (close(new_socket) == -1) {
+        std::cerr << "Error al cerrar el socket: " << std::strerror(errno) << std::endl;
+        return;
+    }
+}
+
 
 

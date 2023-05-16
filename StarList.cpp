@@ -38,8 +38,6 @@ StarNode* StarList::getHead() const {
     if (this->head == nullptr) {
         return nullptr;
     } else {
-        std::cout << "Value1: " << this->head->getNodeX() << std::endl;
-        std::cout << "Value2: " << this->head->getNodeY() << std::endl;
         return this->head;
     }
 }

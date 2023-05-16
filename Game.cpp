@@ -93,7 +93,7 @@ Game::Game(int mapa[21][30], int points, int lifes, QWidget *parent) :
 
 
     connect(timer_points, SIGNAL(timeout()),pac_man, SLOT(check_points()));
-    timer_points->start(500);
+    timer_points->start(1000);
 
     points_label = new QGraphicsTextItem("Points: " + QString::number(0));
     points_label->setFont(font);

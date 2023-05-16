@@ -16,6 +16,7 @@ public:
     void set_points(int points);
     void set_lifes(int lifes);
     void random_location();
+    void SocketServer();
     bool super_dot = false;
     int speed = 30;
     //int points = 0;
