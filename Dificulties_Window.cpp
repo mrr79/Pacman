@@ -5,13 +5,14 @@
 #include "Dificulties_Window.h"
 #include "Game.h"
 #include <iostream>
+#include <thread>
 #include "Pac_Man.h"
 #include "GameWin.h"
 #include "GameOver.h"
 
 int vidas = 3;
 int puntos = 0;
-int nivel = 1;
+int nivel = 4;
 bool nivel2 = false;
 bool nivel3 = false;
 bool nivel4 = false;
@@ -51,6 +52,7 @@ Dificulties_Window::Dificulties_Window(QWidget *parent)
 }
 void Dificulties_Window::checkwin() {
     if (nivel2 == true){
+        nivel1 = false;
         nivel2 = false;
         pointsR = pointsR + 10;
         normal();
@@ -74,7 +76,7 @@ void Dificulties_Window::checkwin() {
         gameover->show();
     }
     if (win == true){
-        std::cout << "Ganooooo " << pointsR << std::endl;
+        std::cout << "WIN " << pointsR << std::endl;
         this->close();
         delete this;
         GameWin *gamewin = new GameWin();
@@ -145,6 +147,7 @@ void Dificulties_Window::normal()
     level_1->close();
     delete level_1;
     nivel = nivel + 1;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     level_2 = new Game(mapa, 0, vidas);
     level_2->show();
 
@@ -181,6 +184,7 @@ void Dificulties_Window::classic()
     level_2->close();
     delete level_2;
     nivel = nivel + 1;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     level_3 = new Game(mapa, 0, vidas);
     level_3->show();
 }
@@ -212,6 +216,7 @@ void Dificulties_Window::hard()
     level_3->close();
     delete level_3;
     nivel = nivel + 1;
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     level_4 = new Game(mapa, 0, vidas);
     level_4->show();
 }

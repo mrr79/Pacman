@@ -146,8 +146,6 @@ void Ghost4::actualizar_posicion_pacman4(int x, int y) {
 
     pac_man_y=y;
     pac_man_x=x;
-    std::cout << "PACMAN X EN Ghost4 ANTES " << pac_man_x<< std::endl;
-    std::cout << "PACMAN Y EN Ghost4: ANTES " << pac_man_y<< std::endl;
     if (pac_man_y !=0 || pac_man_y!=0){
         search= true;
     }
@@ -163,7 +161,6 @@ void Ghost4::check_collision()
             scene()->removeItem(colliding_items[i]);
             delete colliding_items[i];
             poder_activo = false;
-            std::cout << "PODER ROBADOOOOOOOOOOOOOOOOO" << std::endl;
         }
     }
 }

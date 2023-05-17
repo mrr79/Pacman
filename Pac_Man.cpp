@@ -142,7 +142,6 @@ void Pac_Man::check_collision()
                 ghost_ptr->random_location();
             } else{
                 vidas--;
-                std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
                 random_location();
             }
 
@@ -156,7 +155,6 @@ void Pac_Man::check_collision()
                 ghost_ptr2->random_location();
             } else {
                 vidas--;
-                std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
                 random_location();
 
             }
@@ -171,7 +169,6 @@ void Pac_Man::check_collision()
                 ghost_ptr3->random_location();
             } else {
                 vidas--;
-                std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
                 random_location();
 
             }
@@ -186,7 +183,6 @@ void Pac_Man::check_collision()
                 ghost_ptr4->random_location();
             } else {
                 vidas--;
-                std::cout << "VIDAS RESTANTES:" << vidas << std::endl;
                 random_location();
 
             }
@@ -206,22 +202,22 @@ void Pac_Man::check_points() {
         loose = true;
     }
     if (nivel == 1){
-        if (points >= 300){
+        if (points >= 200){
             nivel2 = true;
         }
     }
     else if (nivel == 2){
-        if (points >= 100){
+        if (points >= 300){
             nivel3 = true;
         }
     }
     else if (nivel == 3){
-        if (points >= 150){
+        if (points >= 400){
             nivel4 = true;
         }
     }
     else if (nivel == 4){
-        if (points >= 170){
+        if (points >= 500){
             win = true;
         }
     }
