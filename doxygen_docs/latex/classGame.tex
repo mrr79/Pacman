@@ -1,0 +1,146 @@
+\hypertarget{classGame}{}\doxysection{Game Class Reference}
+\label{classGame}\index{Game@{Game}}
+
+
+Clase que configura el comportamiento generla del juego y anade los elementos a la pantalla principal del mismo.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+
+
+Inheritance diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{classGame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_af370db43c47ada7b2438edeaf55061b6}{Game}} (int mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]}, int points, int lifes, QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{classGame}{Game}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_a447195f79a9dea756894b315f44d202f}\label{classGame_a447195f79a9dea756894b315f44d202f}} 
+void {\bfseries set\+Points} (int points)
+\item 
+\mbox{\hyperlink{classPac__Man}{Pac\+\_\+\+Man}} $\ast$ \mbox{\hyperlink{classGame_ae51d0d069495de3109b3e36180a350d6}{get\+\_\+pacman}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el objeto Pac-\/\+Man del juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGame_ac2ff9f6a7d4eaea5e1d543e8eb033342}\label{classGame_ac2ff9f6a7d4eaea5e1d543e8eb033342}} 
+void {\bfseries deleteghost} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_ae6ca52b0bf1f4d545e749c9775207e99}\label{classGame_ae6ca52b0bf1f4d545e749c9775207e99}} 
+QPixmap {\bfseries m\+\_\+labyrinth\+Pixmap}
+\item 
+\mbox{\Hypertarget{classGame_a0e21933373d4d414937a5b92cd83e92d}\label{classGame_a0e21933373d4d414937a5b92cd83e92d}} 
+QGraphics\+Pixmap\+Item $\ast$ {\bfseries m\+\_\+labyrinth\+Pixmap\+Items} \mbox{[}LABYRINTH\+\_\+\+WIDTH\mbox{]}\mbox{[}LABYRINTH\+\_\+\+HEIGHT\mbox{]}
+\item 
+\mbox{\Hypertarget{classGame_a82e860bc4d6a406b17d1aa782e214bad}\label{classGame_a82e860bc4d6a406b17d1aa782e214bad}} 
+QPixmap {\bfseries m\+\_\+labyrinth\+Pixmaps} \mbox{[}32\mbox{]}
+\item 
+\mbox{\Hypertarget{classGame_abe66c7a095622ecb75ef0f7cb1cbf056}\label{classGame_abe66c7a095622ecb75ef0f7cb1cbf056}} 
+QTimer $\ast$ {\bfseries timer\+\_\+points} = new QTimer()
+\item 
+\mbox{\Hypertarget{classGame_ad31f18f60dca3bc5260a74bd425098c1}\label{classGame_ad31f18f60dca3bc5260a74bd425098c1}} 
+QTimer $\ast$ {\bfseries timer\+\_\+lifes} = new QTimer()
+\item 
+\mbox{\Hypertarget{classGame_aedd90e9f06fa17b93e35e07d76459dc4}\label{classGame_aedd90e9f06fa17b93e35e07d76459dc4}} 
+QTimer $\ast$ {\bfseries timer\+\_\+level} = new QTimer()
+\item 
+\mbox{\Hypertarget{classGame_a8e42ec89337fb95ef9bc47c316d15793}\label{classGame_a8e42ec89337fb95ef9bc47c316d15793}} 
+\mbox{\hyperlink{classPac__Man}{Pac\+\_\+\+Man}} $\ast$ {\bfseries pac\+\_\+man}
+\item 
+\mbox{\Hypertarget{classGame_aba94494bc26fb9bcfcfa821bcea82869}\label{classGame_aba94494bc26fb9bcfcfa821bcea82869}} 
+QGraphics\+Text\+Item $\ast$ {\bfseries points\+\_\+label}
+\item 
+\mbox{\Hypertarget{classGame_ab1c98aed5980782a671dc8852c822a43}\label{classGame_ab1c98aed5980782a671dc8852c822a43}} 
+QGraphics\+Text\+Item $\ast$ {\bfseries lifes\+\_\+label}
+\item 
+\mbox{\Hypertarget{classGame_ad1bca96b476bd2832480f0467eaa14f1}\label{classGame_ad1bca96b476bd2832480f0467eaa14f1}} 
+QGraphics\+Text\+Item $\ast$ {\bfseries level\+\_\+label}
+\item 
+\mbox{\Hypertarget{classGame_a8119e3b9a632906c6808fa294b46a92a}\label{classGame_a8119e3b9a632906c6808fa294b46a92a}} 
+QGraphics\+Scene $\ast$ {\bfseries scene}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGame_a3a03a71e14765c1e50ef819b7e35ea5e}\label{classGame_a3a03a71e14765c1e50ef819b7e35ea5e}} 
+static const uint {\bfseries LABYRINTH\+\_\+\+WIDTH} = 21
+\item 
+\mbox{\Hypertarget{classGame_a63bb79d521e1440f2eedd5f41aa23675}\label{classGame_a63bb79d521e1440f2eedd5f41aa23675}} 
+static const uint {\bfseries LABYRINTH\+\_\+\+HEIGHT} = 31
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que configura el comportamiento generla del juego y anade los elementos a la pantalla principal del mismo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGame_af370db43c47ada7b2438edeaf55061b6}\label{classGame_af370db43c47ada7b2438edeaf55061b6}} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}\item[{int}]{mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]},  }\item[{int}]{points,  }\item[{int}]{lifes,  }\item[{QWidget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \mbox{\hyperlink{classGame}{Game}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz de tamaño 21x30 que representa el mapa del juego. \\
+\hline
+{\em points} & Puntos iniciales del jugador. \\
+\hline
+{\em lifes} & Vidas iniciales del jugador. \\
+\hline
+{\em parent} & Puntero al objeto QWidget padre. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero genra la pantalla de juego. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGame_ae51d0d069495de3109b3e36180a350d6}\label{classGame_ae51d0d069495de3109b3e36180a350d6}} 
+\index{Game@{Game}!get\_pacman@{get\_pacman}}
+\index{get\_pacman@{get\_pacman}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{get\_pacman()}{get\_pacman()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPac__Man}{Pac\+\_\+\+Man}} $\ast$ Game\+::get\+\_\+pacman (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtiene el objeto Pac-\/\+Man del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parametro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al objeto Pac-\/\+Man. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/Game.\+h\item 
+Pacman/Game.\+cpp\end{DoxyCompactItemize}

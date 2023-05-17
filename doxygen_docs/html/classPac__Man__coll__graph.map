@@ -1,0 +1,6 @@
+<map id="Pac_Man" name="Pac_Man">
+<area shape="rect" id="node1" title="Clase que configura el comportamiento del pacman, personaje del jugador en el juego." alt="" coords="149,95,227,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,5,272,32"/>
+<area shape="rect" id="node4" href="$classStarList.html" title="Clase que representa una lista enlazada de nodos de estrellas." alt="" coords="297,5,367,32"/>
+</map>

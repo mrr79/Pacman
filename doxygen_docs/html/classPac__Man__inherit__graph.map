@@ -1,0 +1,5 @@
+<map id="Pac_Man" name="Pac_Man">
+<area shape="rect" id="node1" title="Clase que configura el comportamiento del pacman, personaje del jugador en el juego." alt="" coords="75,80,154,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,80,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="104,5,272,32"/>
+</map>

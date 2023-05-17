@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,173,209"/>
+<area shape="rect" id="node2" href="$classBlock.html" title="Clase que representa graficamente los obstaculos del juego." alt="" coords="233,5,292,32"/>
+<area shape="rect" id="node3" href="$classDot.html" title="Clase que representa graficamente los caminos del juego." alt="" coords="240,56,285,83"/>
+<area shape="rect" id="node4" href="$classGhost.html" title="Clase que representa un fantasma 1 en el juego. Este fantasma es el fantasa de color rojo y se mueve ..." alt="" coords="233,157,293,184"/>
+<area shape="rect" id="node5" href="$classGhost2.html" title="Clase que representa un fantasma 2 en el juego. Este fantasma es el fantasa de color rosado y se muev..." alt="" coords="229,208,297,235"/>
+<area shape="rect" id="node6" href="$classGhost3.html" title="Clase que representa un fantasma 3 en el juego. Este fantasma es el fantasa de color celeste y se mue..." alt="" coords="229,259,297,285"/>
+<area shape="rect" id="node7" href="$classGhost4.html" title="Clase que representa un fantasma 4 en el juego. Este fantasma es el fantasa de color anaranjado y se ..." alt="" coords="229,309,297,336"/>
+<area shape="rect" id="node8" href="$classPac__Man.html" title="Clase que configura el comportamiento del pacman, personaje del jugador en el juego." alt="" coords="223,360,302,387"/>
+<area shape="rect" id="node9" href="$classSuperDot.html" title="Clase que representa graficamente el poder del juego." alt="" coords="221,107,304,133"/>
+<area shape="rect" id="node10" title=" " alt="" coords="52,259,127,285"/>
+</map>

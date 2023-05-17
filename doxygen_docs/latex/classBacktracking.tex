@@ -1,0 +1,52 @@
+\hypertarget{classBacktracking}{}\doxysection{Backtracking Class Reference}
+\label{classBacktracking}\index{Backtracking@{Backtracking}}
+
+
+Clase hace el alogritmo de busqueda \mbox{\hyperlink{classAStar}{AStar}} o A$\ast$ para encontrar el mejor camino entre los fantasmas y su destino.  
+
+
+
+
+{\ttfamily \#include $<$Backtracking.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classBacktracking_abbe4ebe9f00e1ef3fc29ee0f8fc92774}{possible\+Paths}} (std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&maze, int eq, int ye)
+\begin{DoxyCompactList}\small\item\em Encuentra todos los caminos posibles en el laberinto desde una posición de inicio hasta una posición de fin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase hace el alogritmo de busqueda \mbox{\hyperlink{classAStar}{AStar}} o A$\ast$ para encontrar el mejor camino entre los fantasmas y su destino. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBacktracking_abbe4ebe9f00e1ef3fc29ee0f8fc92774}\label{classBacktracking_abbe4ebe9f00e1ef3fc29ee0f8fc92774}} 
+\index{Backtracking@{Backtracking}!possiblePaths@{possiblePaths}}
+\index{possiblePaths@{possiblePaths}!Backtracking@{Backtracking}}
+\doxysubsubsection{\texorpdfstring{possiblePaths()}{possiblePaths()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Backtracking\+::possible\+Paths (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{maze,  }\item[{int}]{eq,  }\item[{int}]{ye }\end{DoxyParamCaption})}
+
+
+
+Encuentra todos los caminos posibles en el laberinto desde una posición de inicio hasta una posición de fin. 
+
+Esta función encuentra todos los caminos posibles en el laberinto desde una posición de inicio hasta una posición de fin. Recibe el laberinto, las coordenadas de la posición de inicio y las coordenadas de la posición de fin. Devuelve un vector que contiene todos los caminos encontrados.
+
+
+\begin{DoxyParams}{Parameters}
+{\em maze} & El laberinto representado como una matriz de enteros. \\
+\hline
+{\em eq} & La coordenada x de la posición de inicio. \\
+\hline
+{\em ye} & La coordenada y de la posición de inicio. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un vector que contiene todos los caminos posibles desde la posición de inicio hasta la posición de fin. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/Backtracking.\+h\item 
+Pacman/Backtracking.\+cpp\end{DoxyCompactItemize}

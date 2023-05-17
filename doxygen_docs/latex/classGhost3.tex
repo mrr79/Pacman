@@ -1,0 +1,209 @@
+\hypertarget{classGhost3}{}\doxysection{Ghost3 Class Reference}
+\label{classGhost3}\index{Ghost3@{Ghost3}}
+
+
+Clase que representa un fantasma 3 en el juego. Este fantasma es el fantasa de color celeste y se mueve ppersiguiendo al pacman o al poder usando el algoritmo A$\ast$.  
+
+
+
+
+{\ttfamily \#include $<$Ghost3.\+h$>$}
+
+
+
+Inheritance diagram for Ghost3\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classGhost3__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ghost3\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGhost3__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGhost3_ac1507f00b79a300a8bd396e23dbfa1ba}{move}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el fantasma en el juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost3_ac4c1fcefa93c0d8da053a252b8657bb6}{chase\+Pac\+Man}} ()
+\begin{DoxyCompactList}\small\item\em Realiza el seguimiento del personaje principal (Pac-\/\+Man). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost3_a48819fce374578d9dae49ab492871661}{actualizar\+\_\+posicion\+\_\+pacman3}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Actualiza la posición del Pac-\/\+Man en el fantasma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost3_ab64ce8c21e30563b6efcea1707b3c47c}{check\+\_\+collision}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si hay colisiones con otros elementos en el juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGhost3_a03495cfa12b56828e8500e17dc4cc304}{Ghost3}} (int mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]}, int j, int i)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{classGhost}{Ghost}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost3_aa02e76b67e5dca12ba0f3dfdac75a935}{random\+\_\+location}} ()
+\begin{DoxyCompactList}\small\item\em Establece la matriz del mapa del juego. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGhost3_a29a2272047f0ddc5f22a20f761b297b6}\label{classGhost3_a29a2272047f0ddc5f22a20f761b297b6}} 
+\mbox{\hyperlink{classPac__Man}{Pac\+\_\+\+Man}} $\ast$ {\bfseries get\+Pacman} ()
+\item 
+void \mbox{\hyperlink{classGhost3_a9846854b53cdde32dee93ad0efb98b44}{set\+\_\+mapa}} (int mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em Establece la matriz del mapa del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGhost3_a31dd418e5ba8bbc66aba8df315873c3f}\label{classGhost3_a31dd418e5ba8bbc66aba8df315873c3f}} 
+\mbox{\hyperlink{classStarList}{Star\+List}} {\bfseries lista\+\_\+randomg}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa un fantasma 3 en el juego. Este fantasma es el fantasa de color celeste y se mueve ppersiguiendo al pacman o al poder usando el algoritmo A$\ast$. 
+
+Esta clase hereda de QObject y QGraphics\+Pixmap\+Item, y representa un fantasma en el juego. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGhost3_a03495cfa12b56828e8500e17dc4cc304}\label{classGhost3_a03495cfa12b56828e8500e17dc4cc304}} 
+\index{Ghost3@{Ghost3}!Ghost3@{Ghost3}}
+\index{Ghost3@{Ghost3}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{Ghost3()}{Ghost3()}}
+{\footnotesize\ttfamily Ghost3\+::\+Ghost3 (\begin{DoxyParamCaption}\item[{int}]{mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]},  }\item[{int}]{j,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \mbox{\hyperlink{classGhost}{Ghost}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz que representa el mapa del juego. \\
+\hline
+{\em j} & Posición horizontal inicial del fantasma en la matriz. \\
+\hline
+{\em i} & Posición vertical inicial del fantasma en la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGhost3_a48819fce374578d9dae49ab492871661}\label{classGhost3_a48819fce374578d9dae49ab492871661}} 
+\index{Ghost3@{Ghost3}!actualizar\_posicion\_pacman3@{actualizar\_posicion\_pacman3}}
+\index{actualizar\_posicion\_pacman3@{actualizar\_posicion\_pacman3}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{actualizar\_posicion\_pacman3}{actualizar\_posicion\_pacman3}}
+{\footnotesize\ttfamily void Ghost3\+::actualizar\+\_\+posicion\+\_\+pacman3 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Actualiza la posición del Pac-\/\+Man en el fantasma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posición horizontal del Pac-\/\+Man en la matriz. \\
+\hline
+{\em y} & Posición vertical del Pac-\/\+Man en la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost3_ac4c1fcefa93c0d8da053a252b8657bb6}\label{classGhost3_ac4c1fcefa93c0d8da053a252b8657bb6}} 
+\index{Ghost3@{Ghost3}!chasePacMan@{chasePacMan}}
+\index{chasePacMan@{chasePacMan}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{chasePacMan}{chasePacMan}}
+{\footnotesize\ttfamily void Ghost3\+::chase\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Realiza el seguimiento del personaje principal (Pac-\/\+Man). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero ejecuta el algoritmo A$\ast$ para decidir los movimeintos del fantasma. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost3_ab64ce8c21e30563b6efcea1707b3c47c}\label{classGhost3_ab64ce8c21e30563b6efcea1707b3c47c}} 
+\index{Ghost3@{Ghost3}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{check\_collision}{check\_collision}}
+{\footnotesize\ttfamily void Ghost3\+::check\+\_\+collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Verifica si hay colisiones con otros elementos en el juego. 
+
+Esta función comprueba si el fantasma colisiona con otros elementos en el juego, como los Super\+Dots. En caso de colisión, realiza las acciones correspondientes. 
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero verfiica si el fantasma roba el poder. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost3_ac1507f00b79a300a8bd396e23dbfa1ba}\label{classGhost3_ac1507f00b79a300a8bd396e23dbfa1ba}} 
+\index{Ghost3@{Ghost3}!move@{move}}
+\index{move@{move}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void Ghost3\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Mueve el fantasma en el juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero genera el movmiento del fantasma en la pantalla basandose en la matriz con las direcciones generadas por A$\ast$. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost3_aa02e76b67e5dca12ba0f3dfdac75a935}\label{classGhost3_aa02e76b67e5dca12ba0f3dfdac75a935}} 
+\index{Ghost3@{Ghost3}!random\_location@{random\_location}}
+\index{random\_location@{random\_location}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{random\_location()}{random\_location()}}
+{\footnotesize\ttfamily void Ghost3\+::random\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Establece la matriz del mapa del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz que representa el mapa del juego. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero hace el set de la matriz para ejecutar los movimientos sobre esta. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost3_a9846854b53cdde32dee93ad0efb98b44}\label{classGhost3_a9846854b53cdde32dee93ad0efb98b44}} 
+\index{Ghost3@{Ghost3}!set\_mapa@{set\_mapa}}
+\index{set\_mapa@{set\_mapa}!Ghost3@{Ghost3}}
+\doxysubsubsection{\texorpdfstring{set\_mapa()}{set\_mapa()}}
+{\footnotesize\ttfamily void Ghost3\+::set\+\_\+mapa (\begin{DoxyParamCaption}\item[{int}]{mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Establece la matriz del mapa del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz que representa el mapa del juego. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero hace el set de la matriz para ejecutar los movimientos sobre esta. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/Ghost3.\+h\item 
+Pacman/Ghost3.\+cpp\end{DoxyCompactItemize}

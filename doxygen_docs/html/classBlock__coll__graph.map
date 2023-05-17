@@ -1,0 +1,4 @@
+<map id="Block" name="Block">
+<area shape="rect" id="node1" title="Clase que representa graficamente los obstaculos del juego." alt="" coords="60,80,119,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,173,32"/>
+</map>

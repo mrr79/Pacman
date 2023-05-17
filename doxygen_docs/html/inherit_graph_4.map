@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,81,127,108"/>
+<area shape="rect" id="node2" href="$classDificulties__Window.html" title="Clase que crea las instancias del jeugo en los diferentes niveles y sus condiciones de puntos y vidas..." alt="" coords="175,5,321,32"/>
+<area shape="rect" id="node3" href="$classGame.html" title="Clase que configura el comportamiento generla del juego y anade los elementos a la pantalla principal..." alt="" coords="217,56,279,83"/>
+<area shape="rect" id="node4" href="$classGameOver.html" title="Clase que representa la pantalla de fin de juego." alt="" coords="202,107,294,133"/>
+<area shape="rect" id="node5" href="$classGameWin.html" title="Clase que representa la pantalla de fin de juego si se gana el mismo." alt="" coords="205,157,291,184"/>
+</map>

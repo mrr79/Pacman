@@ -1,0 +1,209 @@
+\hypertarget{classStarList}{}\doxysection{Star\+List Class Reference}
+\label{classStarList}\index{StarList@{StarList}}
+
+
+Clase que representa una lista enlazada de nodos de estrellas.  
+
+
+
+
+{\ttfamily \#include $<$Star\+List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStarList_aeb3461d3daa618af0f13e96f888d865c}{Star\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{classStarList}{Star\+List}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStarList_a771426eb9ee2a9dbd7cba4a28aedfb1e}{append}} (\mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$new\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Agrega un nuevo nodo al final de la lista. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStarList_a03829f13ce8b6639fd60af31c6114c8f}{size}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el número de elementos en la lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$ \mbox{\hyperlink{classStarList_a532212f8bbd537a81bbbfa6d03029360}{get\+Head}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el puntero al primer nodo de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStarList_a6716aef90fd03f974a0dffbd5dae9fc6}{print\+List}} () const
+\begin{DoxyCompactList}\small\item\em Imprime los elementos de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStarList_a4861707e48d132c2acf61738e02a7b4b}{remove\+Head}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el primer nodo de la lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classStarList_a49792553c9087531114511c03609ee9f}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la lista está vacía. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$ \mbox{\hyperlink{classStarList_afa5991498de509345c33810c5cd5b040}{get\+Random\+Node}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve un nodo aleatorio de la lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStarList_abef69166cbdd6743cf00cdff0a5c167f}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Elimina todos los nodos de la lista. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa una lista enlazada de nodos de estrellas. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStarList_aeb3461d3daa618af0f13e96f888d865c}\label{classStarList_aeb3461d3daa618af0f13e96f888d865c}} 
+\index{StarList@{StarList}!StarList@{StarList}}
+\index{StarList@{StarList}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{StarList()}{StarList()}}
+{\footnotesize\ttfamily Star\+List\+::\+Star\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \mbox{\hyperlink{classStarList}{Star\+List}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStarList_a771426eb9ee2a9dbd7cba4a28aedfb1e}\label{classStarList_a771426eb9ee2a9dbd7cba4a28aedfb1e}} 
+\index{StarList@{StarList}!append@{append}}
+\index{append@{append}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{append()}{append()}}
+{\footnotesize\ttfamily void Star\+List\+::append (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$}]{new\+\_\+node }\end{DoxyParamCaption})}
+
+
+
+Agrega un nuevo nodo al final de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+node} & Puntero al nodo que se va a agregar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_abef69166cbdd6743cf00cdff0a5c167f}\label{classStarList_abef69166cbdd6743cf00cdff0a5c167f}} 
+\index{StarList@{StarList}!clear@{clear}}
+\index{clear@{clear}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void Star\+List\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina todos los nodos de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_a532212f8bbd537a81bbbfa6d03029360}\label{classStarList_a532212f8bbd537a81bbbfa6d03029360}} 
+\index{StarList@{StarList}!getHead@{getHead}}
+\index{getHead@{getHead}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{getHead()}{getHead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$ Star\+List\+::get\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el puntero al primer nodo de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al primer nodo de la lista. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_afa5991498de509345c33810c5cd5b040}\label{classStarList_afa5991498de509345c33810c5cd5b040}} 
+\index{StarList@{StarList}!getRandomNode@{getRandomNode}}
+\index{getRandomNode@{getRandomNode}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{getRandomNode()}{getRandomNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStarNode}{Star\+Node}} $\ast$ Star\+List\+::get\+Random\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve un nodo aleatorio de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero al nodo seleccionado aleatoriamente, o nullptr si la lista está vacía. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_a49792553c9087531114511c03609ee9f}\label{classStarList_a49792553c9087531114511c03609ee9f}} 
+\index{StarList@{StarList}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Star\+List\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifica si la lista está vacía. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si la lista está vacía, {\ttfamily false} en caso contrario. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_a6716aef90fd03f974a0dffbd5dae9fc6}\label{classStarList_a6716aef90fd03f974a0dffbd5dae9fc6}} 
+\index{StarList@{StarList}!printList@{printList}}
+\index{printList@{printList}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{printList()}{printList()}}
+{\footnotesize\ttfamily void Star\+List\+::print\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Imprime los elementos de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_a4861707e48d132c2acf61738e02a7b4b}\label{classStarList_a4861707e48d132c2acf61738e02a7b4b}} 
+\index{StarList@{StarList}!removeHead@{removeHead}}
+\index{removeHead@{removeHead}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{removeHead()}{removeHead()}}
+{\footnotesize\ttfamily void Star\+List\+::remove\+Head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina el primer nodo de la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classStarList_a03829f13ce8b6639fd60af31c6114c8f}\label{classStarList_a03829f13ce8b6639fd60af31c6114c8f}} 
+\index{StarList@{StarList}!size@{size}}
+\index{size@{size}!StarList@{StarList}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Star\+List\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el número de elementos en la lista. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ningun} & parammetro de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Número de elementos en la lista. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/Star\+List.\+h\item 
+Pacman/Star\+List.\+cpp\end{DoxyCompactItemize}

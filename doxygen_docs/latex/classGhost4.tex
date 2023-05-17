@@ -1,0 +1,209 @@
+\hypertarget{classGhost4}{}\doxysection{Ghost4 Class Reference}
+\label{classGhost4}\index{Ghost4@{Ghost4}}
+
+
+Clase que representa un fantasma 4 en el juego. Este fantasma es el fantasa de color anaranjado y se mueve persiguiendo al pacman o al poder usando el algoritmo \mbox{\hyperlink{classBacktracking}{Backtracking}}.  
+
+
+
+
+{\ttfamily \#include $<$Ghost4.\+h$>$}
+
+
+
+Inheritance diagram for Ghost4\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{classGhost4__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ghost4\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGhost4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGhost4_a840b8cffb9a69700ad308b01e4328723}{move}} ()
+\begin{DoxyCompactList}\small\item\em Mueve el fantasma en el juego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost4_afa650ddaecac4b52d611e0293cd4fd9e}{chase\+Pac\+Man}} ()
+\begin{DoxyCompactList}\small\item\em Realiza el seguimiento del personaje principal (Pac-\/\+Man). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost4_a5e01f0c6d85af28cea3546b7be657b16}{actualizar\+\_\+posicion\+\_\+pacman4}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Actualiza la posición del Pac-\/\+Man en el fantasma. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost4_aee782d646ea70d303d53b7fc9884fca9}{check\+\_\+collision}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si hay colisiones con otros elementos en el juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGhost4_ac44adc383f2705529190fb69daa26252}{Ghost4}} (int mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]}, int j, int i)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \mbox{\hyperlink{classGhost}{Ghost}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGhost4_a28e1910e33528526c1ce1d0d53d875a6}{random\+\_\+location}} ()
+\begin{DoxyCompactList}\small\item\em Establece una ubicación aleatoria para el fantasma. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classGhost4_a8009c299e5bfa995669addadbb0c0542}\label{classGhost4_a8009c299e5bfa995669addadbb0c0542}} 
+\mbox{\hyperlink{classPac__Man}{Pac\+\_\+\+Man}} $\ast$ {\bfseries get\+Pacman} ()
+\item 
+void \mbox{\hyperlink{classGhost4_a2fc3cc9ace8b04017908531e1ffba6f8}{set\+\_\+mapa}} (int mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]})
+\begin{DoxyCompactList}\small\item\em Establece la matriz del mapa del juego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGhost4_a2a2e0fb71c3cb29b0027afc744197732}\label{classGhost4_a2a2e0fb71c3cb29b0027afc744197732}} 
+\mbox{\hyperlink{classStarList}{Star\+List}} {\bfseries lista\+\_\+randomg}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa un fantasma 4 en el juego. Este fantasma es el fantasa de color anaranjado y se mueve persiguiendo al pacman o al poder usando el algoritmo \mbox{\hyperlink{classBacktracking}{Backtracking}}. 
+
+Esta clase hereda de QObject y QGraphics\+Pixmap\+Item, y representa un fantasma en el juego. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGhost4_ac44adc383f2705529190fb69daa26252}\label{classGhost4_ac44adc383f2705529190fb69daa26252}} 
+\index{Ghost4@{Ghost4}!Ghost4@{Ghost4}}
+\index{Ghost4@{Ghost4}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{Ghost4()}{Ghost4()}}
+{\footnotesize\ttfamily Ghost4\+::\+Ghost4 (\begin{DoxyParamCaption}\item[{int}]{mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]},  }\item[{int}]{j,  }\item[{int}]{i }\end{DoxyParamCaption})}
+
+
+
+Constructor de la clase \mbox{\hyperlink{classGhost}{Ghost}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz que representa el mapa del juego. \\
+\hline
+{\em j} & Posición horizontal inicial del fantasma en la matriz. \\
+\hline
+{\em i} & Posición vertical inicial del fantasma en la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGhost4_a5e01f0c6d85af28cea3546b7be657b16}\label{classGhost4_a5e01f0c6d85af28cea3546b7be657b16}} 
+\index{Ghost4@{Ghost4}!actualizar\_posicion\_pacman4@{actualizar\_posicion\_pacman4}}
+\index{actualizar\_posicion\_pacman4@{actualizar\_posicion\_pacman4}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{actualizar\_posicion\_pacman4}{actualizar\_posicion\_pacman4}}
+{\footnotesize\ttfamily void Ghost4\+::actualizar\+\_\+posicion\+\_\+pacman4 (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Actualiza la posición del Pac-\/\+Man en el fantasma. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posición horizontal del Pac-\/\+Man en la matriz. \\
+\hline
+{\em y} & Posición vertical del Pac-\/\+Man en la matriz. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost4_afa650ddaecac4b52d611e0293cd4fd9e}\label{classGhost4_afa650ddaecac4b52d611e0293cd4fd9e}} 
+\index{Ghost4@{Ghost4}!chasePacMan@{chasePacMan}}
+\index{chasePacMan@{chasePacMan}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{chasePacMan}{chasePacMan}}
+{\footnotesize\ttfamily void Ghost4\+::chase\+Pac\+Man (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Realiza el seguimiento del personaje principal (Pac-\/\+Man). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero ejecuta el algoritmo Bactrackint para decidir los movimeintos del fantasma. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost4_aee782d646ea70d303d53b7fc9884fca9}\label{classGhost4_aee782d646ea70d303d53b7fc9884fca9}} 
+\index{Ghost4@{Ghost4}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{check\_collision}{check\_collision}}
+{\footnotesize\ttfamily void Ghost4\+::check\+\_\+collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Verifica si hay colisiones con otros elementos en el juego. 
+
+Esta función comprueba si el fantasma colisiona con otros elementos en el juego, como los Super\+Dots. En caso de colisión, realiza las acciones correspondientes. 
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero verfiica si el fantasma roba el poder. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost4_a840b8cffb9a69700ad308b01e4328723}\label{classGhost4_a840b8cffb9a69700ad308b01e4328723}} 
+\index{Ghost4@{Ghost4}!move@{move}}
+\index{move@{move}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void Ghost4\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Mueve el fantasma en el juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em no} & tiene parametros de entrada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero genera el movmiento del fantasma en la pantalla basandose en la matriz con las direcciones generadas por el \mbox{\hyperlink{classBacktracking}{Backtracking}}. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost4_a28e1910e33528526c1ce1d0d53d875a6}\label{classGhost4_a28e1910e33528526c1ce1d0d53d875a6}} 
+\index{Ghost4@{Ghost4}!random\_location@{random\_location}}
+\index{random\_location@{random\_location}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{random\_location()}{random\_location()}}
+{\footnotesize\ttfamily void Ghost4\+::random\+\_\+location (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Establece una ubicación aleatoria para el fantasma. 
+
+Esta función establece una ubicación aleatoria para el fantasma y espera 5 segundos para colocarlo y reanudar el movimiento. 
+\begin{DoxyParams}{Parameters}
+{\em no} & necesita parametros. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classGhost4_a2fc3cc9ace8b04017908531e1ffba6f8}\label{classGhost4_a2fc3cc9ace8b04017908531e1ffba6f8}} 
+\index{Ghost4@{Ghost4}!set\_mapa@{set\_mapa}}
+\index{set\_mapa@{set\_mapa}!Ghost4@{Ghost4}}
+\doxysubsubsection{\texorpdfstring{set\_mapa()}{set\_mapa()}}
+{\footnotesize\ttfamily void Ghost4\+::set\+\_\+mapa (\begin{DoxyParamCaption}\item[{int}]{mapa\mbox{[}21\mbox{]}\mbox{[}30\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Establece la matriz del mapa del juego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Matriz que representa el mapa del juego. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+no retorna nada pero hace el set de la matriz para ejecutar los movimientos sobre esta. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/Ghost4.\+h\item 
+Pacman/Ghost4.\+cpp\end{DoxyCompactItemize}

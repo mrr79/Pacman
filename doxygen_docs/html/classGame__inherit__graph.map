@@ -1,0 +1,4 @@
+<map id="Game" name="Game">
+<area shape="rect" id="node1" title="Clase que configura el comportamiento generla del juego y anade los elementos a la pantalla principal..." alt="" coords="35,80,97,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,127,32"/>
+</map>

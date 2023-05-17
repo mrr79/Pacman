@@ -1,0 +1,70 @@
+\hypertarget{classAStar}{}\doxysection{AStar Class Reference}
+\label{classAStar}\index{AStar@{AStar}}
+
+
+Clase hace el alogritmo de busqueda \mbox{\hyperlink{classAStar}{AStar}} o A$\ast$ para encontrar el mejor camino entre los fantasmas y su destino.  
+
+
+
+
+{\ttfamily \#include $<$AStar.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStarList}{Star\+List}} \mbox{\hyperlink{classAStar_a1a54b9d8870baa6a6dd59b7bcf008719}{get\+Path}} ()
+\begin{DoxyCompactList}\small\item\em Toma los resutados del algoritmo y los convierte en una lista tipo \mbox{\hyperlink{classStarList}{Star\+List}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAStar_af00fc8d503b5e6a07f98bec807effd2d}{a\+Star\+Search}} (int grid\mbox{[}$\,$\mbox{]}\mbox{[}COL\mbox{]}, Pair src, Pair dest)
+\begin{DoxyCompactList}\small\item\em Busca el mejor camino entre el destino y el inicio, usando el Algoritmo Astar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase hace el alogritmo de busqueda \mbox{\hyperlink{classAStar}{AStar}} o A$\ast$ para encontrar el mejor camino entre los fantasmas y su destino. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAStar_af00fc8d503b5e6a07f98bec807effd2d}\label{classAStar_af00fc8d503b5e6a07f98bec807effd2d}} 
+\index{AStar@{AStar}!aStarSearch@{aStarSearch}}
+\index{aStarSearch@{aStarSearch}!AStar@{AStar}}
+\doxysubsubsection{\texorpdfstring{aStarSearch()}{aStarSearch()}}
+{\footnotesize\ttfamily void AStar\+::a\+Star\+Search (\begin{DoxyParamCaption}\item[{int}]{grid\mbox{[}$\,$\mbox{]}\mbox{[}\+COL\mbox{]},  }\item[{Pair}]{src,  }\item[{Pair}]{dest }\end{DoxyParamCaption})}
+
+
+
+Busca el mejor camino entre el destino y el inicio, usando el Algoritmo Astar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & grid\mbox{[}ROW\mbox{]}\mbox{[}COL\mbox{]}\+: la matriz \\
+\hline
+{\em Pair} & src\+: desde donde se inicia la ruta. \\
+\hline
+{\em Pair} & dest donde se finaliza la ruta. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+En caso de encontrar la celda de destino o de no poder alcanzarla, la función imprime mensajes informativos. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classAStar_a1a54b9d8870baa6a6dd59b7bcf008719}\label{classAStar_a1a54b9d8870baa6a6dd59b7bcf008719}} 
+\index{AStar@{AStar}!getPath@{getPath}}
+\index{getPath@{getPath}!AStar@{AStar}}
+\doxysubsubsection{\texorpdfstring{getPath()}{getPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classStarList}{Star\+List}} AStar\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Toma los resutados del algoritmo y los convierte en una lista tipo \mbox{\hyperlink{classStarList}{Star\+List}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & grid\mbox{[}ROW\mbox{]}\mbox{[}COL\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La lista con las celdas para llegar al destino. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pacman/AStar.\+h\item 
+Pacman/AStar.\+cpp\end{DoxyCompactItemize}

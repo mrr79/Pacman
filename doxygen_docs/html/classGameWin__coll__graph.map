@@ -1,0 +1,4 @@
+<map id="GameWin" name="GameWin">
+<area shape="rect" id="node1" title="Clase que representa la pantalla de fin de juego si se gana el mismo." alt="" coords="23,80,109,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,127,32"/>
+</map>
