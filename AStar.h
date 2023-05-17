@@ -24,6 +24,9 @@ struct cell {
     double f, g, h;
 };
 extern bool ejecutar;
+/**
+ * @brief Clase hace el alogritmo de busqueda AStar o A* para encontrar el mejor camino entre los fantasmas y su destino.
+ */
 class AStar {
 public:
 /**

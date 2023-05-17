@@ -15,7 +15,9 @@ extern bool loose;
 extern int vidas;
 extern int puntos;
 extern int nivel;
-
+/**
+ * @brief Clase que crea las instancias del jeugo en los diferentes niveles y sus condiciones de puntos y vidas.
+ */
 class Dificulties_Window: public QGraphicsView{
 Q_OBJECT
 

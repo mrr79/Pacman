@@ -206,7 +206,7 @@ void Pac_Man::check_points() {
         loose = true;
     }
     if (nivel == 1){
-        if (points >= 5000){
+        if (points >= 300){
             nivel2 = true;
         }
     }

@@ -3,7 +3,9 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
-
+/**
+ * @brief Clase que representa graficamente los obstaculos del juego
+ */
 class Block:public QGraphicsPixmapItem{
 public:
     /**

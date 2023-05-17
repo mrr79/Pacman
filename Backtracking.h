@@ -11,7 +11,9 @@ using namespace std;
 
 extern int backtrack_x;
 extern int backtrack_y;
-
+/**
+ * @brief Clase hace el alogritmo de busqueda AStar o A* para encontrar el mejor camino entre los fantasmas y su destino.
+ */
 class Backtracking {
 #include <vector>
 #include <string>

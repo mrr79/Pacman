@@ -3,7 +3,9 @@
 
 #include <QGraphicsPixmapItem>
 #include <QObject>
-
+/**
+ * @brief Clase que representa graficamente los caminos del juego
+ */
 class Dot:public QGraphicsPixmapItem{
 public:
     /**

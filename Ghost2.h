@@ -11,25 +11,72 @@
 #include "StarNode.h"
 #include "StarList.h"
 
-
+/**
+ * @brief Clase que representa un fantasma 2 en el juego.
+ * Este fantasma es el fantasa de color rosado y se mueve persiguiendo al pacman o al poder usando el algoritmo Backtracking.
+ *
+ * Esta clase hereda de QObject y QGraphicsPixmapItem, y representa un fantasma en el juego.
+ */
 class Ghost2:public QObject , public  QGraphicsPixmapItem {
     Q_OBJECT
 public:
+    /**
+     * @brief Constructor de la clase Ghost.
+     * @param mapa Matriz que representa el mapa del juego.
+     * @param j Posición horizontal inicial del fantasma en la matriz.
+     * @param i Posición vertical inicial del fantasma en la matriz.
+     * @return no retorna nada.
+     */
     Ghost2(int mapa[21][30],int j,int i);
+    /**
+ * @brief Establece una ubicación aleatoria para el fantasma.
+ *
+ * Esta función establece una ubicación aleatoria para el fantasma y espera 5 segundos para colocarlo y reanudar el movimiento.
+ * @param no necesita parametros.
+ * @return no retorna nada.
+ */
     void random_location();
 
     Pac_Man* getPacman();
+    /**
+     * @brief Establece la matriz del mapa del juego.
+     * @param mapa Matriz que representa el mapa del juego.
+     * @return no retorna nada pero hace el set de la matriz para ejecutar los movimientos sobre esta.
+     */
     void set_mapa(int mapa[21][30]);
     //StarNode head;
     StarList lista_randomg;
 
 public slots:
-            //void move(int pac_man_x, int pac_man_y);
+    /**
+* @brief Mueve el fantasma en el juego.
+* @param no tiene parametros de entrada.
+* @return no retorna nada pero genera el movmiento del fantasma en la pantalla basandose en la matriz con las direcciones generadas por el Backtracking.
+*/
             void move();
+    /**
+* @brief Realiza el seguimiento del personaje principal (Pac-Man).
+* @param no tiene parametros de entrada.
+* @return no retorna nada pero ejecuta el algoritmo Bactrackint para decidir los movimeintos del fantasma.
+*/
     void chasePacMan();
 
 public slots:
+    /**
+ * @brief Actualiza la posición del Pac-Man en el fantasma.
+ * @param x Posición horizontal del Pac-Man en la matriz.
+ * @param y Posición vertical del Pac-Man en la matriz.
+ * @return no retorna nada.
+ */
     void actualizar_posicion_pacman2(int x, int y);
+    /**
+* @brief Verifica si hay colisiones con otros elementos en el juego.
+*
+* Esta función comprueba si el fantasma colisiona con otros elementos en el juego, como los SuperDots.
+* En caso de colisión, realiza las acciones correspondientes.
+* @param no tiene parametros de entrada.
+* @return no retorna nada pero verfiica si el fantasma roba el poder.
+*/
     void check_collision();
 
 private:

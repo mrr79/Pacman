@@ -8,9 +8,18 @@
 #include <QWidget>
 #include <QGraphicsScene>
 #include <QGraphicsView>
-
+/**
+ * @brief Clase que representa la pantalla de fin de juego.
+ *
+ * Esta clase hereda de QWidget y muestra la pantalla de fin de juego.
+ */
 class GameOver: public QGraphicsView{
 public:
+    /**
+     * @brief Constructor de la clase GameOver.
+     * @param parent Puntero al objeto QWidget padre.
+     * @return no retorna nada pero genera la ventana de game over
+     */
     GameOver(QWidget * parent=0);
     QGraphicsScene * scene;
 };
