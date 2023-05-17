@@ -12,7 +12,7 @@
 
 int vidas = 3;
 int puntos = 0;
-int nivel = 4;
+int nivel = 1;
 bool nivel2 = false;
 bool nivel3 = false;
 bool nivel4 = false;
